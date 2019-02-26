@@ -12,6 +12,7 @@
 		B332591C2225803900BCF32F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B332591A2225803900BCF32F /* Main.storyboard */; };
 		B332591E2225803A00BCF32F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B332591D2225803A00BCF32F /* Assets.xcassets */; };
 		B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B332591F2225803A00BCF32F /* LaunchScreen.storyboard */; };
+		B3325929222580B800BCF32F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3325928222580B800BCF32F /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B332591D2225803A00BCF32F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33259202225803A00BCF32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33259222225803B00BCF32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3325928222580B800BCF32F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B332591D2225803A00BCF32F /* Assets.xcassets */,
 				B332591F2225803A00BCF32F /* LaunchScreen.storyboard */,
 				B33259222225803B00BCF32F /* Info.plist */,
+				B3325928222580B800BCF32F /* PageViewController.swift */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3325929222580B800BCF32F /* PageViewController.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
 				B33259172225803900BCF32F /* AppDelegate.swift in Sources */,
 			);
