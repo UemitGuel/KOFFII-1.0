@@ -34,22 +34,12 @@ class PageViewController: UIPageViewController {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
         
         
+        
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
         
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
@@ -89,7 +79,7 @@ extension PageViewController: UIPageViewControllerDelegate {
     } // The number of items reflected in the page indicator.
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 1
+        return 0
     } // The selected item reflected in the page indicator.
     
 }
