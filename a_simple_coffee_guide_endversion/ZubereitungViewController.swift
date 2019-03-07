@@ -16,6 +16,11 @@ class ZubereitungViewController: UIViewController {
     
     let zubereitungsmöglichkeiten = ["Handfilter", "Espressokocher", "Chemex", "French Press"]
     
+    var nameToPass = String()
+    var imageToPass = UIImage()
+    
+
+    
     var logoImage: [UIImage] = [
         UIImage(named: "Handfilter")!,
         UIImage(named: "Espressokocher")!,
@@ -29,6 +34,18 @@ class ZubereitungViewController: UIViewController {
         ZubereitungTableView.dataSource = self
         ZubereitungTableView.delegate = self
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetailViewControler" {
+            // initialize new view controller and cast it as your view controller
+            let DvC = segue.destination as! DetailViewController
+            // your new view controller should have property that will store passed value
+            DvC.getName = nameToPass
+            DvC.getImage = imageToPass
+            
+        }
     }
     
 
@@ -59,5 +76,18 @@ extension ZubereitungViewController: UITableViewDataSource {
 }
 
 extension ZubereitungViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as! ZubereitungTableViewCell
+        
+        nameToPass = currentCell.cellLabel.text!
+        imageToPass = currentCell.ImageView.image!
+        
+        performSegue(withIdentifier: "showDetailViewControler", sender: self)
+        
+    }
     
 }

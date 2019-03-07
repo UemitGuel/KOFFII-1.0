@@ -1,30 +1,20 @@
 //
-//  ZubereitungTableViewCell.swift
+//  DetailTableViewCell.swift
 //  a_simple_coffee_guide_endversion
 //
-//  Created by Ümit Gül on 02.03.19.
+//  Created by Ümit Gül on 05.03.19.
 //  Copyright © 2019 Ümit Gül. All rights reserved.
 //
 
 import UIKit
 
-class ZubereitungTableViewCell: UITableViewCell {
+class DetailTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cellLabel: UILabel!
-    
-    @IBOutlet weak var RoundedView: UIView!
-    @IBOutlet weak var ImageView: UIImageView!
-   
-    @IBAction func zubereitungToDetailButtonTapped(_ sender: UIButton) {
-    }
+    @IBOutlet weak var tableViewCellLabel: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        ImageView.layer.cornerRadius = 8.0
-        
-        
         // Initialization code
     }
 
