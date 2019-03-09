@@ -74,7 +74,13 @@ extension ZubereitungViewController: UITableViewDataSource {
 extension ZubereitungViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailViewSegue", sender: nil)
+        //performSegue(withIdentifier: "toDetailViewSegue", sender: nil)
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            vc.passedName = zubereitungsmöglichkeiten[indexPath.row]
+            vc.passedImage = logoImage[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
