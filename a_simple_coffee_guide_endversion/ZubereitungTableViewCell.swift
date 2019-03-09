@@ -14,7 +14,11 @@ class ZubereitungTableViewCell: UITableViewCell {
     
     @IBOutlet weak var RoundedView: UIView!
     @IBOutlet weak var ImageView: UIImageView!
+    
+    
    
+    @IBOutlet weak var zubereitungButton: UIButton!
+    
     @IBAction func zubereitungToDetailButtonTapped(_ sender: UIButton) {
     }
     

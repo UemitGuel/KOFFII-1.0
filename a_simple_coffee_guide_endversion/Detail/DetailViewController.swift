@@ -25,8 +25,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var optionRightLabel: UILabel!
     
     // var/let
-    var getName = String()
-    var getImage = UIImage()
+    var passedName = String()
+    var passedImage = UIImage()
     
     
     
@@ -34,8 +34,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Setting Image and Name
-        detailImageView.image = getImage
-        chosenPreparationLabel.text = getName
+        detailImageView.image = passedImage
+        chosenPreparationLabel.text = passedName
         
     }
     

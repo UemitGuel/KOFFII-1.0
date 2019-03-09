@@ -10,16 +10,12 @@ import UIKit
 
 class ZubereitungViewController: UIViewController {
 
-    @IBOutlet weak var ZubereitungTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    
     
     // let var
     
     let zubereitungsmöglichkeiten = ["Handfilter", "Espressokocher", "Chemex", "French Press"]
-    
-    var nameToPass = String()
-    var imageToPass = UIImage()
-    
-
     
     var logoImage: [UIImage] = [
         UIImage(named: "Handfilter")!,
@@ -31,25 +27,25 @@ class ZubereitungViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ZubereitungTableView.dataSource = self
-        ZubereitungTableView.delegate = self
-
+        tableView.dataSource = self
+        tableView.delegate = self
+            
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "showDetailViewControler" {
-            // initialize new view controller and cast it as your view controller
-            let DvC = segue.destination as! DetailViewController
-            // your new view controller should have property that will store passed value
-            DvC.getName = nameToPass
-            DvC.getImage = imageToPass
+        if segue.identifier == "toDetailViewSegue" {
+            let detailVC = segue.destination as! DetailViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            let name = zubereitungsmöglichkeiten[index]
+            let image = logoImage[index]
+            detailVC.passedName = name
+            detailVC.passedImage = image
             
         }
     }
     
-
 }
+
 
 extension ZubereitungViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,16 +74,7 @@ extension ZubereitungViewController: UITableViewDataSource {
 extension ZubereitungViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.row)!")
-        
-        let indexPath = tableView.indexPathForSelectedRow!
-        let currentCell = tableView.cellForRow(at: indexPath)! as! ZubereitungTableViewCell
-        
-        nameToPass = currentCell.cellLabel.text!
-        imageToPass = currentCell.ImageView.image!
-        
-        performSegue(withIdentifier: "showDetailViewControler", sender: self)
-        
+        performSegue(withIdentifier: "toDetailViewSegue", sender: nil)
     }
-    
 }
+
