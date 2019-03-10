@@ -15,6 +15,22 @@ class ZubereitungViewController: UIViewController {
     
     // let var
     
+    var pourover : [String : Any] = ["Name": "Pour over", "Image": UIImage(named: "Handfilter")!, "Quantity": "32g/500ml", "Temp": "96°", "Time": "3-4min", "Tips": ["First Tip", "Second Tip", "Third Tip"], "Complain1": "My Coffee is to bitter", "Complain2": "My coffee tastes sour"]
+    
+    var bialetti : [String : Any] = ["Name": "Bialetti Moka Pot", "Image": UIImage(named: "Espressokocher")!, "Quantity": "Fill completely", "Temp": "medium heat", "Time": "-", "Tips": ["First Tip", "Second Tip", "Third Tip"], "Complain1": "My Coffee is to bitter", "Complain2": "My coffee tastes sour"]
+    
+    var chemex : [String : Any] = ["Name": "Chemex", "Image": UIImage(named: "Chemex")!, "Quantity": "38g/600ml", "Temp": "96°", "Time": "4-5min", "Tips": ["First Tip", "Second Tip", "Third Tip"], "Complain1": "My Coffee is to bitter", "Complain2": "My coffee tastes sour"]
+    
+    var frenchpress : [String : Any] = ["Name": "French Press", "Image": UIImage(named: "Frenchpress")!, "Quantity": "65g/1l", "Temp": "96°", "Time": "4min", "Tips": ["First Tip", "Second Tip", "Third Tip"], "Complain1": "My Coffee is to bitter", "Complain2": "My coffee tastes sour"]
+    
+    var aeropress : [String : Any] = ["Name": "Aeropress", "Image": UIImage(named: "Aeropress")!, "Quantity": "16g/200ml", "Temp": "90°", "Time": "1:30min", "Tips": ["First Tip", "Second Tip", "Third Tip"], "Complain1": "My Coffee is to bitter", "Complain2": "My coffee tastes sour"]
+    
+    var espresso : [String : Any] = ["Name": "Espresso", "Image": UIImage(named: "Espresso")!, "Quantity": "18g/40ml", "Temp": "93-95°", "Time": "30sec", "Tips": ["First Tip", "Second Tip", "Third Tip"], "Complain1": "My Coffee is to bitter", "Complain2": "My coffee tastes sour"]
+    
+    var coffeedict = [[String:Any]]()
+    
+    
+    
     let zubereitungsmöglichkeiten = ["Handfilter", "Espressokocher", "Chemex", "French Press"]
     
     var logoImage: [UIImage] = [
@@ -29,7 +45,14 @@ class ZubereitungViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-            
+        
+        coffeedict.append(pourover)
+        coffeedict.append(bialetti)
+        coffeedict.append(chemex)
+        coffeedict.append(frenchpress)
+        coffeedict.append(aeropress)
+        coffeedict.append(espresso)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,12 +78,15 @@ extension ZubereitungViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrototypeCell", for: indexPath) as! ZubereitungTableViewCell
         
-        cell.cellLabel.text = zubereitungsmöglichkeiten[indexPath.row]
-        cell.ImageView.image = logoImage[indexPath.row]
+        if let brew = coffeedict[indexPath.row]["Name"] as? String {
+            cell.cellLabel!.text = brew
+        }
+    
+        if let image = coffeedict[indexPath.row]["Image"] as? UIImage {
+            cell.ImageView.image = image
+        }
+    
         
-        // getting border for the font in the tableviewcell
-        let attributes: [NSAttributedString.Key : Any] = [.strokeWidth: -2.0, .strokeColor: UIColor.black]
-        cell.cellLabel.attributedText = NSAttributedString(string: cell.cellLabel.text ?? "", attributes: attributes)
         
         return cell
     }
@@ -74,11 +100,17 @@ extension ZubereitungViewController: UITableViewDataSource {
 extension ZubereitungViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "toDetailViewSegue", sender: nil)
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            vc.passedName = zubereitungsmöglichkeiten[indexPath.row]
-            vc.passedImage = logoImage[indexPath.row]
+            
+            if let brew = coffeedict[indexPath.row]["Name"] as? String {
+                vc.passedName = brew
+            }
+            
+           if let image = coffeedict[indexPath.row]["Image"] as? UIImage {
+            vc.passedImage = image
+            }
+            
             navigationController?.pushViewController(vc, animated: true)
         }
     }
