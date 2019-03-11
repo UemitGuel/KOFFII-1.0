@@ -25,8 +25,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var optionRightLabel: UILabel!
     
     // var/let
-    var passedName = String()
-    var passedImage = UIImage()
+    
+    var passedDict = [String : Any]()
     
     
     
@@ -34,20 +34,40 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Setting Image and Name
-        detailImageView.image = passedImage
-        chosenPreparationLabel.text = passedName
+        detailImageView.image = passedDict["Image"] as? UIImage
+        chosenPreparationLabel.text = passedDict["Name"] as? String
+        
+        quantityLabel.text = passedDict["Quantity"] as? String
+        temperatureLabel.text = passedDict["Temp"] as? String
+        brewingLabel.text = passedDict["Time"] as? String
+        
+        infoTableView.dataSource = self
+        infoTableView.delegate = self
+        
+    }
+
+}
+
+extension DetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as! DetailTableViewCell
+        let arrayOfTips = passedDict["Tips"] as! [String]
+        cell.tableViewCellLabel.text = arrayOfTips[indexPath.row]
+        return cell
+        }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let arrayOfTips = passedDict["Tips"] as! [String]
+        return arrayOfTips.count
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 81.5
     }
-    */
+    
+}
 
+extension DetailViewController: UITableViewDelegate {
+    
 }

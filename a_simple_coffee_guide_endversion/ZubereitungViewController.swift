@@ -30,16 +30,6 @@ class ZubereitungViewController: UIViewController {
     var coffeedict = [[String:Any]]()
     
     
-    
-    let zubereitungsmöglichkeiten = ["Handfilter", "Espressokocher", "Chemex", "French Press"]
-    
-    var logoImage: [UIImage] = [
-        UIImage(named: "Handfilter")!,
-        UIImage(named: "Espressokocher")!,
-        UIImage(named: "Chemex")!,
-        UIImage(named: "Kaffee&Gesundheit")!
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,18 +43,6 @@ class ZubereitungViewController: UIViewController {
         coffeedict.append(aeropress)
         coffeedict.append(espresso)
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailViewSegue" {
-            let detailVC = segue.destination as! DetailViewController
-            let index = tableView.indexPathForSelectedRow!.row
-            let name = zubereitungsmöglichkeiten[index]
-            let image = logoImage[index]
-            detailVC.passedName = name
-            detailVC.passedImage = image
-            
-        }
     }
     
 }
@@ -102,15 +80,7 @@ extension ZubereitungViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            
-            if let brew = coffeedict[indexPath.row]["Name"] as? String {
-                vc.passedName = brew
-            }
-            
-           if let image = coffeedict[indexPath.row]["Image"] as? UIImage {
-            vc.passedImage = image
-            }
-            
+            vc.passedDict = coffeedict[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
     }
