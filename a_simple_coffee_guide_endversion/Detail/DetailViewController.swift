@@ -14,6 +14,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var chosenPreparationLabel: UILabel!
     
     
+    @IBOutlet weak var firstSeparator: UIView!
+    @IBOutlet weak var secondSeparator: UIView!
+    @IBOutlet weak var thirdSeparator: UIView!
+    
+    
     
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -35,14 +40,22 @@ class DetailViewController: UIViewController {
 
         // Setting Image and Name
         detailImageView.image = passedDict["Image"] as? UIImage
+        detailImageView.layer.cornerRadius = 8
         chosenPreparationLabel.text = passedDict["Name"] as? String
         
         quantityLabel.text = passedDict["Quantity"] as? String
         temperatureLabel.text = passedDict["Temp"] as? String
         brewingLabel.text = passedDict["Time"] as? String
         
+        optionLeftLabel.text = passedDict["Complain1"] as? String
+        optionRightLabel.text = passedDict["Complain2"] as? String
+        
         infoTableView.dataSource = self
         infoTableView.delegate = self
+        
+        firstSeparator.layer.cornerRadius = 1.5
+        secondSeparator.layer.cornerRadius = 1.5
+        thirdSeparator.layer.cornerRadius = 1.5
         
     }
 
