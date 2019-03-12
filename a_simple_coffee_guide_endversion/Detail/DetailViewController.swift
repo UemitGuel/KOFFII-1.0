@@ -41,7 +41,10 @@ class DetailViewController: UIViewController {
         // Setting Image and Name
         detailImageView.image = passedDict["Image"] as? UIImage
         detailImageView.layer.cornerRadius = 8
-        chosenPreparationLabel.text = passedDict["Name"] as? String
+        //chosenPreparationLabel.text = passedDict["Name"] as? String
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+
+        self.title = passedDict["Name"] as? String
         
         quantityLabel.text = passedDict["Quantity"] as? String
         temperatureLabel.text = passedDict["Temp"] as? String
@@ -57,7 +60,20 @@ class DetailViewController: UIViewController {
         secondSeparator.layer.cornerRadius = 1.5
         thirdSeparator.layer.cornerRadius = 1.5
         
+        self.infoTableView.rowHeight = UITableView.automaticDimension
+        self.infoTableView.estimatedRowHeight = 82.0; // set to whatever your "average" cell height is
+        
+        
         }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
 }
 
 
@@ -73,10 +89,6 @@ extension DetailViewController: UITableViewDataSource {
         let arrayOfTips = passedDict["Tips"] as! [String]
         return arrayOfTips.count
         
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 81.5
     }
     
 }
