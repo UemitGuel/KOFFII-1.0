@@ -57,9 +57,9 @@ class DetailViewController: UIViewController {
         secondSeparator.layer.cornerRadius = 1.5
         thirdSeparator.layer.cornerRadius = 1.5
         
-    }
-
+        }
 }
+
 
 extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
