@@ -26,13 +26,22 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var infoTableView: UITableView!
     
-    @IBOutlet weak var optionLeftLabel: UILabel!
-    @IBOutlet weak var optionRightLabel: UILabel!
+    @IBOutlet weak var leftComplainButton: UIButton!
+    @IBOutlet weak var rightComplainButton: UIButton!
+    
+    
     
     // var/let
     
     var passedDict = [String : Any]()
     
+    var coffeetoobitter : [String : Any] = ["Complain":"coffee too bitter?", "Improvements": ["You should do this", "and that", "aaand this and that"]]
+    
+    var coffeetoosour : [String : Any] = ["Complain":"coffee too sour?", "Improvements": ["You should do this", "and that", "aaand this and that"]]
+    
+    var espressotoobitter : [String : Any] = ["Complain":"espresso too bitter?", "Improvements": ["You should do this", "and that", "aaand this and that"]]
+    
+    var espressotoosour : [String : Any] = ["Complain":"espresso too sour?", "Improvements": ["You should do this", "and that", "aaand this and that"]]
     
     
     override func viewDidLoad() {
@@ -50,8 +59,8 @@ class DetailViewController: UIViewController {
         temperatureLabel.text = passedDict["Temp"] as? String
         brewingLabel.text = passedDict["Time"] as? String
         
-        optionLeftLabel.text = passedDict["Complain1"] as? String
-        optionRightLabel.text = passedDict["Complain2"] as? String
+        leftComplainButton.setTitle(coffeetoobitter["Complain"] as? String, for: .normal)
+        rightComplainButton.setTitle(coffeetoosour["Complain"] as? String, for: .normal)
         
         infoTableView.dataSource = self
         infoTableView.delegate = self
@@ -73,6 +82,23 @@ class DetailViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = .white
     }
+    
+    // Complain Buttons Tapped
+    
+    @IBAction func leftComplainButtonTapped(_ sender: UIButton) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ComplainViewController") as? ComplainViewController {
+            vc.complainDict = coffeetoobitter
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
+    @IBAction func rightComplainButtonTapped(_ sender: UIButton) {
+    }
+    
+    
+    
     
 }
 
