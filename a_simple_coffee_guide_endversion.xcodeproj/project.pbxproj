@@ -18,6 +18,8 @@
 		B332592B22258D8700BCF32F /* Staatliches-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B332592A22258D8600BCF32F /* Staatliches-Regular.ttf */; };
 		B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */; };
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
+		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
+		B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */; };
 		B393CAF7222AA47B004B028E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393CAF6222AA47B004B028E /* Utility.swift */; };
 		B393CAFB222AD1E8004B028E /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B393CAFA222AD1E8004B028E /* Quicksand-Medium.ttf */; };
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
@@ -38,6 +40,8 @@
 		B332592A22258D8600BCF32F /* Staatliches-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Staatliches-Regular.ttf"; path = "../../../../../Downloads/Staatliches/Staatliches-Regular.ttf"; sourceTree = "<group>"; };
 		B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
+		B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		B393CAF6222AA47B004B028E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Staatliches-Regular.ttf"; sourceTree = "<group>"; };
 		B393CAFA222AD1E8004B028E /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../../../Downloads/Quicksand/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				B3C5727B223AA54C003DA27D /* Brewing */,
 				B355A5D4222EC080009A5BE7 /* Detail */,
 				B3C5727A223AA008003DA27D /* Complain */,
+				B37F2F7B223E60110015BC15 /* Knowledge */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -99,6 +104,15 @@
 				B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		B37F2F7B223E60110015BC15 /* Knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */,
+				B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */,
+			);
+			path = Knowledge;
 			sourceTree = "<group>";
 		};
 		B393CAF8222AD1AF004B028E /* Font */ = {
@@ -204,8 +218,10 @@
 				B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */,
 				B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */,
 				B3325929222580B800BCF32F /* PageViewController.swift in Sources */,
+				B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */,
 				B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */,
 				B393CAF7222AA47B004B028E /* Utility.swift in Sources */,
+				B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */,
 				B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
 				B33259172225803900BCF32F /* AppDelegate.swift in Sources */,

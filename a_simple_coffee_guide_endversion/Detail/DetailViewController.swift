@@ -95,6 +95,11 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func rightComplainButtonTapped(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ComplainViewController") as? ComplainViewController {
+            vc.complainDict = coffeetoosour
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     

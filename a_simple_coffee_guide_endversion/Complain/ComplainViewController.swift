@@ -25,6 +25,9 @@ class ComplainViewController: UIViewController {
         complainLabel.text = complainDict["Complain"] as? String
         
         complainTableView.dataSource = self
+        
+        navigationController?.navigationBar.tintColor = .black
+
         }
 
 }
