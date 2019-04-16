@@ -16,7 +16,9 @@ class KnowledgeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        imageview.layer.cornerRadius = 8.0
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
