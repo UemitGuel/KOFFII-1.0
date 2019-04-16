@@ -16,7 +16,6 @@ class PageViewController: UIPageViewController {
         return [
             self.getViewController(withIdentifier: "Zubereitung"),
             self.getViewController(withIdentifier: "Kaffeewissen"),
-            self.getViewController(withIdentifier: "Herkunft")
         ]
     }()
     

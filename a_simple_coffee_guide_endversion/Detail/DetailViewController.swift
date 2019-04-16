@@ -47,11 +47,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Setting Image and Name
         detailImageView.image = passedDict["Image"] as? UIImage
         detailImageView.layer.cornerRadius = 8
         //chosenPreparationLabel.text = passedDict["Name"] as? String
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
 
         self.title = passedDict["Name"] as? String
         
@@ -81,14 +82,18 @@ class DetailViewController: UIViewController {
         }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(true)
+
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
+
     }
     
-    // Complain Buttons Tapped
+     //Complain Buttons Tapped
     
     @IBAction func leftComplainButtonTapped(_ sender: UIButton) {
         
