@@ -22,20 +22,66 @@ class OtherDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        // Setting Image and Name
+        imageView.image = passedDict["Image"] as? UIImage
+        imageView.layer.cornerRadius = 8
+        
+        self.title = passedDict["Name"] as? String
         
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    */
 
+}
+
+extension OtherDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OtherDetailTableViewCell", for: indexPath) as! OtherDetailTableViewCell
+        let arrayOfTips = passedDict["Tips"] as! [String]
+        cell.otherDetailLabel.text = arrayOfTips[indexPath.row]
+        
+        
+        switch passedDict["Name"] as? String {
+        case "Storage":
+            cell.detailImageView.image = UIImage(named: "Storage_Icon")
+        case "Coffee water":
+            cell.detailImageView.image = UIImage(named: "Water_Icon")
+        case "Health":
+            cell.detailImageView.image = UIImage(named: "Health_Icon")
+        case "History of Coffee":
+            cell.detailImageView.image = UIImage(named: "History_Icon")
+        case "Fabrication":
+            cell.detailImageView.image = UIImage(named: "Fabrication_Icon")
+        case "Regions":
+            cell.detailImageView.image = UIImage(named: "Region_Icon")
+        default:
+            cell.detailImageView.image = UIImage(named: "Coffeebean_Icon")
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let arrayOfTips = passedDict["Tips"] as! [String]
+        return arrayOfTips.count
+        
+    }
+    
+}
+
+extension OtherDetailViewController: UITableViewDelegate {
+    
 }
