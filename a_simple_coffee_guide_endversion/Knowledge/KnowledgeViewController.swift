@@ -69,7 +69,7 @@ extension KnowledgeViewController: UITableViewDataSource {
         if let image = knowledgedict[indexPath.row]["Image"] as? UIImage {
             cell.imageview.image = image
         }
-        
+        cell.selectionStyle = .none
         return cell
     }
     

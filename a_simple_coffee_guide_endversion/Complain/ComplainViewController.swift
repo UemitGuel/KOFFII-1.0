@@ -27,6 +27,7 @@ class ComplainViewController: UIViewController {
         complainTableView.dataSource = self
         
         navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.prefersLargeTitles = false
         
         self.complainTableView.rowHeight = UITableView.automaticDimension
         self.complainTableView.estimatedRowHeight = 82.0; // set to whatever your "average" cell height is

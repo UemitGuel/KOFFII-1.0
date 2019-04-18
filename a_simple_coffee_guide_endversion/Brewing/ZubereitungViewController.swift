@@ -78,9 +78,6 @@ extension ZubereitungViewController: UITableViewDataSource {
         if let image = coffeedict[indexPath.row]["Image"] as? UIImage {
             cell.ImageView.image = image
         }
-    
-        
-        
         return cell
     }
     
