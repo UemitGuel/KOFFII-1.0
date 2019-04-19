@@ -22,6 +22,7 @@
 		B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */; };
 		B38912172269D8EB001A92A9 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */; };
 		B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38912182269D933001A92A9 /* OtherDetailTableViewCell.swift */; };
+		B389121B2269E37B001A92A9 /* BrewingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389121A2269E37B001A92A9 /* BrewingModel.swift */; };
 		B393CAF7222AA47B004B028E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393CAF6222AA47B004B028E /* Utility.swift */; };
 		B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */; };
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
@@ -45,6 +46,7 @@
 		B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../Library/Fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		B38912182269D933001A92A9 /* OtherDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailTableViewCell.swift; sourceTree = "<group>"; };
+		B389121A2269E37B001A92A9 /* BrewingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewingModel.swift; sourceTree = "<group>"; };
 		B393CAF6222AA47B004B028E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Staatliches-Regular.ttf"; sourceTree = "<group>"; };
 		B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */,
 				B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */,
+				B389121A2269E37B001A92A9 /* BrewingModel.swift */,
 			);
 			path = Brewing;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */,
 				B393CAF7222AA47B004B028E /* Utility.swift in Sources */,
 				B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */,
+				B389121B2269E37B001A92A9 /* BrewingModel.swift in Sources */,
 				B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
 				B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */,

@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
     
     // var/let
     
-    var passedDict = [String : Any]()
+    var passedbrewing : Brewing = Brewing(name: "", imageName: "", quantity: "", temperatur: "", time: "", tips: [""])
     
     var coffeetoobitter : [String : Any] = ["Complain":"coffee too bitter?", "Improvements": ["Take care not to use boiling water when making coffee. The ideal water temperature for most forms of preparation is 92°- 96°. If the water is hotter, the coffee tastes bitter", "The darker the coffee beans are roasted, the more bitter substances they contain. For financial reasons, coffee in industry is often very short and \"shock-roasted\" at very high temperatures. The coffee bean burns on the outside, while it is still almost raw on the inside. Tip: Use lighter roasts or pay attention to how your coffee was roasted", "A grinding degree that is too fine results in a coffee extraction time that is too long. This dissolves unwanted bitter substances.", "Robusta coffee has the characteristic to taste darker and more bitter than Arabica beans. So be aware of the bean type when choosing your coffee","Insufficient cleaning of your coffee accessories can cause your coffee to taste bitter. Check all parts that come into contact with coffee"]]
     
@@ -49,18 +49,18 @@ class DetailViewController: UIViewController {
 
         
         // Setting Image and Name
-        detailImageView.image = passedDict["Image"] as? UIImage
+        detailImageView.image = UIImage(named: passedbrewing.imageName)
         detailImageView.layer.cornerRadius = 8
         //chosenPreparationLabel.text = passedDict["Name"] as? String
         
 
-        self.title = passedDict["Name"] as? String
+        self.title = passedbrewing.name
         
-        quantityLabel.text = passedDict["Quantity"] as? String
-        temperatureLabel.text = passedDict["Temp"] as? String
-        brewingLabel.text = passedDict["Time"] as? String
+        quantityLabel.text = passedbrewing.quantity
+        temperatureLabel.text = passedbrewing.temperatur
+        brewingLabel.text = passedbrewing.time
         
-        if passedDict["Name"] as? String != "Bialetti Moka Pot" || passedDict["Name"] as? String != "Bialetti Moka Pot" {
+        if passedbrewing.name != "Bialetti Moka Pot" || passedbrewing.name != "Bialetti Moka Pot" {
             leftComplainButton.setTitle(coffeetoobitter["Complain"] as? String, for: .normal)
             rightComplainButton.setTitle(coffeetoosour["Complain"] as? String, for: .normal)
         } else {
@@ -98,7 +98,7 @@ class DetailViewController: UIViewController {
     @IBAction func leftComplainButtonTapped(_ sender: UIButton) {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ComplainViewController") as? ComplainViewController {
-            if passedDict["Name"] as? String != "Bialetti Moka Pot" || passedDict["Name"] as? String != "Bialetti Moka Pot" {
+            if passedbrewing.name != "Bialetti Moka Pot" || passedbrewing.name != "Bialetti Moka Pot" {
                 vc.complainDict = coffeetoobitter
                 navigationController?.pushViewController(vc, animated: true)
             } else {
@@ -111,7 +111,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func rightComplainButtonTapped(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ComplainViewController") as? ComplainViewController {
-            if passedDict["Name"] as? String != "Bialetti Moka Pot" || passedDict["Name"] as? String != "Bialetti Moka Pot" {
+            if passedbrewing.name != "Bialetti Moka Pot" || passedbrewing.name != "Bialetti Moka Pot" {
                 vc.complainDict = coffeetoosour
                 navigationController?.pushViewController(vc, animated: true)
             } else {
@@ -131,13 +131,13 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as! DetailTableViewCell
-        let arrayOfTips = passedDict["Tips"] as! [String]
+        let arrayOfTips = passedbrewing.tips
         cell.tableViewCellLabel.text = arrayOfTips[indexPath.row]
         return cell
         }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let arrayOfTips = passedDict["Tips"] as! [String]
+        let arrayOfTips = passedbrewing.tips
         return arrayOfTips.count
         
     }
