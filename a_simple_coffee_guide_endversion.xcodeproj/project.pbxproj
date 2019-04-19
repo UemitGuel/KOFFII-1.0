@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */; };
 		B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */; };
-		B33067422264E44700B23FD4 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33067412264E44700B23FD4 /* Quicksand-Medium.ttf */; };
 		B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */; };
 		B33259172225803900BCF32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33259162225803900BCF32F /* AppDelegate.swift */; };
 		B33259192225803900BCF32F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33259182225803900BCF32F /* ViewController.swift */; };
@@ -21,6 +20,7 @@
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
 		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
 		B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */; };
+		B38912172269D8EB001A92A9 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */; };
 		B393CAF7222AA47B004B028E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393CAF6222AA47B004B028E /* Utility.swift */; };
 		B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */; };
 		B3B8682E2265F451004D2365 /* OtherDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8682D2265F451004D2365 /* OtherDetailTableViewCell.swift */; };
@@ -31,7 +31,6 @@
 /* Begin PBXFileReference section */
 		B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungViewController.swift; sourceTree = "<group>"; };
 		B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungTableViewCell.swift; sourceTree = "<group>"; };
-		B33067412264E44700B23FD4 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../../../../../../Downloads/Quicksand-Medium.ttf/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		B33259132225803900BCF32F /* a_simple_coffee_guide_endversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a_simple_coffee_guide_endversion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33259162225803900BCF32F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B33259182225803900BCF32F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
 		B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
+		B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../Library/Fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		B393CAF6222AA47B004B028E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Staatliches-Regular.ttf"; sourceTree = "<group>"; };
 		B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */,
-				B33067412264E44700B23FD4 /* Quicksand-Medium.ttf */,
+				B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -213,10 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */,
-				B33067422264E44700B23FD4 /* Quicksand-Medium.ttf in Resources */,
 				B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */,
 				B332591E2225803A00BCF32F /* Assets.xcassets in Resources */,
 				B332591C2225803900BCF32F /* Main.storyboard in Resources */,
+				B38912172269D8EB001A92A9 /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
