@@ -410,8 +410,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="detailImageView" destination="UeQ-nb-6vi" id="n2O-gr-I2X"/>
-                                            <outlet property="otherDetailLabel" destination="BE8-z8-5rZ" id="Q8L-2a-CBx"/>
+                                            <outlet property="icon" destination="UeQ-nb-6vi" id="6u8-31-3xe"/>
+                                            <outlet property="otherDetailLabel" destination="BE8-z8-5rZ" id="pqx-bS-8zS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -57,19 +57,19 @@ extension OtherDetailViewController: UITableViewDataSource {
         
         switch passedDict["Name"] as? String {
         case "Storage":
-            cell.detailImageView.image = UIImage(named: "Storage_Icon")
+            cell.icon.image = UIImage(named: "Storage_Icon")
         case "Coffee water":
-            cell.detailImageView.image = UIImage(named: "Water_Icon")
+            cell.icon.image = UIImage(named: "Water_Icon")
         case "Health":
-            cell.detailImageView.image = UIImage(named: "Health_Icon")
+            cell.icon.image = UIImage(named: "Health_Icon")
         case "History of Coffee":
-            cell.detailImageView.image = UIImage(named: "History_Icon")
+            cell.icon.image = UIImage(named: "History_Icon")
         case "Fabrication":
-            cell.detailImageView.image = UIImage(named: "Fabrication_Icon")
+            cell.icon.image = UIImage(named: "Fabrication_Icon")
         case "Regions":
-            cell.detailImageView.image = UIImage(named: "Region_Icon")
+            cell.icon.image = UIImage(named: "Region_Icon")
         default:
-            cell.detailImageView.image = UIImage(named: "Coffeebean_Icon")
+            cell.icon.image = UIImage(named: "Coffeebean_Icon")
         }
         return cell
     }
