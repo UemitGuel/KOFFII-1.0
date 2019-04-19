@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 struct Brewing {
     let name : String
     let imageName : String

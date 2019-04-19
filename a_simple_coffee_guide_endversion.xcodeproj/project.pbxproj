@@ -23,6 +23,8 @@
 		B38912172269D8EB001A92A9 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */; };
 		B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38912182269D933001A92A9 /* OtherDetailTableViewCell.swift */; };
 		B389121B2269E37B001A92A9 /* BrewingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389121A2269E37B001A92A9 /* BrewingModel.swift */; };
+		B389121F226A02EB001A92A9 /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389121E226A02EB001A92A9 /* KnowledgeModel.swift */; };
+		B3891221226A133F001A92A9 /* ComplainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3891220226A133F001A92A9 /* ComplainModel.swift */; };
 		B393CAF7222AA47B004B028E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393CAF6222AA47B004B028E /* Utility.swift */; };
 		B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */; };
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
@@ -46,7 +48,9 @@
 		B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../Library/Fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		B38912182269D933001A92A9 /* OtherDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailTableViewCell.swift; sourceTree = "<group>"; };
-		B389121A2269E37B001A92A9 /* BrewingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewingModel.swift; sourceTree = "<group>"; };
+		B389121A2269E37B001A92A9 /* BrewingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BrewingModel.swift; path = ../Brewing/BrewingModel.swift; sourceTree = "<group>"; };
+		B389121E226A02EB001A92A9 /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
+		B3891220226A133F001A92A9 /* ComplainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainModel.swift; sourceTree = "<group>"; };
 		B393CAF6222AA47B004B028E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Staatliches-Regular.ttf"; sourceTree = "<group>"; };
 		B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 		B33259152225803900BCF32F /* a_simple_coffee_guide_endversion */ = {
 			isa = PBXGroup;
 			children = (
+				B389121D226A02C8001A92A9 /* New Group */,
 				B393CAF8222AD1AF004B028E /* Font */,
 				B33259162225803900BCF32F /* AppDelegate.swift */,
 				B33259182225803900BCF32F /* ViewController.swift */,
@@ -120,6 +125,16 @@
 			path = Knowledge;
 			sourceTree = "<group>";
 		};
+		B389121D226A02C8001A92A9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B389121A2269E37B001A92A9 /* BrewingModel.swift */,
+				B389121E226A02EB001A92A9 /* KnowledgeModel.swift */,
+				B3891220226A133F001A92A9 /* ComplainModel.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B393CAF8222AD1AF004B028E /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +167,6 @@
 			children = (
 				B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */,
 				B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */,
-				B389121A2269E37B001A92A9 /* BrewingModel.swift */,
 			);
 			path = Brewing;
 			sourceTree = "<group>";
@@ -230,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B389121F226A02EB001A92A9 /* KnowledgeModel.swift in Sources */,
 				B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */,
 				B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */,
 				B3325929222580B800BCF32F /* PageViewController.swift in Sources */,
@@ -243,6 +258,7 @@
 				B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */,
 				B33259172225803900BCF32F /* AppDelegate.swift in Sources */,
 				B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */,
+				B3891221226A133F001A92A9 /* ComplainModel.swift in Sources */,
 				B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */,
 				B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */,
 			);

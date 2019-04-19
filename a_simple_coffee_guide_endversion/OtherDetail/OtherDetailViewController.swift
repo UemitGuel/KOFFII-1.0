@@ -12,7 +12,7 @@ class OtherDetailViewController: UIViewController {
 
     // let/var
     
-    var passedDict = [String : Any]()
+    var passedKnowledge : Knowledge = Knowledge(name: "", imageName: "", tips:[""])
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -26,10 +26,10 @@ class OtherDetailViewController: UIViewController {
         tableView.delegate = self
         
         // Setting Image and Name
-        imageView.image = passedDict["Image"] as? UIImage
+        imageView.image = UIImage(named: passedKnowledge.imageName)
         imageView.layer.cornerRadius = 8
         
-        self.title = passedDict["Name"] as? String
+        self.title = passedKnowledge.name
         
 
         // Do any additional setup after loading the view.
@@ -51,11 +51,11 @@ class OtherDetailViewController: UIViewController {
 extension OtherDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OtherDetailTableViewCell", for: indexPath) as! OtherDetailTableViewCell
-        let arrayOfTips = passedDict["Tips"] as! [String]
+        let arrayOfTips = passedKnowledge.tips
         cell.otherDetailLabel.text = arrayOfTips[indexPath.row]
         
         
-        switch passedDict["Name"] as? String {
+        switch passedKnowledge.name {
         case "Storage":
             cell.icon.image = UIImage(named: "Storage_Icon")
         case "Coffee water":
@@ -75,7 +75,7 @@ extension OtherDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let arrayOfTips = passedDict["Tips"] as! [String]
+        let arrayOfTips = passedKnowledge.tips
         return arrayOfTips.count
         
     }

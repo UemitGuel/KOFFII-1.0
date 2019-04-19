@@ -16,13 +16,12 @@ class ComplainViewController: UIViewController {
     
     
     // let var
-    var complainDict = [String: Any]()
-    var passedDict = [String : Any]()
+    var complain = Complain(complain: "", improvements: [""])
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        complainLabel.text = complainDict["Complain"] as? String
+        complainLabel.text = complain.complain
         
         complainTableView.dataSource = self
         
@@ -38,14 +37,14 @@ class ComplainViewController: UIViewController {
 
 extension ComplainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let arrayOfImprovements = complainDict["Improvements"] as! [String]
+        let arrayOfImprovements = complain.improvements
         return arrayOfImprovements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ComplainTableViewCell", for: indexPath) as! ComplainTableViewCell
         
-        let arrayOfImprovements = complainDict["Improvements"] as! [String]
+        let arrayOfImprovements = complain.improvements
         cell.complainDetailLabel.text = arrayOfImprovements[indexPath.row]
         
         
