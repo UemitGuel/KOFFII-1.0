@@ -16,7 +16,7 @@ class KnowledgeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
+//        navigationController?.setNavigationBarHidden(true, animated: false)
         
         knowledges = [
             Knowledge(name: "Storage", imageName: "Storage", tips: ["You should use pre-ground coffee within 2 weeks because it loses quickly its aroma", "Store your coffee in a dark, dry and cool place", "Use a package with an aroma valve, which allows gases from the coffee to escape without air entering", "Don´t store your coffee in the fridge, because it can easily absorb moisture and foreign aromas"]),
@@ -32,12 +32,12 @@ class KnowledgeViewController: UIViewController {
     
         }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//        self.navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//    }
+//    
  
     
 }

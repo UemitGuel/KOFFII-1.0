@@ -21,10 +21,11 @@ class ZubereitungViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        
+        self.title = "Brewing"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.topItem?.title = "Brewing"
+
+    
         brewings = [
             Brewing(name: "Pour over", imageName: "Handfilter", quantity: "32g/500ml", temperatur: "96°", time: "3-4min", tips: ["Nothing fancy here — just a good, solid technique", "Choose a medium grinding degree. Even extraction will help the coffee fully develop its aroma", "The ideal water temperature is 92-96°. Beside measuring temperature, you can just rest the boiling water for a minute", "After placing the paper filter, rinse it with boiled water to remove the slight taste of the paper filter and preheat the coffee pot. Pour the water out again", "For the last step of the preparation put the grounded coffee in the filter. Recommended are 32g coffee (about 3 full heaped tablespoons) per 500 ml water", "And now, Showtime: Start pouring water starting at the outer edge and move slowly in circular movements to the center until all the coffee powder is covered. As hot water hits the coffee, Co2 will be released and you will see the coffee rise up in masse - this is called blooming", "After 30 seconds of waiting and inhaling the coffee smell ( isn´t it normal? ) pour water into the filter just as you did in the last step. After, just add water in the middle to keep the water level", "Enjoy your coffee :)"]),
             Brewing(name: "Bialetti", imageName: "Espressokocher", quantity: "Fill completely", temperatur: "medium heat", time: "-", tips: ["The Italian way", "Choose a medium grinding degree (slightly finer than for the pour over)", "Fill the bottom half of your Moka pot with boiled water, then fill the pot´s filter basket with the grounded coffee and shake it a bit for even distribution. Put everything together and place the pot on a stove", "Use medium to high heat, but be careful. If the temperature is too high the coffee will burn and lead to a bitter aftertaste", "Take the coffee off the stove when you hear a hissing sound and see coffee coming out continuously from the upper part. The residual heat will be enough, just wait a bit until there is no more coffee coming out", "Enjoy your coffee :)" ]),
@@ -38,12 +39,12 @@ class ZubereitungViewController: UIViewController {
   
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+//    }
     
 }
 
