@@ -23,7 +23,10 @@ class ZubereitungViewController: UIViewController {
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search.."
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.searchBar.backgroundColor = .white
+        
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.hidesNavigationBarDuringPresentation = true
@@ -32,7 +35,6 @@ class ZubereitungViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        self.title = "Brewing"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.topItem?.title = "Brewing"
 
