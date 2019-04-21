@@ -89,17 +89,17 @@ class DetailViewController: UIViewController {
         
         }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.setNavigationBarHidden(false, animated: true)
-
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = true
+//        navigationController?.navigationBar.tintColor = .white
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//
+//    }
     
      //Complain Buttons Tapped
     

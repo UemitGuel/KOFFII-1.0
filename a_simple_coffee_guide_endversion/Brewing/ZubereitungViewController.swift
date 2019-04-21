@@ -12,11 +12,22 @@ class ZubereitungViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
     var brewings = [Brewing]()
+    var filteredBrewings = [Brewing]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Candies"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -45,6 +56,22 @@ class ZubereitungViewController: UIViewController {
 //        self.navigationController?.navigationBar.prefersLargeTitles = true
 //        navigationController?.setNavigationBarHidden(false, animated: false)
 //    }
+    
+    // MARK: - Private instance methods
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredBrewings = brewings.filter({( brewing : Brewing) -> Bool in
+            return brewing.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+
     
 }
 
@@ -83,3 +110,10 @@ extension ZubereitungViewController: UITableViewDelegate {
     }
 }
 
+extension ZubereitungViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+
+    }
+}
