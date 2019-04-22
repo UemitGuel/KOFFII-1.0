@@ -39,11 +39,13 @@ class ZubereitungViewController: UIViewController {
     func setupNavBar() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search.."
+        searchController.searchBar.placeholder = "12Search.."
         navigationItem.searchController = searchController
         searchController.searchBar.searchBarStyle = .minimal
         searchController.searchBar.backgroundColor = .white
+        searchController.searchBar.tintColor = .black
         definesPresentationContext = true
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         // must together for smooth sroll
         extendedLayoutIncludesOpaqueBars = true
@@ -61,7 +63,6 @@ class ZubereitungViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavBar()
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
@@ -136,7 +137,7 @@ extension ZubereitungViewController: UITableViewDelegate {
                 brewing = brewings[indexPath.row]
                 vc.passedbrewing = brewing
             }
-            navigationController?.pushViewController(vc, animated: true)
+            parent?.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

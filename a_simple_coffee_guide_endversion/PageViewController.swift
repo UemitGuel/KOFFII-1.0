@@ -13,7 +13,7 @@ class PageViewController: UIPageViewController {
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "Zubereitung_nav"),
-            self.getViewController(withIdentifier: "Kaffeewissen"),
+            self.getViewController(withIdentifier: "Kaffeewissen_Nav"),
         ]
     }()
     
@@ -31,7 +31,9 @@ class PageViewController: UIPageViewController {
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        backButton.tintColor = UIColor.white
+        navigationItem.backBarButtonItem = backButton
         
         
         if let firstVC = pages.first {
