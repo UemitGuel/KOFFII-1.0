@@ -20,18 +20,33 @@ class ComplainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
         
         complainLabel.text = complain.complain
         
         complainTableView.dataSource = self
         
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.prefersLargeTitles = false
-        
         self.complainTableView.rowHeight = UITableView.automaticDimension
         self.complainTableView.estimatedRowHeight = 82.0; // set to whatever your "average" cell height is
 
         }
+    
+    func setupNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavBar()
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
 }
 
