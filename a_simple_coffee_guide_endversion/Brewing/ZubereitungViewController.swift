@@ -64,20 +64,34 @@ class ZubereitungViewController: UIViewController {
         tableView.reloadData()
     }
 
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+
     
 }
 
 
 extension ZubereitungViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredBrewings.count
+        }
+        
         return brewings.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrototypeCell", for: indexPath) as! ZubereitungTableViewCell
         let brewing : Brewing
         
-        brewing = brewings[indexPath.row]
+        if isFiltering() {
+            brewing = filteredBrewings[indexPath.row]
+        } else {
+            brewing = brewings[indexPath.row]
+        }
         cell.cellLabel.text = brewing.name
         cell.ImageView.image = UIImage(named: brewing.imageName)
         return cell
@@ -86,7 +100,6 @@ extension ZubereitungViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
-    
 }
 
 extension ZubereitungViewController: UITableViewDelegate {
@@ -95,8 +108,13 @@ extension ZubereitungViewController: UITableViewDelegate {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             let brewing : Brewing
-            brewing = brewings[indexPath.row]
-            vc.passedbrewing = brewing
+            if isFiltering() {
+                brewing = filteredBrewings[indexPath.row]
+                vc.passedbrewing = brewing
+            } else {
+                brewing = brewings[indexPath.row]
+                vc.passedbrewing = brewing
+            }
             navigationController?.pushViewController(vc, animated: true)
         }
     }

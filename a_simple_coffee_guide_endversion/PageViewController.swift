@@ -10,9 +10,6 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    let searchController = UISearchController(searchResultsController: nil)
-
-    
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "Zubereitung_nav"),
@@ -26,7 +23,6 @@ class PageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.searchController = searchController
         
         self.dataSource = self
         self.delegate   = self
