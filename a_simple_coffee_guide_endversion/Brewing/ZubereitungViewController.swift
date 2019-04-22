@@ -19,24 +19,10 @@ class ZubereitungViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setup the Search Controller
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search.."
-        searchController.searchBar.searchBarStyle = .minimal
-        searchController.searchBar.backgroundColor = .white
-        
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
-        searchController.hidesNavigationBarDuringPresentation = true
-        searchController.dimsBackgroundDuringPresentation = false
+        setupNavBar()
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "Brewing"
 
     
         brewings = [
@@ -48,16 +34,20 @@ class ZubereitungViewController: UIViewController {
             Brewing(name: "Espresso", imageName: "Espresso", quantity: "18g/40ml", temperatur: "93-95°", time: "30sec", tips: ["The champions league of coffee making", "Choose a fine grinding degree", "Make sure the strainer holder is clean", "Put the ground coffee in the strainer holder and gently distribute it with your fingers", "Position your portafilter on a flat surface. Then use your tamper to evenly apply 15 - 20 kg pressure downward - that means you don´t have to turn green for this task, just enough to seal the coffee evenly. Give the tamper a soft spin in the end, so the ground gets an extra extraction", "Place the portafilter in the group head and you are ready to start your shot", "For the optimal experience, you should preheat your cup before putting it under the carrier opening. A good espresso should run though in 25 - 35 seconds", "Enjoy your espresso :)"]),
             Brewing(name: "Turkish Mocha", imageName: "Turkish Mocha", quantity: "1 to 10 ratio", temperatur: "60°", time: "2min", tips: ["The most original way to make coffee", "Put 1 heavily heaped tsp of ground coffee (Mocha powder), with 1 cup of water and 1 tsp of sugar in a Turkish mocha pot, the so-called Cezva, stir it well and let the water boil", "Be careful: Remove the Cezva from the heat when the foam begins to rise towards the rim and before the coffee boils", "Without filtering, put the mocha and coffee grounds into the preheated cup", "Often the coffee is served with a small candy like baklava or other Turkish Delights", "Enjoy your mocha :) - p.s. make sure you avoid drinking the coffee grounds"])
         ]
-        
-  
-        
     }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-//    }
+    
+    func setupNavBar() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search.."
+        navigationItem.searchController = searchController
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.searchBar.backgroundColor = .white
+        definesPresentationContext = true
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.topItem?.title = "Brewing"
+    }
     
     // MARK: - Private instance methods
     

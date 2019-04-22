@@ -15,7 +15,7 @@ class PageViewController: UIPageViewController {
     
     fileprivate lazy var pages: [UIViewController] = {
         return [
-            self.getViewController(withIdentifier: "Zubereitung"),
+            self.getViewController(withIdentifier: "Zubereitung_nav"),
             self.getViewController(withIdentifier: "Kaffeewissen"),
         ]
     }()
