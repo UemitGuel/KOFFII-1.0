@@ -45,7 +45,6 @@ class ZubereitungViewController: UIViewController {
         searchController.searchBar.backgroundColor = .white
         searchController.searchBar.tintColor = .black
         definesPresentationContext = true
-        navigationItem.hidesSearchBarWhenScrolling = false
         
         // must together for smooth sroll
         extendedLayoutIncludesOpaqueBars = true
