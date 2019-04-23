@@ -490,7 +490,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-8i-Kio">
-                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="KnowledgeTableViewCell" rowHeight="180" id="V7W-h9-Gua" customClass="KnowledgeTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -531,7 +531,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aU1-8i-Kio" firstAttribute="trailing" secondItem="lBa-Et-34k" secondAttribute="trailing" id="5yE-JT-qTK"/>
-                            <constraint firstItem="aU1-8i-Kio" firstAttribute="top" secondItem="lBa-Et-34k" secondAttribute="top" id="CSe-HQ-udv"/>
+                            <constraint firstItem="aU1-8i-Kio" firstAttribute="top" secondItem="2Ec-GO-kM0" secondAttribute="top" id="CSe-HQ-udv"/>
                             <constraint firstItem="lBa-Et-34k" firstAttribute="bottom" secondItem="aU1-8i-Kio" secondAttribute="bottom" id="M3o-FU-B7o"/>
                             <constraint firstItem="aU1-8i-Kio" firstAttribute="leading" secondItem="lBa-Et-34k" secondAttribute="leading" id="aXX-nn-2l7"/>
                         </constraints>
@@ -552,7 +552,7 @@
                 <navigationController storyboardIdentifier="Zubereitung_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ocs-RE-cN9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4dU-AV-XMq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -580,7 +580,7 @@
                 <navigationController storyboardIdentifier="Kaffeewissen_Nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V5f-gh-6Rj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="stL-16-N21">
-                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="25"/>
@@ -628,7 +628,7 @@
                 <navigationController storyboardIdentifier="DetailViewController_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qh-M2-bKa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3fm-4a-zSH">
-                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>

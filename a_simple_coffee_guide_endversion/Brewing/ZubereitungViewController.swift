@@ -39,7 +39,7 @@ class ZubereitungViewController: UIViewController {
     func setupSearch() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "12Search.."
+        searchController.searchBar.placeholder = "Search.."
         navigationItem.searchController = searchController
         searchController.searchBar.searchBarStyle = .minimal
         searchController.searchBar.backgroundColor = .white
