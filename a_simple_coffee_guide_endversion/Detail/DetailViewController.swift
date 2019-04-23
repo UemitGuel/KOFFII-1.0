@@ -39,10 +39,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         navigationController?.setNavigationBarHidden(true, animated: false)
         setupNavBar()
-        navigationController?.setNavigationBarHidden(false, animated: true)
-
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         
         complains = [
             Complain(complain: "coffee too bitter?", improvements: ["If your grinding degree is too fine, the coffee extraction time will take too long and therefore your coffee can taste too bitter. Try a coarser grinding degree", "Make sure you don`t use boiling water for making your coffee, because it can lead to a bitter taste","Robusta coffee usually tastes darker and more bitter than Arabica beans", "For financial reasons, parts of the coffee industry are roasting the beans shortly at very high temperatures. This leads to beans which are burned outside, but still raw from the inside. Check the quality of your beans if you think your coffee is too bitter"]),

@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" title="Brewing" largeTitleDisplayMode="always" id="d1a-VY-ipY"/>
                     <connections>
                         <outlet property="tableView" destination="CWY-ae-QFm" id="p1P-dR-HTI"/>
-                        <segue destination="vHC-In-Rre" kind="show" identifier="toDetailViewSegue" id="REJ-dV-mpg"/>
+                        <segue destination="9qh-M2-bKa" kind="show" identifier="toDetailViewSegue" id="REJ-dV-mpg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yl-rq-VEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,6 +306,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yok-Q8-Cyg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yKf-bD-EZc"/>
                     <connections>
                         <outlet property="brewingLabel" destination="hBh-DB-P7n" id="K25-wg-5RS"/>
                         <outlet property="detailImageView" destination="YAc-6p-mzz" id="6Kr-n2-S9t"/>
@@ -322,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD4-qE-fER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4929" y="1679"/>
+            <point key="canvasLocation" x="5868" y="1678.1109445277364"/>
         </scene>
         <!--Other Detail View Controller-->
         <scene sceneID="JOh-M1-NNL">
@@ -401,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LcG-i6-h2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8241" y="1639"/>
+            <point key="canvasLocation" x="9180" y="1638.5307346326838"/>
         </scene>
         <!--Complain View Controller-->
         <scene sceneID="IOV-Ea-pXL">
@@ -412,13 +413,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-0m-KZ1">
-                                <rect key="frame" x="16" y="80" width="343" height="50"/>
+                                <rect key="frame" x="16" y="132" width="343" height="50"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbY-rA-VPd">
-                                <rect key="frame" x="16" y="138" width="343" height="521"/>
+                                <rect key="frame" x="16" y="190" width="343" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComplainTableViewCell" rowHeight="125" id="4xV-kU-EdM" customClass="ComplainTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -480,7 +481,7 @@
             </objects>
             <point key="canvasLocation" x="4928.8000000000002" y="2433.7331334332835"/>
         </scene>
-        <!--Knowledge View Controller-->
+        <!--Knowledge-->
         <scene sceneID="9Ej-0Z-p9C">
             <objects>
                 <viewController storyboardIdentifier="Kaffeewissen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tZB-DD-Qcw" customClass="KnowledgeViewController" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,7 +490,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-8i-Kio">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="KnowledgeTableViewCell" rowHeight="180" id="V7W-h9-Gua" customClass="KnowledgeTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -536,7 +537,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lBa-Et-34k"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M3W-Uk-7Zo"/>
+                    <navigationItem key="navigationItem" title="Knowledge" largeTitleDisplayMode="always" id="M3W-Uk-7Zo"/>
                     <connections>
                         <outlet property="tableview" destination="aU1-8i-Kio" id="Td8-7W-JA2"/>
                     </connections>
@@ -550,8 +551,8 @@
             <objects>
                 <navigationController storyboardIdentifier="Zubereitung_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ocs-RE-cN9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4dU-AV-XMq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4dU-AV-XMq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -578,11 +579,15 @@
             <objects>
                 <navigationController storyboardIdentifier="Kaffeewissen_Nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V5f-gh-6Rj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="stL-16-N21">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="stL-16-N21">
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="25"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -600,9 +605,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="USQ-o9-8K6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1jL-on-KYd">
+                    <navigationBar key="navigationBar" hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1jL-on-KYd">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -612,6 +621,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVp-Pc-fgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5868" y="160.56971514242881"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RTJ-lb-jv7">
+            <objects>
+                <navigationController storyboardIdentifier="DetailViewController_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qh-M2-bKa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3fm-4a-zSH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
+                            <color key="textColor" red="0.68388712409999997" green="0.1115860566" blue="0.15763717890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vHC-In-Rre" kind="relationship" relationship="rootViewController" id="OJC-XN-qqN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7I-OY-4aL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4928.8000000000002" y="1678.1109445277364"/>
         </scene>
     </scenes>
     <resources>

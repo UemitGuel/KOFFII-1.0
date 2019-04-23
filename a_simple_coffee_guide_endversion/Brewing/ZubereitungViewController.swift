@@ -19,7 +19,7 @@ class ZubereitungViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar()
+        setupSearch()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -36,7 +36,7 @@ class ZubereitungViewController: UIViewController {
         ]
     }
     
-    func setupNavBar() {
+    func setupSearch() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "12Search.."
@@ -45,29 +45,6 @@ class ZubereitungViewController: UIViewController {
         searchController.searchBar.backgroundColor = .white
         searchController.searchBar.tintColor = .black
         definesPresentationContext = true
-        
-        // must together for smooth sroll
-        extendedLayoutIncludesOpaqueBars = true
-        navigationController?.navigationBar.isTranslucent = false
-        
-        navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "Brewing"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let customFont = UIFont(name: "Staatliches-Regular", size: 40)
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: - Private instance methods
