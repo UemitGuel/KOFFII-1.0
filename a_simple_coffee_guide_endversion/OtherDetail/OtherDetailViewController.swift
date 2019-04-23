@@ -22,8 +22,9 @@ class OtherDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setupNavBar()
         navigationController?.setNavigationBarHidden(false, animated: true)
+
+        setupNavBar()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -40,8 +41,8 @@ class OtherDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         setupNavBar()
-        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

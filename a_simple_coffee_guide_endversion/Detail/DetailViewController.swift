@@ -39,11 +39,12 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("load")
         
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        setupNavBar()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+        setupNavBar()
         
         complains = [
             Complain(complain: "coffee too bitter?", improvements: ["If your grinding degree is too fine, the coffee extraction time will take too long and therefore your coffee can taste too bitter. Try a coarser grinding degree", "Make sure you don`t use boiling water for making your coffee, because it can lead to a bitter taste","Robusta coffee usually tastes darker and more bitter than Arabica beans", "For financial reasons, parts of the coffee industry are roasting the beans shortly at very high temperatures. This leads to beans which are burned outside, but still raw from the inside. Check the quality of your beans if you think your coffee is too bitter"]),
@@ -56,7 +57,7 @@ class DetailViewController: UIViewController {
         detailImageView.layer.cornerRadius = 8
         //chosenPreparationLabel.text = passedDict["Name"] as? String
         
-
+        
         self.title = passedbrewing.name
         
         quantityLabel.text = passedbrewing.quantity
@@ -84,16 +85,16 @@ class DetailViewController: UIViewController {
         }
     
     func setupNavBar() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        
         title = passedbrewing.name
         
         let customFont = UIFont(name: "Staatliches-Regular", size: 40)
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
             
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         backButton.tintColor = UIColor.black
@@ -107,13 +108,16 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("appear")
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         setupNavBar()
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        title = ""
+        print("disappear")
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     

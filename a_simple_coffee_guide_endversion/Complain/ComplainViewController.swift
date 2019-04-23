@@ -20,6 +20,9 @@ class ComplainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("load_complain")
+        title = ""
+        navigationController?.setNavigationBarHidden(false, animated: true)
         setupNavBar()
         
         complainLabel.text = complain.complain
@@ -33,7 +36,6 @@ class ComplainViewController: UIViewController {
     
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
 
     }
     
@@ -43,12 +45,16 @@ class ComplainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavBar()
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        print("appear_complain")
+
+        setupNavBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("disappear_complain")
+
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
