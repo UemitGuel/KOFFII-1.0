@@ -12,19 +12,19 @@ class ZubereitungViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
     var brewings = [Brewing]()
+    var filteredBrewings = [Brewing]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearch()
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        
+
+    
         brewings = [
             Brewing(name: "Pour over", imageName: "Handfilter", quantity: "32g/500ml", temperatur: "96°", time: "3-4min", tips: ["Nothing fancy here — just a good, solid technique", "Choose a medium grinding degree. Even extraction will help the coffee fully develop its aroma", "The ideal water temperature is 92-96°. Beside measuring temperature, you can just rest the boiling water for a minute", "After placing the paper filter, rinse it with boiled water to remove the slight taste of the paper filter and preheat the coffee pot. Pour the water out again", "For the last step of the preparation put the grounded coffee in the filter. Recommended are 32g coffee (about 3 full heaped tablespoons) per 500 ml water", "And now, Showtime: Start pouring water starting at the outer edge and move slowly in circular movements to the center until all the coffee powder is covered. As hot water hits the coffee, Co2 will be released and you will see the coffee rise up in masse - this is called blooming", "After 30 seconds of waiting and inhaling the coffee smell ( isn´t it normal? ) pour water into the filter just as you did in the last step. After, just add water in the middle to keep the water level", "Enjoy your coffee :)"]),
             Brewing(name: "Bialetti", imageName: "Espressokocher", quantity: "Fill completely", temperatur: "medium heat", time: "-", tips: ["The Italian way", "Choose a medium grinding degree (slightly finer than for the pour over)", "Fill the bottom half of your Moka pot with boiled water, then fill the pot´s filter basket with the grounded coffee and shake it a bit for even distribution. Put everything together and place the pot on a stove", "Use medium to high heat, but be careful. If the temperature is too high the coffee will burn and lead to a bitter aftertaste", "Take the coffee off the stove when you hear a hissing sound and see coffee coming out continuously from the upper part. The residual heat will be enough, just wait a bit until there is no more coffee coming out", "Enjoy your coffee :)" ]),
@@ -34,30 +34,62 @@ class ZubereitungViewController: UIViewController {
             Brewing(name: "Espresso", imageName: "Espresso", quantity: "18g/40ml", temperatur: "93-95°", time: "30sec", tips: ["The champions league of coffee making", "Choose a fine grinding degree", "Make sure the strainer holder is clean", "Put the ground coffee in the strainer holder and gently distribute it with your fingers", "Position your portafilter on a flat surface. Then use your tamper to evenly apply 15 - 20 kg pressure downward - that means you don´t have to turn green for this task, just enough to seal the coffee evenly. Give the tamper a soft spin in the end, so the ground gets an extra extraction", "Place the portafilter in the group head and you are ready to start your shot", "For the optimal experience, you should preheat your cup before putting it under the carrier opening. A good espresso should run though in 25 - 35 seconds", "Enjoy your espresso :)"]),
             Brewing(name: "Turkish Mocha", imageName: "Turkish Mocha", quantity: "1 to 10 ratio", temperatur: "60°", time: "2min", tips: ["The most original way to make coffee", "Put 1 heavily heaped tsp of ground coffee (Mocha powder), with 1 cup of water and 1 tsp of sugar in a Turkish mocha pot, the so-called Cezva, stir it well and let the water boil", "Be careful: Remove the Cezva from the heat when the foam begins to rise towards the rim and before the coffee boils", "Without filtering, put the mocha and coffee grounds into the preheated cup", "Often the coffee is served with a small candy like baklava or other Turkish Delights", "Enjoy your mocha :) - p.s. make sure you avoid drinking the coffee grounds"])
         ]
-        
-  
-        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.setNavigationBarHidden(true, animated: false)
+    func setupSearch() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "12Search.."
+        navigationItem.searchController = searchController
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.searchBar.backgroundColor = .white
+        searchController.searchBar.tintColor = .black
+        definesPresentationContext = true
     }
+    
+    // MARK: - Private instance methods
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredBrewings = brewings.filter({( brewing : Brewing) -> Bool in
+            return brewing.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+
     
 }
 
 
 extension ZubereitungViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredBrewings.count
+        }
+        
         return brewings.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrototypeCell", for: indexPath) as! ZubereitungTableViewCell
         let brewing : Brewing
         
-        brewing = brewings[indexPath.row]
+        if isFiltering() {
+            brewing = filteredBrewings[indexPath.row]
+        } else {
+            brewing = brewings[indexPath.row]
+        }
         cell.cellLabel.text = brewing.name
         cell.ImageView.image = UIImage(named: brewing.imageName)
         return cell
@@ -66,7 +98,6 @@ extension ZubereitungViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
-    
 }
 
 extension ZubereitungViewController: UITableViewDelegate {
@@ -75,10 +106,22 @@ extension ZubereitungViewController: UITableViewDelegate {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             let brewing : Brewing
-            brewing = brewings[indexPath.row]
-            vc.passedbrewing = brewing
-            navigationController?.pushViewController(vc, animated: true)
+            if isFiltering() {
+                brewing = filteredBrewings[indexPath.row]
+                vc.passedbrewing = brewing
+            } else {
+                brewing = brewings[indexPath.row]
+                vc.passedbrewing = brewing
+            }
+            parent?.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
 
+extension ZubereitungViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+
+    }
+}

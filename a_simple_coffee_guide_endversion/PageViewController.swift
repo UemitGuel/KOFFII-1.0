@@ -10,12 +10,10 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    
-    
     fileprivate lazy var pages: [UIViewController] = {
         return [
-            self.getViewController(withIdentifier: "Zubereitung"),
-            self.getViewController(withIdentifier: "Kaffeewissen"),
+            self.getViewController(withIdentifier: "Zubereitung_nav"),
+            self.getViewController(withIdentifier: "Kaffeewissen_Nav"),
         ]
     }()
     
@@ -25,6 +23,7 @@ class PageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.dataSource = self
         self.delegate   = self
         
@@ -32,7 +31,9 @@ class PageViewController: UIPageViewController {
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        backButton.tintColor = UIColor.white
+        navigationItem.backBarButtonItem = backButton
         
         
         if let firstVC = pages.first {
@@ -47,7 +48,7 @@ extension PageViewController: UIPageViewControllerDataSource
 {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
         
         let previousIndex = viewControllerIndex - 1
         
@@ -60,7 +61,7 @@ extension PageViewController: UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
         
         let nextIndex = viewControllerIndex + 1
         

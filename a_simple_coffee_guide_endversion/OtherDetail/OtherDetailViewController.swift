@@ -21,6 +21,9 @@ class OtherDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        setupNavBar()
+        navigationController?.setNavigationBarHidden(false, animated: true)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,17 +38,36 @@ class OtherDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavBar()
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    func setupNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        title = passedKnowledge.name
+        
+        let customFont = UIFont(name: "Staatliches-Regular", size: 40)
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
+        }
     }
-
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
 }
 
 extension OtherDetailViewController: UITableViewDataSource {
@@ -53,6 +75,8 @@ extension OtherDetailViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OtherDetailTableViewCell", for: indexPath) as! OtherDetailTableViewCell
         let arrayOfTips = passedKnowledge.tips
         cell.otherDetailLabel.text = arrayOfTips[indexPath.row]
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+
         
         
         switch passedKnowledge.name {
