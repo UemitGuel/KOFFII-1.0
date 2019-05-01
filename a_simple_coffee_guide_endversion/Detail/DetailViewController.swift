@@ -18,6 +18,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var secondSeparator: UIView!
     @IBOutlet weak var thirdSeparator: UIView!
     
+    @IBOutlet weak var quantityLabelAbove: UILabel!
+    @IBOutlet weak var temperatureLabelAbove: UILabel!
+    @IBOutlet weak var brewingLabelAbove: UILabel!
     
     
     @IBOutlet weak var quantityLabel: UILabel!
@@ -103,8 +106,14 @@ class DetailViewController: UIViewController {
     func setupLanguage() {
         if ZubereitungViewController.GlobalVariable.EN_DE == "EN" {
             setupEN()
+            quantityLabelAbove.text = "Quantity"
+            temperatureLabelAbove.text = "Temperature"
+            brewingLabelAbove.text = "Brewing Time"
         } else {
             setupDE()
+            quantityLabelAbove.text = "Menge"
+            temperatureLabelAbove.text = "Temperatur"
+            brewingLabelAbove.text = "Zeit"
         }
     }
     

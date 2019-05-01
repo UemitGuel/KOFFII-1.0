@@ -317,14 +317,17 @@
                     <navigationItem key="navigationItem" id="yKf-bD-EZc"/>
                     <connections>
                         <outlet property="brewingLabel" destination="hBh-DB-P7n" id="K25-wg-5RS"/>
+                        <outlet property="brewingLabelAbove" destination="w69-wq-O8x" id="du3-Xx-44J"/>
                         <outlet property="detailImageView" destination="YAc-6p-mzz" id="6Kr-n2-S9t"/>
                         <outlet property="firstSeparator" destination="CAi-c8-0rG" id="LRX-ex-eoV"/>
                         <outlet property="infoTableView" destination="cOf-hK-u0e" id="D8S-en-fh7"/>
                         <outlet property="leftComplainButton" destination="fBO-dv-8Nb" id="gbk-z9-vxL"/>
                         <outlet property="quantityLabel" destination="fDU-yl-QOw" id="kde-vf-240"/>
+                        <outlet property="quantityLabelAbove" destination="PjE-pY-v71" id="jVQ-Ef-ATC"/>
                         <outlet property="rightComplainButton" destination="Ny0-PJ-RQ6" id="nBh-sP-MUq"/>
                         <outlet property="secondSeparator" destination="hdK-i4-ECq" id="cmc-7o-mQm"/>
                         <outlet property="temperatureLabel" destination="NJA-Ef-SlE" id="Z7X-4j-SHF"/>
+                        <outlet property="temperatureLabelAbove" destination="fqS-Qx-Nzr" id="sa4-uw-1C4"/>
                         <outlet property="thirdSeparator" destination="B3Z-I1-YjG" id="fTe-Ph-DZ5"/>
                         <segue destination="d4H-La-5ez" kind="show" id="hAy-lc-h2f"/>
                     </connections>
@@ -421,13 +424,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-0m-KZ1">
-                                <rect key="frame" x="16" y="134" width="343" height="50"/>
+                                <rect key="frame" x="16" y="132" width="343" height="50"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbY-rA-VPd">
-                                <rect key="frame" x="16" y="192" width="343" height="467"/>
+                                <rect key="frame" x="16" y="190" width="343" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComplainTableViewCell" rowHeight="125" id="4xV-kU-EdM" customClass="ComplainTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -568,7 +571,7 @@
                 <navigationController storyboardIdentifier="Zubereitung_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ocs-RE-cN9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4dU-AV-XMq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -596,7 +599,7 @@
                 <navigationController storyboardIdentifier="Kaffeewissen_Nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V5f-gh-6Rj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="stL-16-N21">
-                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="25"/>
@@ -647,7 +650,7 @@
                 <navigationController storyboardIdentifier="DetailViewController_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qh-M2-bKa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3fm-4a-zSH">
-                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.68388712409999997" green="0.1115860566" blue="0.15763717890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
