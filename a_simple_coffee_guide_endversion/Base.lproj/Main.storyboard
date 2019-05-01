@@ -101,8 +101,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kIu-1s-B1L"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Brewing" largeTitleDisplayMode="always" id="d1a-VY-ipY"/>
+                    <navigationItem key="navigationItem" title="Brewing" largeTitleDisplayMode="always" id="d1a-VY-ipY">
+                        <barButtonItem key="rightBarButtonItem" title="DE" style="done" id="Mqd-e6-7V0">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="DE_BarButtonItemtapped:" destination="M11-KB-dup" id="HDi-94-XAL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="DE_BarButtonItem" destination="Mqd-e6-7V0" id="teH-FU-TaZ"/>
                         <outlet property="tableView" destination="CWY-ae-QFm" id="p1P-dR-HTI"/>
                         <segue destination="9qh-M2-bKa" kind="show" identifier="toDetailViewSegue" id="REJ-dV-mpg"/>
                     </connections>
@@ -413,13 +421,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-0m-KZ1">
-                                <rect key="frame" x="16" y="132" width="343" height="50"/>
+                                <rect key="frame" x="16" y="134" width="343" height="50"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbY-rA-VPd">
-                                <rect key="frame" x="16" y="190" width="343" height="469"/>
+                                <rect key="frame" x="16" y="192" width="343" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComplainTableViewCell" rowHeight="125" id="4xV-kU-EdM" customClass="ComplainTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -537,8 +545,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lBa-Et-34k"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Knowledge" largeTitleDisplayMode="always" id="M3W-Uk-7Zo"/>
+                    <navigationItem key="navigationItem" title="Knowledge" largeTitleDisplayMode="always" id="M3W-Uk-7Zo">
+                        <barButtonItem key="rightBarButtonItem" title="DE" style="done" id="aMJ-Y2-zOo">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="DE_BarButtonItemtapped:" destination="tZB-DD-Qcw" id="LWV-2Z-FYE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="DE_BarButtonItem" destination="aMJ-Y2-zOo" id="ZWc-Cg-BmA"/>
                         <outlet property="tableview" destination="aU1-8i-Kio" id="Td8-7W-JA2"/>
                     </connections>
                 </viewController>
@@ -631,7 +647,7 @@
                 <navigationController storyboardIdentifier="DetailViewController_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qh-M2-bKa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3fm-4a-zSH">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.68388712409999997" green="0.1115860566" blue="0.15763717890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
