@@ -82,7 +82,7 @@ extension OtherDetailViewController: UITableViewDataSource {
         
         switch passedKnowledge.name {
         case "Storage":
-            cell.icon.image = UIImage(named: "Storage_Icon")
+            cell.icon.image = UIImage(named: "Coffee_Storage")
         case "Coffee water":
             cell.icon.image = UIImage(named: "Water_Icon")
         case "Health":
