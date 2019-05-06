@@ -30,6 +30,12 @@ class ZubereitungViewController: UIViewController {
         tableView.delegate = self
     
         setupLanguage()
+        
+        // eliminate 1pt line
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+
+        
+        
     }
     
     func setupLanguage() {
@@ -52,6 +58,8 @@ class ZubereitungViewController: UIViewController {
             Brewing(name: "Espresso", imageName: "Espresso", quantity: "18g/40ml", temperatur: "93-95°", time: "30sec", tips: ["The champions league of coffee making", "Choose a fine grinding degree", "Make sure the strainer holder is clean", "Put the ground coffee in the strainer holder and gently distribute it with your fingers", "Position your portafilter on a flat surface. Then use your tamper to evenly apply 15 - 20 kg pressure downward - that means you don´t have to turn green for this task, just enough to seal the coffee evenly. Give the tamper a soft spin in the end, so the ground gets an extra extraction", "Place the portafilter in the group head and you are ready to start your shot", "For the optimal experience, you should preheat your cup before putting it under the carrier opening. A good espresso should run though in 25 - 35 seconds", "Enjoy your espresso :)"]),
             Brewing(name: "Turkish Mocha", imageName: "Turkish Mocha", quantity: "1 to 10 ratio", temperatur: "60°", time: "2min", tips: ["The most original way to make coffee", "Put 1 heavily heaped tsp of ground coffee (Mocha powder), with 1 cup of water and 1 tsp of sugar in a Turkish mocha pot, the so-called Cezva, stir it well and let the water boil", "Be careful: Remove the Cezva from the heat when the foam begins to rise towards the rim and before the coffee boils", "Without filtering, put the mocha and coffee grounds into the preheated cup", "Often the coffee is served with a small candy like baklava or other Turkish Delights", "Enjoy your mocha :) - p.s. make sure you avoid drinking the coffee grounds"])
         ]
+        brewings = brewings.sorted { $0.name < $1.name }
+
     }
     
     func setupDE() {
@@ -64,6 +72,7 @@ class ZubereitungViewController: UIViewController {
             Brewing(name: "Espresso", imageName: "Espresso", quantity: "18g/40ml", temperatur: "93-95°", time: "30sek", tips: ["Die Champions League der Kaffeezubereitung", "Wähle einen feineren Mahlgrad", "Vergewisser dich, dass der Siebhalter sauber ist", "Gebe den gemahlenen Kaffee in den Siebhalter und verteilen ihn mit den Fingern vorsichtig", "Positioniere den Portafilter auf einer ebenen Fläche. Dann übe mit dem Tamper 15 - 20 kg Druck gleichmäßig nach unten aus - das bedeutet nicht, dass du für diese Aufgabe zum Hulk werden musst. Nur genug Kraft, um den Kaffee gleichmäßig zu verschließen", "Positioniere den Portafilter in der Maschine", "Für ein optimales Erlebnis solltest du deine Tasse vorheizen, bevor du sie unter die Trägeröffnung stellst. Ein guter Espresso sollte in 25 - 35 Sekunden durchlaufen", "Genieße deinen Espresso :)"]),
             Brewing(name: "Türkischer Mokka", imageName: "Turkish Mocha", quantity: "1 zu 10", temperatur: "60°", time: "2min", tips: ["Die originale Art Kaffee zuzubereiten", "Gebe 1 stark gehäuften Teelöffel gemahlenen Kaffee (Mokka-Pulver) mit 1 Tasse Wasser und 1 Teelöffel Zucker in eine türkische Mokkatopf, den sogenannten Cezva, rühr alles gut um und lass das Wasser kochen", "Sei vorsichtig: Entferne den Cezva vom Herd, wenn der Schaum zum Rand hin ansteigt und der Kaffee kocht", "Ohne zu filtern, gebe den gesamten Mokka in die vorgewärmte Tasse", "Oft wird der Kaffee mit einer Kleinigkeit wie Baklava oder anderen türkischen Köstlichkeiten serviert", "Genieße deinen Mokka :) - p.s. stell sicher, dass du den Kaffeesatz nicht mittrinkst"])
         ]
+
     }
     
     @IBAction func DE_BarButtonItemtapped(_ sender: UIBarButtonItem) {

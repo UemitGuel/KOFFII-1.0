@@ -46,14 +46,12 @@ class ComplainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-        print("appear_complain")
 
         setupNavBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("disappear_complain")
 
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
