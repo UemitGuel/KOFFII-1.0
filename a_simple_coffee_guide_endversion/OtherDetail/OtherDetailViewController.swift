@@ -83,18 +83,31 @@ extension OtherDetailViewController: UITableViewDataSource {
         switch passedKnowledge.name {
         case "Storage":
             cell.icon.image = UIImage(named: "Coffee_Storage")
+        case "Lagerung":
+            cell.icon.image = UIImage(named: "Coffee_Storage")
         case "Coffee water":
+            cell.icon.image = UIImage(named: "Water_Icon")
+        case "Wasser":
             cell.icon.image = UIImage(named: "Water_Icon")
         case "Health":
             cell.icon.image = UIImage(named: "Health_Icon")
+        case "Gesundheit":
+            cell.icon.image = UIImage(named: "Health_Icon")
         case "History of Coffee":
             cell.icon.image = UIImage(named: "History_Icon")
-        case "Fabrication":
+        case "Geschichte":
+            cell.icon.image = UIImage(named: "History_Icon")
+        case "Production":
+            cell.icon.image = UIImage(named: "Fabrication_Icon")
+        case "Verarbeitung":
             cell.icon.image = UIImage(named: "Fabrication_Icon")
         case "Regions":
             cell.icon.image = UIImage(named: "Region_Icon")
+        case "Regionen":
+            cell.icon.image = UIImage(named: "Region_Icon")
         default:
             cell.icon.image = UIImage(named: "Coffeebean_Icon")
+            
         }
         return cell
     }

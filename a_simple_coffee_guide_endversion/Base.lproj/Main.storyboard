@@ -131,7 +131,6 @@
                                 <rect key="frame" x="0.0" y="-8" width="375" height="236"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="236" id="9Ax-8j-BIc"/>
-                                    <constraint firstAttribute="width" constant="375" id="DQx-78-GXB"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAi-c8-0rG">
@@ -311,6 +310,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="CAi-c8-0rG" secondAttribute="trailing" constant="32" id="Y12-CM-SGq"/>
                             <constraint firstItem="cOf-hK-u0e" firstAttribute="top" secondItem="CAi-c8-0rG" secondAttribute="bottom" id="ZeI-aB-zSw"/>
                             <constraint firstItem="1MN-7h-lMb" firstAttribute="top" secondItem="YAc-6p-mzz" secondAttribute="bottom" constant="16" id="xBH-78-kCv"/>
+                            <constraint firstItem="YAc-6p-mzz" firstAttribute="centerX" secondItem="Awu-mB-Uae" secondAttribute="centerX" id="zxh-ZY-jFR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yok-Q8-Cyg"/>
                     </view>
