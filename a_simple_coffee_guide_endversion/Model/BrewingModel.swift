@@ -16,4 +16,5 @@ struct Brewing {
     let temperatur : String
     let time : String
     let tips : [String]
+    let tipsonestring: String
 }

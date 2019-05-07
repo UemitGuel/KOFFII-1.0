@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     
     // var/let
     
-    var passedbrewing : Brewing = Brewing(name: "", imageName: "", quantity: "", temperatur: "", time: "", tips: [""])
+    var passedbrewing : Brewing = Brewing(name: "", imageName: "", quantity: "", temperatur: "", time: "", tips: [""], tipsonestring: "")
     
     var complains = [Complain]()
     

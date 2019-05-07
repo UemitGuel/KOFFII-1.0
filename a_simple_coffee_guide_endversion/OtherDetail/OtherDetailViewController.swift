@@ -12,7 +12,7 @@ class OtherDetailViewController: UIViewController {
 
     // let/var
     
-    var passedKnowledge : Knowledge = Knowledge(name: "", imageName: "", tips:[""])
+    var passedKnowledge : Knowledge = Knowledge(name: "", imageName: "", tips:[""],tipsonestring: "")
     
     @IBOutlet weak var imageView: UIImageView!
     

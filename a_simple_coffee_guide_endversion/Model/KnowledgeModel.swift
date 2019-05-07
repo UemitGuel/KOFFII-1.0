@@ -13,5 +13,6 @@ struct Knowledge {
     let name : String
     let imageName : String
     let tips : [String]
+    let tipsonestring: String
 }
 
