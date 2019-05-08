@@ -33,8 +33,6 @@ class ZubereitungViewController: UIViewController {
         
         // eliminate 1pt line
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-
-        
         
     }
     
