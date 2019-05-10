@@ -29,6 +29,7 @@
 		B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */; };
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
 		B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */; };
+		B3FBE7F92285BDD700900812 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
 		B3C57276223A9D86003DA27D /* ComplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainViewController.swift; sourceTree = "<group>"; };
 		B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainTableViewCell.swift; sourceTree = "<group>"; };
+		B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../Library/Fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */,
 				B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */,
+				B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */,
+				B3FBE7F92285BDD700900812 /* Quicksand-Bold.ttf in Resources */,
 				B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */,
 				B332591E2225803A00BCF32F /* Assets.xcassets in Resources */,
 				B332591C2225803900BCF32F /* Main.storyboard in Resources */,

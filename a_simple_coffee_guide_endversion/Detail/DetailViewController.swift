@@ -208,3 +208,9 @@ extension DetailViewController: UITableViewDataSource {
 extension DetailViewController: UITableViewDelegate {
     
 }
+
+extension UINavigationController {
+    override open var childForStatusBarHidden: UIViewController? {
+        return self.topViewController
+    }
+}
