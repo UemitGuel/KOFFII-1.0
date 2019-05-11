@@ -52,6 +52,8 @@ class KnowledgeViewController: UIViewController {
             Knowledge(name: "Storage", imageName: "Storage", tips: ["You should use pre-ground coffee within 2 weeks because it loses quickly its aroma", "Store your coffee in a dark, dry and cool place", "Use a package with an aroma valve, which allows gases from the coffee to escape without air entering", "Don´t store your coffee in the fridge, because it can easily absorb moisture and foreign aromas"], tipsonestring: "You should use pre-ground coffee within 2 weeks because it loses quickly its aroma. Store your coffee in a dark, dry and cool place. Use a package with an aroma valve, which allows gases from the coffee to escape without air entering. Don´t store your coffee in the fridge, because it can easily absorb moisture and foreign aromas")
         ]
         self.title = "Knowledge"
+        searchController.searchBar.placeholder = "Search.."
+
     }
     
     func setupDE() {
@@ -64,6 +66,8 @@ class KnowledgeViewController: UIViewController {
             Knowledge(name: "Lagerung", imageName: "Storage", tips: ["Du solltest vorgemahlenen Kaffee innerhalb von 2 Wochen verwenden, da er sein Aroma schnell verliert", "Lager deinen Kaffee an einem dunklen, trockenen und kühlen Ort", "Verwende eine Verpackung mit einem Aromaventil, damit Gase aus dem Kaffee entweichen können, ohne dass Luft eindringt", "Lager deinen Kaffee nicht im Kühlschrank, da er Feuchtigkeit und Fremdaromen leicht aufnehmen kann"], tipsonestring: "Du solltest vorgemahlenen Kaffee innerhalb von 2 Wochen verwenden, da er sein Aroma schnell verliert. Lager deinen Kaffee an einem dunklen, trockenen und kühlen Ort. Verwende eine Verpackung mit einem Aromaventil, damit Gase aus dem Kaffee entweichen können, ohne dass Luft eindringt. Lager deinen Kaffee nicht im Kühlschrank, da er Feuchtigkeit und Fremdaromen leicht aufnehmen kann")
         ]
         self.title = "Wissen"
+        searchController.searchBar.placeholder = "Suche.."
+
     }
     
     @IBAction func DE_BarButtonItemtapped(_ sender: UIBarButtonItem) {

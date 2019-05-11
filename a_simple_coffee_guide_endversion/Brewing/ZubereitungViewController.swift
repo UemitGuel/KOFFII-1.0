@@ -58,6 +58,8 @@ class ZubereitungViewController: UIViewController {
         ]
         brewings = brewings.sorted { $0.name < $1.name }
         self.title = "Brewing"
+        searchController.searchBar.placeholder = "Search.."
+
 
     }
     
@@ -73,6 +75,8 @@ class ZubereitungViewController: UIViewController {
         ]
         
         self.title = "Zubereitung"
+        searchController.searchBar.placeholder = "Suche.."
+
     }
     
     @IBAction func DE_BarButtonItemtapped(_ sender: UIBarButtonItem) {
