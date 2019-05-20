@@ -40,9 +40,11 @@ class ZubereitungViewController: UIViewController {
         if GlobalVariable.EN_DE == "EN" {
             setupEN()
             DE_BarButtonItem.title = "DE"
+
         } else {
             setupDE()
             DE_BarButtonItem.title = "EN"
+
         }
     }
     
@@ -61,6 +63,7 @@ class ZubereitungViewController: UIViewController {
         searchController.searchBar.placeholder = "Search.."
 
 
+
     }
     
     func setupDE() {
@@ -77,6 +80,7 @@ class ZubereitungViewController: UIViewController {
         self.title = "Zubereitung"
         searchController.searchBar.placeholder = "Suche.."
 
+
     }
     
     @IBAction func DE_BarButtonItemtapped(_ sender: UIBarButtonItem) {
@@ -84,10 +88,15 @@ class ZubereitungViewController: UIViewController {
             setupDE()
             GlobalVariable.EN_DE = "DE"
             DE_BarButtonItem.title = "EN"
+
+
+
         } else {
             setupEN()
             GlobalVariable.EN_DE = "EN"
             DE_BarButtonItem.title = "DE"
+
+
         }
         tableView.reloadData()
     }
@@ -108,6 +117,9 @@ class ZubereitungViewController: UIViewController {
         searchController.searchBar.backgroundColor = .white
         searchController.searchBar.tintColor = .black
         definesPresentationContext = true
+        
+        self.searchController.searchBar.setValue("X", forKey: "cancelButtonText")
+
     }
     
     
