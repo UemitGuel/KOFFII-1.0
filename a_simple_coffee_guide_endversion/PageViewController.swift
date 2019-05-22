@@ -14,6 +14,7 @@ class PageViewController: UIPageViewController {
         return [
             self.getViewController(withIdentifier: "Zubereitung_nav"),
             self.getViewController(withIdentifier: "Kaffeewissen_Nav"),
+            self.getViewController(withIdentifier: "Map_Nav")
         ]
     }()
     

@@ -30,6 +30,9 @@
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
 		B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */; };
 		B3FBE7F92285BDD700900812 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */; };
+		B3FCAF44229570880097749B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF43229570880097749B /* LocationViewController.swift */; };
+		B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF45229572880097749B /* LocationTableViewCell.swift */; };
+		B3FCAF49229574470097749B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF48229574470097749B /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		B3C57276223A9D86003DA27D /* ComplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainViewController.swift; sourceTree = "<group>"; };
 		B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainTableViewCell.swift; sourceTree = "<group>"; };
 		B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../Library/Fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		B3FCAF43229570880097749B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		B3FCAF45229572880097749B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		B3FCAF48229574470097749B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				B3C5727A223AA008003DA27D /* Complain */,
 				B37F2F7B223E60110015BC15 /* Knowledge */,
 				B3B8682C2265F2A0004D2365 /* OtherDetail */,
+				B3FCAF47229572900097749B /* Location */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 				B3872367226A217000ED97DF /* BrewingModel.swift */,
 				B3872369226A21AF00ED97DF /* KnowledgeModel.swift */,
 				B387236B226A221800ED97DF /* Complain.swift */,
+				B3FCAF48229574470097749B /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +180,15 @@
 				B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */,
 			);
 			path = Brewing;
+			sourceTree = "<group>";
+		};
+		B3FCAF47229572900097749B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				B3FCAF43229570880097749B /* LocationViewController.swift */,
+				B3FCAF45229572880097749B /* LocationTableViewCell.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +268,7 @@
 			files = (
 				B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */,
 				B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */,
+				B3FCAF49229574470097749B /* Location.swift in Sources */,
 				B3325929222580B800BCF32F /* PageViewController.swift in Sources */,
 				B387236A226A21AF00ED97DF /* KnowledgeModel.swift in Sources */,
 				B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */,
@@ -262,8 +280,10 @@
 				B387236C226A221800ED97DF /* Complain.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
 				B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */,
+				B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */,
 				B33259172225803900BCF32F /* AppDelegate.swift in Sources */,
 				B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */,
+				B3FCAF44229570880097749B /* LocationViewController.swift in Sources */,
 				B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */,
 				B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */,
 			);
