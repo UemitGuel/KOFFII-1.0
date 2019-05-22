@@ -98,6 +98,8 @@ extension LocationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! LocationTableViewCell
+        cell.selectionStyle = .none
+
         let location : Location
         
         if isFiltering() {
@@ -117,7 +119,26 @@ extension LocationViewController: UITableViewDataSource {
 
 extension LocationViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CityViewController") as? CityViewController {
+            let location : Location
+            if isFiltering() {
+                location = filteredLocations[indexPath.row]
+                vc.passedlocation = location
+            } else {
+                location = locations[indexPath.row]
+                vc.passedlocation = location
+            }
+            
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.tintColor = UIColor.black
+            parent?.navigationItem.backBarButtonItem = backButton
+            parent?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
+
 
 extension LocationViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate

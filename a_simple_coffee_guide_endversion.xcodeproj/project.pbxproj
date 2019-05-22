@@ -16,6 +16,7 @@
 		B332591E2225803A00BCF32F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B332591D2225803A00BCF32F /* Assets.xcassets */; };
 		B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B332591F2225803A00BCF32F /* LaunchScreen.storyboard */; };
 		B3325929222580B800BCF32F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3325928222580B800BCF32F /* PageViewController.swift */; };
+		B336B6DA229584C000F6AD69 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336B6D9229584C000F6AD69 /* CityViewController.swift */; };
 		B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */; };
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
 		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
@@ -46,6 +47,7 @@
 		B33259202225803A00BCF32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33259222225803B00BCF32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3325928222580B800BCF32F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		B336B6D9229584C000F6AD69 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				B37F2F7B223E60110015BC15 /* Knowledge */,
 				B3B8682C2265F2A0004D2365 /* OtherDetail */,
 				B3FCAF47229572900097749B /* Location */,
+				B336B6D9229584C000F6AD69 /* CityViewController.swift */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				B3FCAF44229570880097749B /* LocationViewController.swift in Sources */,
 				B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */,
 				B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */,
+				B336B6DA229584C000F6AD69 /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
