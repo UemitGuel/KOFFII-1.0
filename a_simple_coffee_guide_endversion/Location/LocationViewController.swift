@@ -76,9 +76,9 @@ class LocationViewController: UIViewController {
     
     func populateTableView() {
         locations = [
-            Location(city: "Barcelona", imageName: "Barcelona", cafes: ["Itacate","Sopa", "Federal" ], cafesOneString: "Itacate, Sopa, Federal"),
-            Location(city: "Cologne", imageName: "Cologne", cafes: ["WNDRFUEL", "Woyton"], cafesOneString: "WNDRFUEL, Woyton"),
-            Location(city: "Madrid", imageName: "Madrid", cafes: ["Federal", "Toma"], cafesOneString: "Federal, Toma")
+            Location(city: "Barcelona", imageName: "Barcelona", cafes: [Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]),Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]), Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"])], cafesOneString: ""),
+            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]),Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]), Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"])], cafesOneString: ""),
+            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]),Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]), Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"])], cafesOneString: "")
         ]
     }
     
@@ -130,7 +130,6 @@ extension LocationViewController: UITableViewDelegate {
                 location = locations[indexPath.row]
                 vc.passedlocation = location
             }
-            
             let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             backButton.tintColor = UIColor.black
             parent?.navigationItem.backBarButtonItem = backButton

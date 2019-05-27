@@ -10,6 +10,8 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
+    var currentPage : Int = 1
+    
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "Zubereitung_nav"),
@@ -50,9 +52,18 @@ extension PageViewController: UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
+        if pages.firstIndex(of: viewController) == Optional(2) {
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.tintColor = UIColor.black
+            navigationItem.backBarButtonItem = backButton
+        } else {
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.tintColor = UIColor.white
+            navigationItem.backBarButtonItem = backButton
+        }
         
         let previousIndex = viewControllerIndex - 1
-        
+        print(previousIndex)
         guard previousIndex >= 0          else { return pages.last }
         
         guard pages.count > previousIndex else { return nil        }
@@ -63,6 +74,16 @@ extension PageViewController: UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
+        if pages.firstIndex(of: viewController) == Optional(2) {
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.tintColor = UIColor.black
+            navigationItem.backBarButtonItem = backButton
+        } else {
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.tintColor = UIColor.white
+            navigationItem.backBarButtonItem = backButton
+        }
+        
         
         let nextIndex = viewControllerIndex + 1
         
@@ -84,5 +105,23 @@ extension PageViewController: UIPageViewControllerDelegate {
         return 0
     } // The selected item reflected in the page indicator.
     
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    }
 }
 
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+}

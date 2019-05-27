@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B305922B2296CA770010B6FA /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305922A2296CA770010B6FA /* CityTableViewCell.swift */; };
+		B305922E2296CBD00010B6FA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305922D2296CBD00010B6FA /* Cafe.swift */; };
 		B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */; };
 		B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */; };
 		B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B305922A2296CA770010B6FA /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		B305922D2296CBD00010B6FA /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungViewController.swift; sourceTree = "<group>"; };
 		B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungTableViewCell.swift; sourceTree = "<group>"; };
 		B33259132225803900BCF32F /* a_simple_coffee_guide_endversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a_simple_coffee_guide_endversion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B305922C2296CB5A0010B6FA /* City */ = {
+			isa = PBXGroup;
+			children = (
+				B336B6D9229584C000F6AD69 /* CityViewController.swift */,
+				B305922A2296CA770010B6FA /* CityTableViewCell.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
 		B332590A2225803900BCF32F = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +127,7 @@
 				B37F2F7B223E60110015BC15 /* Knowledge */,
 				B3B8682C2265F2A0004D2365 /* OtherDetail */,
 				B3FCAF47229572900097749B /* Location */,
-				B336B6D9229584C000F6AD69 /* CityViewController.swift */,
+				B305922C2296CB5A0010B6FA /* City */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -144,6 +157,7 @@
 				B3872369226A21AF00ED97DF /* KnowledgeModel.swift */,
 				B387236B226A221800ED97DF /* Complain.swift */,
 				B3FCAF48229574470097749B /* Location.swift */,
+				B305922D2296CBD00010B6FA /* Cafe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +293,8 @@
 				B393CAF7222AA47B004B028E /* Utility.swift in Sources */,
 				B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */,
 				B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */,
+				B305922E2296CBD00010B6FA /* Cafe.swift in Sources */,
+				B305922B2296CA770010B6FA /* CityTableViewCell.swift in Sources */,
 				B3872368226A217000ED97DF /* BrewingModel.swift in Sources */,
 				B387236C226A221800ED97DF /* Complain.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
