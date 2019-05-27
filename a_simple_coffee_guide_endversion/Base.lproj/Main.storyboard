@@ -349,7 +349,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ivq-Bk-nY2">
-                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="180" id="3fL-M6-WVw" customClass="LocationTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -421,7 +421,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Bl-0A-fNf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Bl-0A-fNf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -429,7 +429,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="13k-6Q-Nrj" id="PDL-ys-OWY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2I-ME-cJI">
@@ -476,7 +476,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZh-41-mNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10557.6" y="1607.9460269865069"/>
+            <point key="canvasLocation" x="10558" y="1589"/>
+        </scene>
+        <!--Cafe Detail View Controller-->
+        <scene sceneID="gnh-FQ-RDi">
+            <objects>
+                <viewController storyboardIdentifier="CafeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNi-dT-X1m" customClass="CafeDetailViewController" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Up-wV-dld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Py-3I-MAy">
+                                <rect key="frame" x="0.0" y="-8" width="375" height="236"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="236" id="rT0-K1-9hD"/>
+                                </constraints>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-yo-935">
+                                <rect key="frame" x="0.0" y="290" width="375" height="377"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W01-n9-osD">
+                                <rect key="frame" x="0.0" y="244" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QuK-k9-Yjh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W01-n9-osD" firstAttribute="top" secondItem="1Py-3I-MAy" secondAttribute="bottom" constant="16" id="DUH-3S-neO"/>
+                            <constraint firstItem="1Py-3I-MAy" firstAttribute="top" secondItem="3Up-wV-dld" secondAttribute="top" constant="-8" id="Epv-rZ-DqP"/>
+                            <constraint firstItem="NUO-yo-935" firstAttribute="leading" secondItem="vEO-nv-gNz" secondAttribute="leading" id="FVE-Zs-sPg"/>
+                            <constraint firstItem="W01-n9-osD" firstAttribute="leading" secondItem="vEO-nv-gNz" secondAttribute="leading" id="MdR-5f-ska"/>
+                            <constraint firstItem="vEO-nv-gNz" firstAttribute="bottom" secondItem="NUO-yo-935" secondAttribute="bottom" id="Plc-0O-aXb"/>
+                            <constraint firstItem="NUO-yo-935" firstAttribute="top" secondItem="W01-n9-osD" secondAttribute="bottom" constant="16" id="V1O-6f-kas"/>
+                            <constraint firstItem="vEO-nv-gNz" firstAttribute="trailing" secondItem="W01-n9-osD" secondAttribute="trailing" id="VdZ-HG-ExX"/>
+                            <constraint firstItem="1Py-3I-MAy" firstAttribute="leading" secondItem="vEO-nv-gNz" secondAttribute="leading" id="a8w-UA-gTZ"/>
+                            <constraint firstItem="vEO-nv-gNz" firstAttribute="trailing" secondItem="NUO-yo-935" secondAttribute="trailing" id="l5I-gO-C4h"/>
+                            <constraint firstItem="vEO-nv-gNz" firstAttribute="trailing" secondItem="1Py-3I-MAy" secondAttribute="trailing" id="quk-x7-5yg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vEO-nv-gNz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5ip-qX-G7a">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="round-arrow_back_ios-24px (2)" style="done" id="9ku-hc-V1x">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButttonTapped:" destination="uNi-dT-X1m" id="Ir4-Yy-o2b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cityDetailImageView" destination="1Py-3I-MAy" id="HcO-nW-Via"/>
+                        <outlet property="cityDetailLabel" destination="W01-n9-osD" id="dFB-wq-lhd"/>
+                        <outlet property="map" destination="NUO-yo-935" id="Vaq-UA-3Pz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZU-X6-6Hf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10558" y="2328"/>
         </scene>
         <!--Other Detail View Controller-->
         <scene sceneID="JOh-M1-NNL">
@@ -713,7 +774,7 @@
                 <navigationController storyboardIdentifier="Zubereitung_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ocs-RE-cN9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4dU-AV-XMq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -741,7 +802,7 @@
                 <navigationController storyboardIdentifier="Kaffeewissen_Nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V5f-gh-6Rj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="stL-16-N21">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -793,7 +854,7 @@
                 <navigationController storyboardIdentifier="DetailViewController_nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qh-M2-bKa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3fm-4a-zSH">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.68388712409999997" green="0.1115860566" blue="0.15763717890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -843,5 +904,6 @@
     <resources>
         <image name="Coffee_Bean_last" width="40" height="52"/>
         <image name="Complain" width="36" height="36"/>
+        <image name="round-arrow_back_ios-24px (2)" width="11" height="20"/>
     </resources>
 </document>

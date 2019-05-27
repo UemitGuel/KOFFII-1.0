@@ -60,7 +60,8 @@ extension CityViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
-        
+        cell.selectionStyle = .none
+
         cell.cafeImageView.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
         cell.cityCellLabel.text = passedlocation.cafes[indexPath.row].name
         return cell
@@ -74,4 +75,22 @@ extension CityViewController: UITableViewDataSource {
 
 extension CityViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CafeDetailViewController") as? CafeDetailViewController {
+            vc.passedCafe = passedlocation.cafes[indexPath.row]
+                    
+            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            backButton.tintColor = UIColor.black
+            
+            let navigationControlleradded = UINavigationController(rootViewController: vc)
+            
+            navigationControlleradded.navigationItem.backBarButtonItem = backButton
+            
+            self.present(navigationControlleradded, animated: true, completion: nil)
+            //navigationController?.pushViewController(vc, animated: true)
+
+        }
+    }
 }
+

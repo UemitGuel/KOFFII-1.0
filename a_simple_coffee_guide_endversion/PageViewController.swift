@@ -10,8 +10,6 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    var currentPage : Int = 1
-    
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "Zubereitung_nav"),
@@ -63,7 +61,6 @@ extension PageViewController: UIPageViewControllerDataSource
         }
         
         let previousIndex = viewControllerIndex - 1
-        print(previousIndex)
         guard previousIndex >= 0          else { return pages.last }
         
         guard pages.count > previousIndex else { return nil        }
@@ -105,8 +102,6 @@ extension PageViewController: UIPageViewControllerDelegate {
         return 0
     } // The selected item reflected in the page indicator.
     
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-    }
 }
 
 extension UIApplication {

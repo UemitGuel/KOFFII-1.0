@@ -130,9 +130,6 @@ extension LocationViewController: UITableViewDelegate {
                 location = locations[indexPath.row]
                 vc.passedlocation = location
             }
-            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            backButton.tintColor = UIColor.black
-            parent?.navigationItem.backBarButtonItem = backButton
             parent?.navigationController?.pushViewController(vc, animated: true)
         }
     }
