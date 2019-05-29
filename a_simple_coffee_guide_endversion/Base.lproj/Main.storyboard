@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -422,7 +423,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Bl-0A-fNf">
-                                <rect key="frame" x="0.0" y="98" width="375" height="525"/>
+                                <rect key="frame" x="0.0" y="127.5" width="375" height="495.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityTableViewCell" rowHeight="180" id="13k-6Q-Nrj" customClass="CityTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -459,100 +460,161 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-D0-cep">
-                                <rect key="frame" x="16" y="28" width="343" height="62"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-14-W7J">
+                                <rect key="frame" x="16" y="28" width="343" height="91.5"/>
                                 <subviews>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvQ-15-P3R" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
-                                        <state key="normal" image="WIFI"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNf-qD-j8Z" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="0.0" width="62.5" height="62"/>
-                                        <state key="normal" image="FOOD"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-ec-ARr" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="0.0" width="62" height="62"/>
-                                        <state key="normal" image="VEGAN"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKx-iO-Vuz" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
-                                        <rect key="frame" x="210.5" y="0.0" width="62.5" height="62"/>
-                                        <state key="normal" image="CAKE"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-6p-iDe" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
-                                        <rect key="frame" x="281" y="0.0" width="62" height="62"/>
-                                        <state key="normal" image="PLUG"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-D0-cep">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="62"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvQ-15-P3R" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                                <state key="normal" image="WIFI"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="wifiButtonTapped:" destination="Wf6-1h-4pp" eventType="touchUpInside" id="teN-zh-USH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNf-qD-j8Z" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="0.0" width="62.5" height="62"/>
+                                                <state key="normal" image="FOOD"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="foodButtonTapped:" destination="Wf6-1h-4pp" eventType="touchUpInside" id="zxx-VR-zlY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-ec-ARr" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
+                                                <rect key="frame" x="140.5" y="0.0" width="62" height="62"/>
+                                                <state key="normal" image="VEGAN"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="veganButtonTapped:" destination="Wf6-1h-4pp" eventType="touchUpInside" id="GNB-mm-VoP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKx-iO-Vuz" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
+                                                <rect key="frame" x="210.5" y="0.0" width="62.5" height="62"/>
+                                                <state key="normal" image="CAKE"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cakeButtonTapped:" destination="Wf6-1h-4pp" eventType="touchUpInside" id="oOt-86-9K7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-6p-iDe" customClass="RoundButton" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
+                                                <rect key="frame" x="281" y="0.0" width="62" height="62"/>
+                                                <state key="normal" image="PLUG"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="plugButtonTapped:" destination="Wf6-1h-4pp" eventType="touchUpInside" id="x1f-Pk-C8c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OvQ-15-P3R" firstAttribute="width" secondItem="WNf-qD-j8Z" secondAttribute="height" multiplier="1:1" id="vNt-oT-iod"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lM3-d8-WTe">
+                                        <rect key="frame" x="0.0" y="70" width="343" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIFI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-42-syx">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOOD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNP-f8-Eqi">
+                                                <rect key="frame" x="70" y="0.0" width="62.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VEGAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-Ey-oAF">
+                                                <rect key="frame" x="140.5" y="0.0" width="62" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-C9-EuJ">
+                                                <rect key="frame" x="210.5" y="0.0" width="62.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IG-ym-18h">
+                                                <rect key="frame" x="281" y="0.0" width="62" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GaE-42-syx" firstAttribute="width" secondItem="hNP-f8-Eqi" secondAttribute="width" id="tJD-Ip-qeL"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="OvQ-15-P3R" firstAttribute="width" secondItem="WNf-qD-j8Z" secondAttribute="height" multiplier="1:1" id="vNt-oT-iod"/>
+                                    <constraint firstItem="GaE-42-syx" firstAttribute="width" secondItem="OvQ-15-P3R" secondAttribute="width" id="ilJ-3e-BsN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MU5-D0-cep" firstAttribute="leading" secondItem="A6B-JL-m38" secondAttribute="leading" constant="16" id="NUm-fT-d1B"/>
-                            <constraint firstItem="0Bl-0A-fNf" firstAttribute="top" secondItem="MU5-D0-cep" secondAttribute="bottom" constant="8" id="Z7i-DM-o1X"/>
+                            <constraint firstItem="0Bl-0A-fNf" firstAttribute="top" secondItem="hdS-14-W7J" secondAttribute="bottom" constant="8" id="CpE-wd-2g1"/>
+                            <constraint firstItem="A6B-JL-m38" firstAttribute="trailing" secondItem="hdS-14-W7J" secondAttribute="trailing" constant="16" id="FxH-HH-of5"/>
                             <constraint firstAttribute="bottomMargin" secondItem="0Bl-0A-fNf" secondAttribute="bottom" id="dWC-rj-CVl"/>
                             <constraint firstItem="0Bl-0A-fNf" firstAttribute="trailing" secondItem="A6B-JL-m38" secondAttribute="trailing" id="e5v-fd-XcB"/>
-                            <constraint firstItem="MU5-D0-cep" firstAttribute="top" secondItem="A6B-JL-m38" secondAttribute="top" constant="8" id="hSU-cO-u5G"/>
+                            <constraint firstItem="hdS-14-W7J" firstAttribute="top" secondItem="A6B-JL-m38" secondAttribute="top" constant="8" id="fq3-AL-9lw"/>
+                            <constraint firstItem="hdS-14-W7J" firstAttribute="leading" secondItem="A6B-JL-m38" secondAttribute="leading" constant="16" id="vPH-1n-MnU"/>
                             <constraint firstItem="0Bl-0A-fNf" firstAttribute="leading" secondItem="A6B-JL-m38" secondAttribute="leading" id="vit-F9-R54"/>
                             <constraint firstItem="0Bl-0A-fNf" firstAttribute="top" secondItem="A6B-JL-m38" secondAttribute="top" constant="170" id="wPn-dt-U5U"/>
-                            <constraint firstItem="A6B-JL-m38" firstAttribute="trailing" secondItem="MU5-D0-cep" secondAttribute="trailing" constant="16" id="xy7-dH-uQy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A6B-JL-m38"/>
                         <variation key="default">
@@ -568,11 +630,16 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cakeButton" destination="HKx-iO-Vuz" id="IUu-t3-m2w"/>
+                        <outlet property="cakeLabel" destination="Np1-C9-EuJ" id="0Vk-mH-p4H"/>
                         <outlet property="foodButton" destination="WNf-qD-j8Z" id="o03-Lf-pgY"/>
+                        <outlet property="foodLabel" destination="hNP-f8-Eqi" id="pnO-pm-4Hs"/>
                         <outlet property="plugButton" destination="6zS-6p-iDe" id="lek-nR-npl"/>
+                        <outlet property="plugLabel" destination="5IG-ym-18h" id="A2E-g6-xkL"/>
                         <outlet property="tableView" destination="0Bl-0A-fNf" id="eAU-kB-xWB"/>
                         <outlet property="veganButton" destination="lt5-ec-ARr" id="7hJ-Qt-hzQ"/>
+                        <outlet property="veganLabel" destination="eSz-Ey-oAF" id="myv-XV-Kcq"/>
                         <outlet property="wifiButton" destination="OvQ-15-P3R" id="ubT-E2-5hI"/>
+                        <outlet property="wifiLabel" destination="GaE-42-syx" id="Whj-eg-rpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZh-41-mNM" userLabel="First Responder" sceneMemberID="firstResponder"/>

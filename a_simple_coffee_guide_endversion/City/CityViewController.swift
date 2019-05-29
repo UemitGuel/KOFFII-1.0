@@ -11,14 +11,19 @@ import UIKit
 class CityViewController: UIViewController {
     
     @IBOutlet weak var wifiButton: RoundButton!
+    @IBOutlet weak var wifiLabel: UILabel!
     
     @IBOutlet weak var foodButton: RoundButton!
+    @IBOutlet weak var foodLabel: UILabel!
     
     @IBOutlet weak var veganButton: RoundButton!
+    @IBOutlet weak var veganLabel: UILabel!
     
     @IBOutlet weak var cakeButton: RoundButton!
+    @IBOutlet weak var cakeLabel: UILabel!
     
     @IBOutlet weak var plugButton: RoundButton!
+    @IBOutlet weak var plugLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,6 +55,8 @@ class CityViewController: UIViewController {
         }
     }
     
+    // Buttons
+    
     func setupButtons() {
         
         wifiButton.layer.cornerRadius = 0.5 * wifiButton.bounds.size.width
@@ -57,8 +64,83 @@ class CityViewController: UIViewController {
         veganButton.layer.cornerRadius = 0.5 * veganButton.bounds.size.width
         cakeButton.layer.cornerRadius = 0.5 * cakeButton.bounds.size.width
         plugButton.layer.cornerRadius = 0.5 * plugButton.bounds.size.width
-        
     }
+    
+    @IBAction func wifiButtonTapped(_ sender: UIButton) {
+        
+        if wifiButton.tapped == "NO" {
+            wifiButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+            wifiButton.borderWidth = 2
+            wifiLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            wifiButton.tapped = "YES"
+        } else {
+            wifiButton.customBGColor = UIColor.white
+            wifiButton.borderWidth = 1
+            wifiLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
+            wifiButton.tapped = "NO"
+        }
+    }
+    
+    @IBAction func foodButtonTapped(_ sender: UIButton) {
+        if foodButton.tapped == "NO" {
+            foodButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+            foodButton.borderWidth = 2
+            foodLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            foodButton.tapped = "YES"
+        } else {
+            foodButton.customBGColor = UIColor.white
+            foodButton.borderWidth = 1
+            foodLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
+            foodButton.tapped = "NO"
+        }
+    }
+    
+    @IBAction func veganButtonTapped(_ sender: UIButton) {
+        if veganButton.tapped == "NO" {
+            veganButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+            veganButton.borderWidth = 2
+            veganLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            veganButton.tapped = "YES"
+        } else {
+            veganButton.customBGColor = UIColor.white
+            veganButton.borderWidth = 1
+            veganLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
+            veganButton.tapped = "NO"
+        }
+    }
+    
+    @IBAction func cakeButtonTapped(_ sender: UIButton) {
+        if cakeButton.tapped == "NO" {
+            cakeButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+            cakeButton.borderWidth = 2
+            cakeLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            cakeButton.tapped = "YES"
+        } else {
+            cakeButton.customBGColor = UIColor.white
+            cakeButton.borderWidth = 1
+            cakeLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
+            cakeButton.tapped = "NO"
+        }
+    }
+    
+    @IBAction func plugButtonTapped(_ sender: UIButton) {
+        if plugButton.tapped == "NO" {
+            plugButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+            plugButton.borderWidth = 2
+            plugLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            plugButton.tapped = "YES"
+        } else {
+            plugButton.customBGColor = UIColor.white
+            plugButton.borderWidth = 1
+            plugLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
+            plugButton.tapped = "NO"
+        }
+    }
+    
+    
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
