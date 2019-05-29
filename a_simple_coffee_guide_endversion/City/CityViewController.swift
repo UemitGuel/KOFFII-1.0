@@ -10,6 +10,16 @@ import UIKit
 
 class CityViewController: UIViewController {
     
+    @IBOutlet weak var wifiButton: RoundButton!
+    
+    @IBOutlet weak var foodButton: RoundButton!
+    
+    @IBOutlet weak var veganButton: RoundButton!
+    
+    @IBOutlet weak var cakeButton: RoundButton!
+    
+    @IBOutlet weak var plugButton: RoundButton!
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -19,6 +29,7 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        setupButtons()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -37,6 +48,16 @@ class CityViewController: UIViewController {
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
         }
+    }
+    
+    func setupButtons() {
+        
+        wifiButton.layer.cornerRadius = 0.5 * wifiButton.bounds.size.width
+        foodButton.layer.cornerRadius = 0.5 * foodButton.bounds.size.width
+        veganButton.layer.cornerRadius = 0.5 * veganButton.bounds.size.width
+        cakeButton.layer.cornerRadius = 0.5 * cakeButton.bounds.size.width
+        plugButton.layer.cornerRadius = 0.5 * plugButton.bounds.size.width
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
