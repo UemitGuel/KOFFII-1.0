@@ -25,6 +25,9 @@ class CafeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        
+        cityDetailImageView.layer.cornerRadius = 8
+        map.layer.cornerRadius = 8
                 
         cityDetailImageView.image = UIImage(named: passedCafe.image)
         cityDetailLabel.text = "cool"

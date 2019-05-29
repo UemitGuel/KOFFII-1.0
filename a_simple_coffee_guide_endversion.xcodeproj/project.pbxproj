@@ -19,6 +19,7 @@
 		B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B332591F2225803A00BCF32F /* LaunchScreen.storyboard */; };
 		B3325929222580B800BCF32F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3325928222580B800BCF32F /* PageViewController.swift */; };
 		B336B6DA229584C000F6AD69 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336B6D9229584C000F6AD69 /* CityViewController.swift */; };
+		B339FBA8229EDE82005186D1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B339FBA7229EDE82005186D1 /* RoundButton.swift */; };
 		B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */; };
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
 		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
@@ -53,6 +54,7 @@
 		B33259222225803B00BCF32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3325928222580B800BCF32F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B336B6D9229584C000F6AD69 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		B339FBA7229EDE82005186D1 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				B3FCAF47229572900097749B /* Location */,
 				B305922C2296CB5A0010B6FA /* City */,
 				B3A1305D229BE3E200BE937D /* CafeDetail */,
+				B339FBA7229EDE82005186D1 /* RoundButton.swift */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				B393CAF7222AA47B004B028E /* Utility.swift in Sources */,
 				B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */,
 				B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */,
+				B339FBA8229EDE82005186D1 /* RoundButton.swift in Sources */,
 				B305922E2296CBD00010B6FA /* Cafe.swift in Sources */,
 				B305922B2296CA770010B6FA /* CityTableViewCell.swift in Sources */,
 				B3872368226A217000ED97DF /* BrewingModel.swift in Sources */,
