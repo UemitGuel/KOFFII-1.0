@@ -125,6 +125,7 @@
 				B33259222225803B00BCF32F /* Info.plist */,
 				B3325928222580B800BCF32F /* PageViewController.swift */,
 				B393CAF6222AA47B004B028E /* Utility.swift */,
+				B339FBA7229EDE82005186D1 /* RoundButton.swift */,
 				B3C5727B223AA54C003DA27D /* Brewing */,
 				B355A5D4222EC080009A5BE7 /* Detail */,
 				B3C5727A223AA008003DA27D /* Complain */,
@@ -133,7 +134,6 @@
 				B3FCAF47229572900097749B /* Location */,
 				B305922C2296CB5A0010B6FA /* City */,
 				B3A1305D229BE3E200BE937D /* CafeDetail */,
-				B339FBA7229EDE82005186D1 /* RoundButton.swift */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";

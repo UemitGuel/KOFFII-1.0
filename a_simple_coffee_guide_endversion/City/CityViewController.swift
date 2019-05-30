@@ -30,6 +30,10 @@ class CityViewController: UIViewController {
     
     // let/var
     var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: "")
+    var passedCafes = [Cafe]()
+    var filteredPassedCafes = [Cafe]()
+    var cafenames = [String]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,8 @@ class CityViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        passedCafes = passedlocation.cafes
     }
 
     func setupNavBar() {
@@ -68,78 +74,180 @@ class CityViewController: UIViewController {
     
     @IBAction func wifiButtonTapped(_ sender: UIButton) {
         
-        if wifiButton.tapped == "NO" {
+        if wifiButton.tapped == 0 {
             wifiButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             wifiButton.borderWidth = 2
             wifiLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
-            wifiButton.tapped = "YES"
+            wifiButton.tapped = 1
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         } else {
             wifiButton.customBGColor = UIColor.white
             wifiButton.borderWidth = 1
             wifiLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
-            wifiButton.tapped = "NO"
+            wifiButton.tapped = 0
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         }
     }
     
     @IBAction func foodButtonTapped(_ sender: UIButton) {
-        if foodButton.tapped == "NO" {
+        if foodButton.tapped == 0 {
             foodButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             foodButton.borderWidth = 2
             foodLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
-            foodButton.tapped = "YES"
+            foodButton.tapped = 1
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         } else {
             foodButton.customBGColor = UIColor.white
             foodButton.borderWidth = 1
             foodLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
-            foodButton.tapped = "NO"
+            foodButton.tapped = 0
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         }
     }
     
     @IBAction func veganButtonTapped(_ sender: UIButton) {
-        if veganButton.tapped == "NO" {
+        if veganButton.tapped == 0 {
             veganButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             veganButton.borderWidth = 2
             veganLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
-            veganButton.tapped = "YES"
+            veganButton.tapped = 1
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         } else {
             veganButton.customBGColor = UIColor.white
             veganButton.borderWidth = 1
             veganLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
-            veganButton.tapped = "NO"
+            veganButton.tapped = 0
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         }
     }
     
     @IBAction func cakeButtonTapped(_ sender: UIButton) {
-        if cakeButton.tapped == "NO" {
+        if cakeButton.tapped == 0 {
             cakeButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             cakeButton.borderWidth = 2
             cakeLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
-            cakeButton.tapped = "YES"
+            cakeButton.tapped = 1
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         } else {
             cakeButton.customBGColor = UIColor.white
             cakeButton.borderWidth = 1
             cakeLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
-            cakeButton.tapped = "NO"
+            cakeButton.tapped = 0
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         }
     }
     
     @IBAction func plugButtonTapped(_ sender: UIButton) {
-        if plugButton.tapped == "NO" {
+        if plugButton.tapped == 0 {
             plugButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             plugButton.borderWidth = 2
             plugLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
-            plugButton.tapped = "YES"
+            plugButton.tapped = 1
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         } else {
             plugButton.customBGColor = UIColor.white
             plugButton.borderWidth = 1
             plugLabel.font = UIFont(name: "Quicksand-Medium", size: 17)
-            plugButton.tapped = "NO"
+            plugButton.tapped = 0
+            
+            filteredPassedCafes.removeAll()
+            cafenames.removeAll()
+            filtering()
+            tableView.reloadData()
         }
     }
     
+    // Search
     
-    
-    
+    func isFiltering() -> Bool {
+        return wifiButton.tapped != 0 || foodButton.tapped != 0 || veganButton.tapped != 0 || cakeButton.tapped != 0 || plugButton.tapped != 0 
+    }
+
+    func filtering() {
+        for cafe in passedCafes {
+            if wifiButton.tapped == 1 && wifiButton.tapped == cafe.wifi {
+                for cafes in filteredPassedCafes {
+                    cafenames.append(cafes.name)
+                }
+                if !cafenames.contains(cafe.name) {
+                        filteredPassedCafes.append(cafe)
+                    }
+                }
+            
+            if foodButton.tapped == 1 && foodButton.tapped == cafe.food {
+                for cafes in filteredPassedCafes {
+                    cafenames.append(cafes.name)
+                }
+                if !cafenames.contains(cafe.name) {
+                    filteredPassedCafes.append(cafe)
+                }
+            }
+            
+            if veganButton.tapped == 1 && veganButton.tapped == cafe.vegan {
+                for cafes in filteredPassedCafes {
+                    cafenames.append(cafes.name)
+                }
+                if !cafenames.contains(cafe.name) {
+                    filteredPassedCafes.append(cafe)
+                }
+            }
+            
+            if cakeButton.tapped == 1 && cakeButton.tapped == cafe.cake {
+                for cafes in filteredPassedCafes {
+                    cafenames.append(cafes.name)
+                }
+                if !cafenames.contains(cafe.name) {
+                    filteredPassedCafes.append(cafe)
+                }
+            }
+            
+            if plugButton.tapped == 1 && plugButton.tapped == cafe.plug {
+                for cafes in filteredPassedCafes {
+                    cafenames.append(cafes.name)
+                }
+                if !cafenames.contains(cafe.name) {
+                    filteredPassedCafes.append(cafe)
+                }
+            }
+            
+        }
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -158,16 +266,26 @@ class CityViewController: UIViewController {
 
 extension CityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return passedlocation.cafes.count
+        if isFiltering() {
+            return filteredPassedCafes.count
+        } else {
+            return passedlocation.cafes.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
         cell.selectionStyle = .none
-
-        cell.cafeImageView.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
-        cell.cityCellLabel.text = passedlocation.cafes[indexPath.row].name
-        return cell
+        print(filteredPassedCafes)
+        if isFiltering() {
+            cell.cafeImageView.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
+            cell.cityCellLabel.text = filteredPassedCafes[indexPath.row].name
+            return cell
+        } else {
+            cell.cafeImageView.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
+            cell.cityCellLabel.text = passedlocation.cafes[indexPath.row].name
+            return cell
+    }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
