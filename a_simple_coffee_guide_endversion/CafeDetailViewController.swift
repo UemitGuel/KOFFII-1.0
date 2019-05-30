@@ -20,7 +20,7 @@ class CafeDetailViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     
     //let/var
-    var passedCafe = Cafe(name: "", image: "", features: [""])
+    var passedCafe = Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()

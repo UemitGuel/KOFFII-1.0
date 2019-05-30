@@ -29,7 +29,7 @@ class CityViewController: UIViewController {
     
     
     // let/var
-    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [""])], cafesOneString: "")
+    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()

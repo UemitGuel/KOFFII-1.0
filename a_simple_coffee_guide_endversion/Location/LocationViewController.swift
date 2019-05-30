@@ -76,9 +76,16 @@ class LocationViewController: UIViewController {
     
     func populateTableView() {
         locations = [
-            Location(city: "Barcelona", imageName: "Barcelona", cafes: [Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]),Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]), Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"])], cafesOneString: ""),
-            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]),Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]), Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"])], cafesOneString: ""),
-            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]),Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"]), Cafe(name: "Federal", image: "Cafe_Itercate", features: ["cool"])], cafesOneString: "")
+            Location(city: "Barcelona", imageName: "Barcelona",
+                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", wifi: 1, food: 1, vegan: 1, cake: 1, plug: 1),
+                             Cafe(name: "Sopa", image: "Cafe_Itercate", wifi: 1, food: 1, vegan: 1, cake: 1, plug: 1),
+                             Cafe(name: "Federal", image: "Cafe_Itercate", wifi: 1, food: 1, vegan: 0, cake: 0, plug: 0), //please check
+                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", wifi: 1, food: 0, vegan: 0, cake: 1, plug: 1), // please check
+                            Cafe(name: "CafeCosmo", image: "Cafe_Itercate", wifi: 0, food: 1, vegan: 1, cake: 1, plug: 0),
+                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", wifi: 0, food: 1, vegan: 1, cake: 1, plug: 0),
+                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", wifi: 0, food: 1, vegan: 1, cake: 1, plug: 0)], cafesOneString: ""),
+            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: ""),
+            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: "")
         ]
     }
     

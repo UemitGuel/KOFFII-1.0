@@ -11,5 +11,9 @@ import Foundation
 struct Cafe {
     let name: String
     let image: String
-    let features: [String]
+    let wifi: Int
+    let food: Int
+    let vegan: Int
+    let cake: Int
+    let plug: Int
 }
