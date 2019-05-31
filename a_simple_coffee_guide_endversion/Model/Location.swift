@@ -12,7 +12,5 @@ struct Location {
     
     let city: String
     let imageName: String
-    let cafes: [Cafe]
-    let cafesOneString: String
-    
+    let cafes: [Cafe]    
 }

@@ -59,12 +59,12 @@ class LocationViewController: UIViewController {
         // Returns true if the text is empty or nil
         return searchController.searchBar.text?.isEmpty ?? true
     }
-    
+
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filteredLocations = locations.filter({( location : Location) -> Bool in
-            return location.cafesOneString.lowercased().contains(searchText.lowercased()) || location.city.lowercased().contains(searchText.lowercased())
+            return location.city.lowercased().contains(searchText.lowercased())
         })
-        
+    
         tableView.reloadData()
     }
     
@@ -77,16 +77,16 @@ class LocationViewController: UIViewController {
     func populateTableView() {
         locations = [
             Location(city: "Barcelona", imageName: "Barcelona",
-                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", wifi: 1, food: 1, vegan: 1, cake: 1, plug: 1),
-                             Cafe(name: "Sopa", image: "Cafe_Itercate", wifi: 1, food: 1, vegan: 1, cake: 1, plug: 1),
-                             Cafe(name: "Federal", image: "Cafe_Itercate", wifi: 1, food: 1, vegan: 0, cake: 0, plug: 0), //please check
-                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", wifi: 1, food: 0, vegan: 0, cake: 1, plug: 1), // please check
-                            Cafe(name: "CafeCosmo", image: "Cafe_Itercate", wifi: 0, food: 1, vegan: 1, cake: 1, plug: 0),
-                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", wifi: 0, food: 1, vegan: 1, cake: 1, plug: 0),
-                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", wifi: 0, food: 1, vegan: 1, cake: 1, plug: 0)], cafesOneString: ""),
-            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: ""),
-            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: "")
-        ]
+                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", features: [1,1,1,1,1]),
+                             Cafe(name: "Sopa", image: "Cafe_Itercate", features: [1,1,1,1,1]),
+                             Cafe(name: "Federal", image: "Cafe_Itercate", features: [1,1,0,1,0]), //please check
+                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", features: [1,1,1,0,1]), // please check
+                            Cafe(name: "CafeCosmo", image: "Cafe_Itercate", features: [0,1,1,1,0]),
+                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", features: [0,1,1,0,0]),
+                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", features: [0,1,1,0,0])]),
+            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", features: [1,1,1,1,1])]),
+            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", features: [1,1,1,1,1])])
+    ]
     }
     
     
@@ -94,8 +94,8 @@ class LocationViewController: UIViewController {
     @IBAction func DE_BarButtonItemTapped(_ sender: UIBarButtonItem) {
         
     }
-    
 }
+
 
 extension LocationViewController: UITableViewDataSource {
     

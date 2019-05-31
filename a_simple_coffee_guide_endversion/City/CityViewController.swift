@@ -29,10 +29,10 @@ class CityViewController: UIViewController {
     
     
     // let/var
-    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", wifi: 0, food: 0, vegan: 0, cake: 0, plug: 0)], cafesOneString: "")
+    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [0,0,0,0,0])])
     var passedCafes = [Cafe]()
     var filteredPassedCafes = [Cafe]()
-    var cafenames = [String]()
+    var buttons = [RoundButton]()
 
     
     override func viewDidLoad() {
@@ -70,6 +70,12 @@ class CityViewController: UIViewController {
         veganButton.layer.cornerRadius = 0.5 * veganButton.bounds.size.width
         cakeButton.layer.cornerRadius = 0.5 * cakeButton.bounds.size.width
         plugButton.layer.cornerRadius = 0.5 * plugButton.bounds.size.width
+        
+        buttons.append(wifiButton)
+        buttons.append(foodButton)
+        buttons.append(veganButton)
+        buttons.append(cakeButton)
+        buttons.append(plugButton)
     }
     
     @IBAction func wifiButtonTapped(_ sender: UIButton) {
@@ -81,7 +87,6 @@ class CityViewController: UIViewController {
             wifiButton.tapped = 1
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         } else {
@@ -91,7 +96,6 @@ class CityViewController: UIViewController {
             wifiButton.tapped = 0
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         }
@@ -105,7 +109,6 @@ class CityViewController: UIViewController {
             foodButton.tapped = 1
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         } else {
@@ -115,7 +118,6 @@ class CityViewController: UIViewController {
             foodButton.tapped = 0
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         }
@@ -129,7 +131,6 @@ class CityViewController: UIViewController {
             veganButton.tapped = 1
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         } else {
@@ -139,7 +140,6 @@ class CityViewController: UIViewController {
             veganButton.tapped = 0
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         }
@@ -153,7 +153,6 @@ class CityViewController: UIViewController {
             cakeButton.tapped = 1
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         } else {
@@ -163,7 +162,6 @@ class CityViewController: UIViewController {
             cakeButton.tapped = 0
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         }
@@ -177,7 +175,6 @@ class CityViewController: UIViewController {
             plugButton.tapped = 1
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         } else {
@@ -187,7 +184,6 @@ class CityViewController: UIViewController {
             plugButton.tapped = 0
             
             filteredPassedCafes.removeAll()
-            cafenames.removeAll()
             filtering()
             tableView.reloadData()
         }
@@ -200,52 +196,17 @@ class CityViewController: UIViewController {
     }
 
     func filtering() {
-        for cafe in passedCafes {
-            if wifiButton.tapped == 1 && wifiButton.tapped == cafe.wifi {
-                for cafes in filteredPassedCafes {
-                    cafenames.append(cafes.name)
-                }
-                if !cafenames.contains(cafe.name) {
+        for i in 0...4 {
+            for cafe in passedCafes {
+
+                if buttons[i].tapped == 1 {
+                    if cafe.features[i] == 1 {
                         filteredPassedCafes.append(cafe)
                     }
-                }
-            
-            if foodButton.tapped == 1 && foodButton.tapped == cafe.food {
-                for cafes in filteredPassedCafes {
-                    cafenames.append(cafes.name)
-                }
-                if !cafenames.contains(cafe.name) {
+                } else {
                     filteredPassedCafes.append(cafe)
                 }
             }
-            
-            if veganButton.tapped == 1 && veganButton.tapped == cafe.vegan {
-                for cafes in filteredPassedCafes {
-                    cafenames.append(cafes.name)
-                }
-                if !cafenames.contains(cafe.name) {
-                    filteredPassedCafes.append(cafe)
-                }
-            }
-            
-            if cakeButton.tapped == 1 && cakeButton.tapped == cafe.cake {
-                for cafes in filteredPassedCafes {
-                    cafenames.append(cafes.name)
-                }
-                if !cafenames.contains(cafe.name) {
-                    filteredPassedCafes.append(cafe)
-                }
-            }
-            
-            if plugButton.tapped == 1 && plugButton.tapped == cafe.plug {
-                for cafes in filteredPassedCafes {
-                    cafenames.append(cafes.name)
-                }
-                if !cafenames.contains(cafe.name) {
-                    filteredPassedCafes.append(cafe)
-                }
-            }
-            
         }
     }
     
