@@ -196,16 +196,20 @@ class CityViewController: UIViewController {
     }
 
     func filtering() {
-        for i in 0...4 {
-            for cafe in passedCafes {
-
-                if buttons[i].tapped == 1 {
-                    if cafe.features[i] == 1 {
-                        filteredPassedCafes.append(cafe)
-                    }
+        for cafe in passedCafes {
+            var count = 0
+            loop: for i in 0...4 {
+                if buttons[i].tapped == 1 && cafe.features[i] == 0 {
+                    break loop
                 } else {
-                    filteredPassedCafes.append(cafe)
+                    count += 1
                 }
+            }
+            if count == 5 {
+                filteredPassedCafes.append(cafe)
+                count = 0
+            } else {
+                count = 0
             }
         }
     }
