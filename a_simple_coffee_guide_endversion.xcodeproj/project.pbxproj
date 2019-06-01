@@ -19,7 +19,6 @@
 		B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B332591F2225803A00BCF32F /* LaunchScreen.storyboard */; };
 		B3325929222580B800BCF32F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3325928222580B800BCF32F /* PageViewController.swift */; };
 		B336B6DA229584C000F6AD69 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336B6D9229584C000F6AD69 /* CityViewController.swift */; };
-		B339FBA8229EDE82005186D1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B339FBA7229EDE82005186D1 /* RoundButton.swift */; };
 		B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */; };
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
 		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
@@ -34,6 +33,7 @@
 		B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */; };
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
 		B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */; };
+		B3CDEF8322A2B3C500674791 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDEF8222A2B3C500674791 /* RoundButton.swift */; };
 		B3FBE7F92285BDD700900812 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */; };
 		B3FCAF44229570880097749B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF43229570880097749B /* LocationViewController.swift */; };
 		B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF45229572880097749B /* LocationTableViewCell.swift */; };
@@ -54,7 +54,6 @@
 		B33259222225803B00BCF32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3325928222580B800BCF32F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B336B6D9229584C000F6AD69 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
-		B339FBA7229EDE82005186D1 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
 		B3C57276223A9D86003DA27D /* ComplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainViewController.swift; sourceTree = "<group>"; };
 		B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainTableViewCell.swift; sourceTree = "<group>"; };
+		B3CDEF8222A2B3C500674791 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../Library/Fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		B3FCAF43229570880097749B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B3FCAF45229572880097749B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 				B33259222225803B00BCF32F /* Info.plist */,
 				B3325928222580B800BCF32F /* PageViewController.swift */,
 				B393CAF6222AA47B004B028E /* Utility.swift */,
-				B339FBA7229EDE82005186D1 /* RoundButton.swift */,
 				B3C5727B223AA54C003DA27D /* Brewing */,
 				B355A5D4222EC080009A5BE7 /* Detail */,
 				B3C5727A223AA008003DA27D /* Complain */,
@@ -134,6 +133,7 @@
 				B3FCAF47229572900097749B /* Location */,
 				B305922C2296CB5A0010B6FA /* City */,
 				B3A1305D229BE3E200BE937D /* CafeDetail */,
+				B3CDEF8222A2B3C500674791 /* RoundButton.swift */,
 			);
 			path = a_simple_coffee_guide_endversion;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				B393CAF7222AA47B004B028E /* Utility.swift in Sources */,
 				B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */,
 				B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */,
-				B339FBA8229EDE82005186D1 /* RoundButton.swift in Sources */,
+				B3CDEF8322A2B3C500674791 /* RoundButton.swift in Sources */,
 				B305922E2296CBD00010B6FA /* Cafe.swift in Sources */,
 				B305922B2296CA770010B6FA /* CityTableViewCell.swift in Sources */,
 				B3872368226A217000ED97DF /* BrewingModel.swift in Sources */,
