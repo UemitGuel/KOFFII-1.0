@@ -77,15 +77,15 @@ class LocationViewController: UIViewController {
     func populateTableView() {
         locations = [
             Location(city: "Barcelona", imageName: "Barcelona",
-                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", features: [1,1,1,1,1]),
-                             Cafe(name: "Sopa", image: "Cafe_Itercate", features: [1,1,1,1,1]),
-                             Cafe(name: "Federal", image: "Cafe_Itercate", features: [1,1,0,1,0]), //please check
-                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", features: [1,1,1,0,1]), // please check
-                            Cafe(name: "CafeCosmo", image: "Cafe_Itercate", features: [0,1,1,1,0]),
-                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", features: [0,1,1,0,0]),
-                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", features: [0,1,1,0,0])]),
-            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", features: [1,1,1,1,1])]),
-            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", features: [1,1,1,1,1])])
+                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug]),
+                             Cafe(name: "Sopa", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug]),
+                             Cafe(name: "Federal", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Cake]), //please check
+                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food]), // please check
+                        Cafe(name: "CafeCosmo", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake]),
+                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan]),
+                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake])]),
+            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug])]),
+            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug])])
     ]
     }
     

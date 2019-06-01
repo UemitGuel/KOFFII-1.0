@@ -36,7 +36,7 @@ class PageViewController: UIPageViewController {
         backButton.tintColor = UIColor.white
         navigationItem.backBarButtonItem = backButton
         
-        
+        //load others VCs and assigned it!
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }

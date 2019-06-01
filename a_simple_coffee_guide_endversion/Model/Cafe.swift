@@ -8,8 +8,18 @@
 
 import Foundation
 
+enum Features {
+    case Wifi
+    case Food
+    case Vegan
+    case Cake
+    case Plug
+}
+
 struct Cafe {
     let name: String
     let image: String
-    let features: [Int]
+    let features: [Features]
 }
+
+
