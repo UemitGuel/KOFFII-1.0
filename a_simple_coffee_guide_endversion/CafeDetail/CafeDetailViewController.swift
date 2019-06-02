@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import MapKit
+
 
 class CafeDetailViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var map: MKMapView!
     
     
     @IBOutlet weak var wifiButton: RoundButton!
@@ -32,12 +36,23 @@ class CafeDetailViewController: UIViewController {
     
     // let/var
     var passedCafe = Cafe(name: "", image: "", features: [])
+    let initialLocation = CLLocation(latitude: 41.379895, longitude: 2.159335)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activateButtons(passedCafe)
+        
+        // set initial location in Itacate
+        centerMapOnLocation(location: initialLocation)
 
-
+    }
+    
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        map.setRegion(coordinateRegion, animated: true)
     }
     
     func activateButtons(_ passedCafe: Cafe) {
@@ -70,8 +85,6 @@ class CafeDetailViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-
-        print("himi")
     }
     
     
