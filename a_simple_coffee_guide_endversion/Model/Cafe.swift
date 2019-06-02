@@ -20,6 +20,8 @@ struct Cafe {
     let name: String
     let image: String
     let features: [Features]
+    let latitude: Double
+    let longitude: Double
 }
 
 

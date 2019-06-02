@@ -77,15 +77,15 @@ class LocationViewController: UIViewController {
     func populateTableView() {
         locations = [
             Location(city: "Barcelona", imageName: "Barcelona",
-                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug]),
-                             Cafe(name: "Sopa", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug]),
-                             Cafe(name: "Federal", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Cake]), //please check
-                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food]), // please check
-                        Cafe(name: "CafeCosmo", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake]),
-                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan]),
-                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake])]),
-            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug])]),
-            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug])])
+                     cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 41.379895, longitude: 2.159335),
+                             Cafe(name: "Sopa", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 41.402390, longitude: 2.195293),
+                             Cafe(name: "Federal", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Cake], latitude: 41.378008, longitude: 2.177775),
+                            Cafe(name: "Nappuccino", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food], latitude: 41.385280, longitude:  2.161633),
+                        Cafe(name: "CafeCosmo", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake], latitude: 41.387472, longitude: 2.162690),
+                            Cafe(name: "Satan's Coffee - Gòtic", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan], latitude: 41.382651, longitude: 2.175212),
+                            Cafe(name: "Satan´s Coffee - Eixample", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake], latitude: 41.393602, longitude: 2.174269)]),
+            Location(city: "Cologne", imageName: "Cologne", cafes: [Cafe(name: "", image: "", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 0, longitude: 0)]),
+            Location(city: "Madrid", imageName: "Madrid", cafes: [Cafe(name: "", image: "", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 0, longitude: 0)])
     ]
     }
     

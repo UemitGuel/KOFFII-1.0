@@ -29,7 +29,7 @@ class CityViewController: UIViewController {
     
     
     // let/var
-    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [])])
+    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0)])
     var passedCafes = [Cafe]()
     var filteredPassedCafes = [Cafe]()
     var requestedFeatures : [Features] = []

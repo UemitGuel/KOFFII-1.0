@@ -35,16 +35,16 @@ class CafeDetailViewController: UIViewController {
     
     
     // let/var
-    var passedCafe = Cafe(name: "", image: "", features: [])
-    let initialLocation = CLLocation(latitude: 41.379895, longitude: 2.159335)
+    var passedCafe = Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0)
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activateButtons(passedCafe)
         
-        // set initial location in Itacate
-        centerMapOnLocation(location: initialLocation)
+        // set map
+        let location = CLLocation(latitude: passedCafe.latitude, longitude: passedCafe.longitude)
+        centerMapOnLocation(location: location)
 
     }
     
