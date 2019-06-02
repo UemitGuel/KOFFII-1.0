@@ -16,6 +16,8 @@ class CafeDetailViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
     
+    @IBOutlet weak var toLocationButton: UIButton!
+    
     
     @IBOutlet weak var wifiButton: RoundButton!
     @IBOutlet weak var wifiLabel: UILabel!
@@ -87,5 +89,12 @@ class CafeDetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
+    @IBAction func toLocationButtonTapped(_ sender: UIButton) {
+        print("hi")
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)) {
+            UIApplication.shared.openURL(URL(string:                "comgooglemaps-x-callback://?q=\(passedCafe.name)&center=\(passedCafe.latitude),\(passedCafe.longitude)")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+}
 }

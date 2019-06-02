@@ -78,7 +78,7 @@ class LocationViewController: UIViewController {
         locations = [
             Location(city: "Barcelona", imageName: "Barcelona",
                      cafes: [Cafe(name: "Itacate", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 41.379895, longitude: 2.159335),
-                             Cafe(name: "Sopa", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 41.402390, longitude: 2.195293),
+                             Cafe(name: "Sopa Boronat", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Vegan, Features.Cake, Features.Plug], latitude: 41.402390, longitude: 2.195293),
                              Cafe(name: "Federal", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food, Features.Cake], latitude: 41.378008, longitude: 2.177775),
                             Cafe(name: "Nappuccino", image: "Cafe_Itercate", features: [Features.Wifi, Features.Food], latitude: 41.385280, longitude:  2.161633),
                         Cafe(name: "CafeCosmo", image: "Cafe_Itercate", features: [Features.Food, Features.Vegan, Features.Cake], latitude: 41.387472, longitude: 2.162690),
