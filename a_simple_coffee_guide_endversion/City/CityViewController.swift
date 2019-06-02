@@ -236,8 +236,6 @@ extension CityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
         cell.selectionStyle = .none
-        print(filteredPassedCafes)
-        print(requestedFeatures)
         if isFiltering() {
             cell.cafeImageView.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
             cell.cityCellLabel.text = filteredPassedCafes[indexPath.row].name
@@ -260,19 +258,13 @@ extension CityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CafeDetailViewController") as? CafeDetailViewController {
-            vc.passedCafe = passedlocation.cafes[indexPath.row]
-                    
-            let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            backButton.tintColor = UIColor.black
-            
-            let navigationControlleradded = UINavigationController(rootViewController: vc)
-            
-            navigationControlleradded.navigationItem.backBarButtonItem = backButton
-            
-            self.present(navigationControlleradded, animated: true, completion: nil)
-            //navigationController?.pushViewController(vc, animated: true)
+            if isFiltering() {
+                vc.passedCafe = filteredPassedCafes[indexPath.row]
+            } else {
+                vc.passedCafe = passedCafes[indexPath.row]
+            }
+            navigationController?.pushViewController(vc, animated: true)
 
         }
     }
 }
-

@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSAttributedString.Key.font : UIFont(name: "Staatliches-Regular", size: 30)!,
                 NSAttributedString.Key.foregroundColor : UIColor.black,
             ], for: .normal)
+        
+        NSSetUncaughtExceptionHandler { exception in
+            print(exception)
+            print(exception.callStackSymbols)
+        }
         return true
     }
 
