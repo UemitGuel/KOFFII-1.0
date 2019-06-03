@@ -350,7 +350,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ivq-Bk-nY2">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="180" id="3fL-M6-WVw" customClass="LocationTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -818,10 +818,20 @@
                                     <constraint firstAttribute="height" constant="91.5" id="uqY-ue-yOT"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W81-9R-AWr">
+                                <rect key="frame" x="64" y="72" width="303" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="OzS-nz-io1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NUO-yo-935" firstAttribute="trailing" secondItem="vEO-nv-gNz" secondAttribute="trailing" id="0eP-p2-JRK"/>
+                            <constraint firstItem="vEO-nv-gNz" firstAttribute="trailing" secondItem="W81-9R-AWr" secondAttribute="trailing" constant="8" id="23j-qv-waf"/>
                             <constraint firstItem="vEO-nv-gNz" firstAttribute="trailing" secondItem="jSR-Zm-WWt" secondAttribute="trailing" constant="16" id="2gn-4b-MVh"/>
                             <constraint firstItem="NUO-yo-935" firstAttribute="top" secondItem="vEO-nv-gNz" secondAttribute="top" id="4G6-T4-FFV"/>
                             <constraint firstItem="WVr-Lz-aYd" firstAttribute="top" secondItem="vEO-nv-gNz" secondAttribute="top" id="7K4-9F-feU"/>
@@ -830,7 +840,9 @@
                             <constraint firstItem="jSR-Zm-WWt" firstAttribute="leading" secondItem="vEO-nv-gNz" secondAttribute="leading" constant="16" id="Jb4-nr-Tt5"/>
                             <constraint firstItem="jSR-Zm-WWt" firstAttribute="top" secondItem="NUO-yo-935" secondAttribute="bottom" constant="8" id="OkY-25-CcZ"/>
                             <constraint firstItem="vEO-nv-gNz" firstAttribute="bottom" secondItem="jSR-Zm-WWt" secondAttribute="bottom" constant="8" id="V7L-Vs-D4l"/>
+                            <constraint firstItem="W81-9R-AWr" firstAttribute="top" secondItem="vEO-nv-gNz" secondAttribute="top" constant="8" id="b8x-g0-qAj"/>
                             <constraint firstItem="WVr-Lz-aYd" firstAttribute="trailing" secondItem="vEO-nv-gNz" secondAttribute="trailing" id="gF6-wG-qBc"/>
+                            <constraint firstItem="W81-9R-AWr" firstAttribute="leading" secondItem="ZlK-7R-1VA" secondAttribute="trailing" constant="8" id="hum-LE-hDk"/>
                             <constraint firstItem="vTg-d8-maS" firstAttribute="centerY" secondItem="NUO-yo-935" secondAttribute="centerY" constant="-20" id="oCI-BF-I2H"/>
                             <constraint firstItem="jSR-Zm-WWt" firstAttribute="top" secondItem="WVr-Lz-aYd" secondAttribute="bottom" constant="8" id="pMZ-4Y-G1D"/>
                             <constraint firstItem="ZlK-7R-1VA" firstAttribute="leading" secondItem="vEO-nv-gNz" secondAttribute="leading" constant="8" id="rQ7-B4-j1S"/>
@@ -847,6 +859,7 @@
                         <outlet property="foodButton" destination="FUi-o7-oT4" id="G7v-4b-cXL"/>
                         <outlet property="foodLabel" destination="Hdg-3l-JNn" id="l8G-Qc-Fyc"/>
                         <outlet property="map" destination="NUO-yo-935" id="tAV-7R-YfW"/>
+                        <outlet property="nameLabel" destination="W81-9R-AWr" id="GIJ-hJ-kcY"/>
                         <outlet property="plugButton" destination="Ne7-bp-nEV" id="reF-eb-uQF"/>
                         <outlet property="plugLabel" destination="UM5-X9-ygo" id="YvA-xz-X21"/>
                         <outlet property="toLocationButton" destination="WVr-Lz-aYd" id="oaF-mh-kzx"/>
@@ -948,13 +961,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-0m-KZ1">
-                                <rect key="frame" x="16" y="134" width="343" height="50"/>
+                                <rect key="frame" x="16" y="132" width="343" height="50"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbY-rA-VPd">
-                                <rect key="frame" x="16" y="192" width="343" height="467"/>
+                                <rect key="frame" x="16" y="190" width="343" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComplainTableViewCell" rowHeight="125" id="4xV-kU-EdM" customClass="ComplainTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">

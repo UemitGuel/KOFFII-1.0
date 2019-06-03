@@ -18,6 +18,8 @@ class CafeDetailViewController: UIViewController {
     
     @IBOutlet weak var toLocationButton: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     @IBOutlet weak var wifiButton: RoundButton!
     @IBOutlet weak var wifiLabel: UILabel!
@@ -44,6 +46,8 @@ class CafeDetailViewController: UIViewController {
         super.viewDidLoad()
         setupButtons()
         activateButtons(passedCafe)
+        
+        nameLabel.text = passedCafe.name
         
         // set map
         let location = CLLocation(latitude: passedCafe.latitude, longitude: passedCafe.longitude)
