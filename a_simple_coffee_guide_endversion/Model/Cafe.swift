@@ -22,6 +22,7 @@ struct Cafe {
     let features: [Features]
     let latitude: Double
     let longitude: Double
+    let url: String
 }
 
 

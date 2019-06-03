@@ -29,7 +29,7 @@ class CityViewController: UIViewController {
     
     
     // let/var
-    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0)])
+    var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0, url: "")])
     var passedCafes = [Cafe]()
     var filteredPassedCafes = [Cafe]()
     var requestedFeatures : [Features] = []
@@ -46,7 +46,7 @@ class CityViewController: UIViewController {
     }
 
     func setupNavBar() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -54,9 +54,9 @@ class CityViewController: UIViewController {
         
         title = passedlocation.city
         
-        let customFont = UIFont(name: "Staatliches-Regular", size: 40)
+        let customFont = UIFont(name: "Staatliches-Regular", size: 23)
         if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
         }
     }
     

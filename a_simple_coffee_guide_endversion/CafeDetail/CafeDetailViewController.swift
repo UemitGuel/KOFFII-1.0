@@ -37,17 +37,28 @@ class CafeDetailViewController: UIViewController {
     
     
     // let/var
-    var passedCafe = Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0)
+    var passedCafe = Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0, url: "")
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtons()
         activateButtons(passedCafe)
         
         // set map
         let location = CLLocation(latitude: passedCafe.latitude, longitude: passedCafe.longitude)
         centerMapOnLocation(location: location)
 
+    }
+    
+    func setupButtons() {
+        
+        wifiButton.layer.cornerRadius = 0.5 * wifiButton.bounds.size.width
+        foodButton.layer.cornerRadius = 0.5 * foodButton.bounds.size.width
+        veganButton.layer.cornerRadius = 0.5 * veganButton.bounds.size.width
+        cakeButton.layer.cornerRadius = 0.5 * cakeButton.bounds.size.width
+        plugButton.layer.cornerRadius = 0.5 * plugButton.bounds.size.width
+        
     }
     
     let regionRadius: CLLocationDistance = 1000
@@ -91,8 +102,11 @@ class CafeDetailViewController: UIViewController {
     
     @IBAction func toLocationButtonTapped(_ sender: UIButton) {
         print("hi")
+        
+        
         if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)) {
-            UIApplication.shared.openURL(URL(string:                "comgooglemaps-x-callback://?q=\(passedCafe.name)&center=\(passedCafe.latitude),\(passedCafe.longitude)")!)
+            
+            UIApplication.shared.open((URL(string: passedCafe.url)!) , options: [:] , completionHandler: nil)
         } else {
             print("Can't use comgooglemaps://");
         }
