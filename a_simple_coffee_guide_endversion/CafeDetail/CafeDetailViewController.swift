@@ -57,11 +57,11 @@ class CafeDetailViewController: UIViewController {
     
     func setupButtons() {
         
-        wifiButton.layer.cornerRadius = 0.5 * wifiButton.bounds.size.width
-        foodButton.layer.cornerRadius = 0.5 * foodButton.bounds.size.width
-        veganButton.layer.cornerRadius = 0.5 * veganButton.bounds.size.width
-        cakeButton.layer.cornerRadius = 0.5 * cakeButton.bounds.size.width
-        plugButton.layer.cornerRadius = 0.5 * plugButton.bounds.size.width
+        wifiButton.layer.cornerRadius = 8
+        foodButton.layer.cornerRadius = 8
+        veganButton.layer.cornerRadius = 8
+        cakeButton.layer.cornerRadius = 8
+        plugButton.layer.cornerRadius = 8
         
     }
     
@@ -76,27 +76,27 @@ class CafeDetailViewController: UIViewController {
         if passedCafe.features.contains(.Wifi) {
             wifiButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             wifiButton.borderWidth = 2
-            wifiLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            wifiLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
         }
         if passedCafe.features.contains(.Food) {
             foodButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             foodButton.borderWidth = 2
-            foodLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            foodLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
         }
         if passedCafe.features.contains(.Vegan) {
             veganButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             veganButton.borderWidth = 2
-            veganLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            veganLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
         }
         if passedCafe.features.contains(.Cake) {
             cakeButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             cakeButton.borderWidth = 2
-            cakeLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            cakeLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
         }
         if passedCafe.features.contains(.Plug) {
             plugButton.customBGColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
             plugButton.borderWidth = 2
-            plugLabel.font = UIFont(name: "Quicksand-Bold", size: 17)
+            plugLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
         }
     }
     
