@@ -115,7 +115,16 @@ extension LocationViewController: UITableViewDataSource {
             location = locations[indexPath.row]
         }
         cell.cellLabel.text = location.city
-        cell.locationImageView.image = UIImage(named: location.imageName)
+        //cell.locationImageView.image = UIImage(named: location.imageName)
+        let url = URL(string: "https://www.menu-diario.com/wp-content/uploads/2017/07/itacate-0-640x800.jpg")
+        
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            DispatchQueue.main.async {
+                cell.locationImageView.image = UIImage(data: data!)
+            }
+        }
+        
         return cell
     }
     
