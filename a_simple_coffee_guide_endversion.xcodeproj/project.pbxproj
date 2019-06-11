@@ -11,6 +11,7 @@
 		B305922E2296CBD00010B6FA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305922D2296CBD00010B6FA /* Cafe.swift */; };
 		B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */; };
 		B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */; };
+		B318762222AFEAE000D0B920 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318762122AFEAE000D0B920 /* CafeCollectionViewCell.swift */; };
 		B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */; };
 		B33259172225803900BCF32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33259162225803900BCF32F /* AppDelegate.swift */; };
 		B33259192225803900BCF32F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33259182225803900BCF32F /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		B305922D2296CBD00010B6FA /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungViewController.swift; sourceTree = "<group>"; };
 		B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungTableViewCell.swift; sourceTree = "<group>"; };
+		B318762122AFEAE000D0B920 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B33259132225803900BCF32F /* a_simple_coffee_guide_endversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a_simple_coffee_guide_endversion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33259162225803900BCF32F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B33259182225803900BCF32F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				B336B6D9229584C000F6AD69 /* CityViewController.swift */,
 				B305922A2296CA770010B6FA /* CityTableViewCell.swift */,
+				B318762122AFEAE000D0B920 /* CafeCollectionViewCell.swift */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				B384BC2022A2BC73006F5566 /* CafeDetailViewController.swift in Sources */,
 				B387236C226A221800ED97DF /* Complain.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
+				B318762222AFEAE000D0B920 /* CafeCollectionViewCell.swift in Sources */,
 				B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */,
 				B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */,
 				B33259172225803900BCF32F /* AppDelegate.swift in Sources */,
