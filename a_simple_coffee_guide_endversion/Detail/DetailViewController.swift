@@ -42,13 +42,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("load")
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-
         setupNavBar()
-        
+
         setupLanguage()
         
         
@@ -102,6 +97,9 @@ class DetailViewController: UIViewController {
     
     
     func setupNavBar() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         title = passedbrewing.name
         
         let customFont = UIFont(name: "Staatliches-Regular", size: 40)

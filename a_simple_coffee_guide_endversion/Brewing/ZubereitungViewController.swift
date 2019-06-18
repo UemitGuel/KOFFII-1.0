@@ -25,12 +25,15 @@ class ZubereitungViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearch()
+        setupNavBar()
         
         tableView.dataSource = self
         tableView.delegate = self
     
         setupLanguage()
-        
+    }
+    
+    func setupNavBar() {
         // eliminate 1pt line
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         
@@ -102,9 +105,7 @@ class ZubereitungViewController: UIViewController {
 
     }
     
-    
-    // MARK: - Private instance methods
-    
+        
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil
         return searchController.searchBar.text?.isEmpty ?? true
