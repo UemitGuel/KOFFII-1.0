@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import CoreLocation
+
 
 class CafeDetailViewController: UIViewController {
 
@@ -106,14 +108,34 @@ class CafeDetailViewController: UIViewController {
     }
     
     @IBAction func toLocationButtonTapped(_ sender: UIButton) {
-        print("hi")
         
+        let alert = UIAlertController(title: "", message: "Choose your Map App", preferredStyle: .actionSheet)
         
-        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)) {
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        //Google Maps
+        let actionGoogleMaps = UIAlertAction(title: "Google Maps", style: .default) { UIAlertAction in
             
-            UIApplication.shared.open((URL(string: passedCafe.url)!) , options: [:] , completionHandler: nil)
-        } else {
-            print("Can't use comgooglemaps://");
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)) {
+                
+                UIApplication.shared.open((URL(string: self.passedCafe.url)!) , options: [:] , completionHandler: nil)
+            } else {
+                print("Can't use comgooglemaps://");
+            }
         }
+        
+        //Apple Maps
+        let actionAppleMaps = UIAlertAction(title: "Apple Maps", style: .default) { UIAlertAction in
+            let url = URL(string: "http://maps.apple.com/?q=\(self.passedCafe.name)&sll=\(self.passedCafe.latitude),\(self.passedCafe.longitude)&t=s")
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+
+            }
+        
+        alert.addAction(actionGoogleMaps)
+        alert.addAction(actionAppleMaps)
+        alert.addAction(actionCancel)
+        
+        present(alert, animated: true)
+        
 }
 }

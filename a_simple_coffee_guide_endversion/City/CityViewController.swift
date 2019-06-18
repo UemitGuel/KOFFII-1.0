@@ -327,3 +327,18 @@ extension CityViewController:UICollectionViewDelegateFlowLayout {
         return sectionInsets.left
     }
 }
+
+extension CityViewController:UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CafeDetailViewController") as? CafeDetailViewController {
+            if isFiltering() {
+                vc.passedCafe = filteredPassedCafes[indexPath.row]
+            } else {
+                vc.passedCafe = passedCafes[indexPath.row]
+            }
+            navigationController?.pushViewController(vc, animated: true)
+            }
+    }
+    
+}
