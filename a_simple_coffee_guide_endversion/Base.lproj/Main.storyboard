@@ -422,46 +422,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Bl-0A-fNf">
-                                <rect key="frame" x="0.0" y="119" width="375" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityTableViewCell" rowHeight="180" id="13k-6Q-Nrj" customClass="CityTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="13k-6Q-Nrj" id="PDL-ys-OWY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2I-ME-cJI">
-                                                    <rect key="frame" x="15" y="11" width="345" height="158"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFi-x6-Xh7">
-                                                    <rect key="frame" x="23" y="19" width="329" height="50"/>
-                                                    <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="N2I-ME-cJI" firstAttribute="top" secondItem="PDL-ys-OWY" secondAttribute="topMargin" id="5gY-es-0ma"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="N2I-ME-cJI" secondAttribute="trailing" id="AAL-jC-xaI"/>
-                                                <constraint firstItem="eFi-x6-Xh7" firstAttribute="top" secondItem="PDL-ys-OWY" secondAttribute="topMargin" constant="8" id="G58-jI-rK5"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="N2I-ME-cJI" secondAttribute="bottom" id="NE3-mc-b3h"/>
-                                                <constraint firstItem="N2I-ME-cJI" firstAttribute="leading" secondItem="PDL-ys-OWY" secondAttribute="leadingMargin" id="cMx-Hv-MwX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eFi-x6-Xh7" secondAttribute="trailing" constant="8" id="isB-ed-fmO"/>
-                                                <constraint firstItem="eFi-x6-Xh7" firstAttribute="leading" secondItem="PDL-ys-OWY" secondAttribute="leadingMargin" constant="8" id="kIY-ca-y4R"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="cafeImageView" destination="N2I-ME-cJI" id="MEJ-0q-SqX"/>
-                                            <outlet property="cityCellLabel" destination="eFi-x6-Xh7" id="efM-K5-ZXO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-14-W7J">
-                                <rect key="frame" x="16" y="28" width="343" height="83"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-14-W7J">
+                                <rect key="frame" x="16" y="28" width="343" height="81.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-D0-cep">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
@@ -562,34 +524,34 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lM3-d8-WTe">
-                                        <rect key="frame" x="0.0" y="64" width="343" height="19"/>
+                                        <rect key="frame" x="0.0" y="64" width="343" height="17.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIFI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-42-syx">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOOD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNP-f8-Eqi">
-                                                <rect key="frame" x="72" y="0.0" width="55.5" height="19"/>
+                                                <rect key="frame" x="72" y="0.0" width="55.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VEGAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-Ey-oAF">
-                                                <rect key="frame" x="143.5" y="0.0" width="56" height="19"/>
+                                                <rect key="frame" x="143.5" y="0.0" width="56" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-C9-EuJ">
-                                                <rect key="frame" x="215.5" y="0.0" width="55.5" height="19"/>
+                                                <rect key="frame" x="215.5" y="0.0" width="55.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IG-ym-18h">
-                                                <rect key="frame" x="287" y="0.0" width="56" height="19"/>
+                                                <rect key="frame" x="287" y="0.0" width="56" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand Medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -598,38 +560,76 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-xq-UAN">
+                                <rect key="frame" x="0.0" y="109.5" width="375" height="557.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GXj-1P-hqV">
+                                    <size key="itemSize" width="133" height="151"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cafeCell" id="0Tv-5m-e7E" customClass="CafeCollectionViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="133" height="158"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee_1" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-J4-gal">
+                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="158"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-Ag-U2E">
+                                                    <rect key="frame" x="8" y="28" width="117" height="35"/>
+                                                    <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Jkq-J4-gal" secondAttribute="trailing" id="242-uz-sSu"/>
+                                            <constraint firstItem="Rf1-Ag-U2E" firstAttribute="leading" secondItem="0Tv-5m-e7E" secondAttribute="leadingMargin" id="8cd-7Z-9CM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Rf1-Ag-U2E" secondAttribute="trailing" id="CpV-yV-A4q"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jkq-J4-gal" secondAttribute="bottom" id="GA0-bf-lcA"/>
+                                            <constraint firstItem="Jkq-J4-gal" firstAttribute="top" secondItem="0Tv-5m-e7E" secondAttribute="top" id="ShE-vR-ggh"/>
+                                            <constraint firstItem="Rf1-Ag-U2E" firstAttribute="top" secondItem="0Tv-5m-e7E" secondAttribute="topMargin" id="Y3W-Df-1us"/>
+                                            <constraint firstItem="Jkq-J4-gal" firstAttribute="leading" secondItem="0Tv-5m-e7E" secondAttribute="leading" id="rpQ-f2-cph"/>
+                                        </constraints>
+                                        <size key="customSize" width="133" height="158"/>
+                                        <connections>
+                                            <outlet property="cafeLabel" destination="Rf1-Ag-U2E" id="Vuy-7h-hap"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0Bl-0A-fNf" firstAttribute="top" secondItem="hdS-14-W7J" secondAttribute="bottom" constant="8" id="CpE-wd-2g1"/>
+                            <constraint firstItem="A6B-JL-m38" firstAttribute="trailing" secondItem="Liz-xq-UAN" secondAttribute="trailing" id="7cP-t8-Yk1"/>
+                            <constraint firstItem="Liz-xq-UAN" firstAttribute="leading" secondItem="A6B-JL-m38" secondAttribute="leading" id="CE2-Re-znz"/>
+                            <constraint firstItem="Liz-xq-UAN" firstAttribute="top" secondItem="hdS-14-W7J" secondAttribute="bottom" id="EGK-fe-FyD"/>
                             <constraint firstItem="A6B-JL-m38" firstAttribute="trailing" secondItem="hdS-14-W7J" secondAttribute="trailing" constant="16" id="FxH-HH-of5"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="0Bl-0A-fNf" secondAttribute="bottom" id="dWC-rj-CVl"/>
-                            <constraint firstItem="0Bl-0A-fNf" firstAttribute="trailing" secondItem="A6B-JL-m38" secondAttribute="trailing" id="e5v-fd-XcB"/>
                             <constraint firstItem="hdS-14-W7J" firstAttribute="top" secondItem="A6B-JL-m38" secondAttribute="top" constant="8" id="fq3-AL-9lw"/>
+                            <constraint firstItem="A6B-JL-m38" firstAttribute="bottom" secondItem="Liz-xq-UAN" secondAttribute="bottom" id="ohN-C6-vyp"/>
                             <constraint firstItem="hdS-14-W7J" firstAttribute="leading" secondItem="A6B-JL-m38" secondAttribute="leading" constant="16" id="vPH-1n-MnU"/>
-                            <constraint firstItem="0Bl-0A-fNf" firstAttribute="leading" secondItem="A6B-JL-m38" secondAttribute="leading" id="vit-F9-R54"/>
-                            <constraint firstItem="0Bl-0A-fNf" firstAttribute="top" secondItem="A6B-JL-m38" secondAttribute="top" constant="170" id="wPn-dt-U5U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A6B-JL-m38"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="wPn-dt-U5U"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem title="Item" id="mNM-fM-qqk"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Barcelona" id="6ea-Ju-4aC"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cakeButton" destination="HKx-iO-Vuz" id="IUu-t3-m2w"/>
                         <outlet property="cakeLabel" destination="Np1-C9-EuJ" id="0Vk-mH-p4H"/>
+                        <outlet property="collectionView" destination="Liz-xq-UAN" id="kWk-AS-DkY"/>
                         <outlet property="foodButton" destination="WNf-qD-j8Z" id="o03-Lf-pgY"/>
                         <outlet property="foodLabel" destination="hNP-f8-Eqi" id="pnO-pm-4Hs"/>
                         <outlet property="plugButton" destination="6zS-6p-iDe" id="lek-nR-npl"/>
                         <outlet property="plugLabel" destination="5IG-ym-18h" id="A2E-g6-xkL"/>
-                        <outlet property="tableView" destination="0Bl-0A-fNf" id="eAU-kB-xWB"/>
                         <outlet property="veganButton" destination="lt5-ec-ARr" id="7hJ-Qt-hzQ"/>
                         <outlet property="veganLabel" destination="eSz-Ey-oAF" id="myv-XV-Kcq"/>
                         <outlet property="wifiButton" destination="OvQ-15-P3R" id="ubT-E2-5hI"/>
@@ -955,13 +955,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-0m-KZ1">
-                                <rect key="frame" x="16" y="134" width="343" height="50"/>
+                                <rect key="frame" x="16" y="132" width="343" height="50"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbY-rA-VPd">
-                                <rect key="frame" x="16" y="192" width="343" height="467"/>
+                                <rect key="frame" x="16" y="190" width="343" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComplainTableViewCell" rowHeight="125" id="4xV-kU-EdM" customClass="ComplainTableViewCell" customModule="a_simple_coffee_guide_endversion" customModuleProvider="target">
@@ -1232,6 +1232,7 @@
     <resources>
         <image name="CAKE" width="18" height="22"/>
         <image name="Cafe_map_icon" width="26" height="35"/>
+        <image name="Coffee_1" width="1997" height="3000"/>
         <image name="Coffee_Bean_last" width="40" height="52"/>
         <image name="Complain" width="36" height="36"/>
         <image name="FOOD" width="20" height="18"/>

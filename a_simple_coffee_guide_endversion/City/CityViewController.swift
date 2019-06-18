@@ -10,6 +10,8 @@ import UIKit
 
 class CityViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     @IBOutlet weak var wifiButton: RoundButton!
     @IBOutlet weak var wifiLabel: UILabel!
     
@@ -25,8 +27,7 @@ class CityViewController: UIViewController {
     @IBOutlet weak var plugButton: RoundButton!
     @IBOutlet weak var plugLabel: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    
+
     
     // let/var
     var passedlocation : Location = Location(city: "", imageName: "", cafes: [Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0, url: "")])
@@ -34,14 +35,23 @@ class CityViewController: UIViewController {
     var filteredPassedCafes = [Cafe]()
     var requestedFeatures : [Features] = []
     
+    private let reuseIdentifier = "cafeCell"
+    private let sectionInsets = UIEdgeInsets(top: 50.0,
+                                             left: 20.0,
+                                             bottom: 50.0,
+                                             right: 20.0)
+    private let itemsPerRow: CGFloat = 2
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupButtons()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
         passedCafes = passedlocation.cafes
     }
 
@@ -82,7 +92,7 @@ class CityViewController: UIViewController {
             wifiLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         } else {
             requestedFeatures = requestedFeatures.filter({ return $0 != .Wifi})
             
@@ -91,7 +101,7 @@ class CityViewController: UIViewController {
             wifiLabel.font = UIFont(name: "Quicksand-Medium", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
     
@@ -104,7 +114,7 @@ class CityViewController: UIViewController {
             foodLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         } else {
             requestedFeatures = requestedFeatures.filter({ return $0 != .Food})
 
@@ -114,7 +124,7 @@ class CityViewController: UIViewController {
             foodLabel.font = UIFont(name: "Quicksand-Medium", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
     
@@ -127,7 +137,7 @@ class CityViewController: UIViewController {
             veganLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         } else {
             requestedFeatures = requestedFeatures.filter({ return $0 != .Vegan})
 
@@ -136,7 +146,7 @@ class CityViewController: UIViewController {
             veganLabel.font = UIFont(name: "Quicksand-Medium", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
     
@@ -149,7 +159,7 @@ class CityViewController: UIViewController {
             cakeLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         } else {
             requestedFeatures = requestedFeatures.filter({ return $0 != .Cake})
 
@@ -158,7 +168,7 @@ class CityViewController: UIViewController {
             cakeLabel.font = UIFont(name: "Quicksand-Medium", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
     
@@ -171,7 +181,7 @@ class CityViewController: UIViewController {
             plugLabel.font = UIFont(name: "Quicksand-Bold", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         } else {
             requestedFeatures = requestedFeatures.filter({ return $0 != .Plug})
 
@@ -180,7 +190,7 @@ class CityViewController: UIViewController {
             plugLabel.font = UIFont(name: "Quicksand-Medium", size: 15)
             
             filtering()
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
     
@@ -224,8 +234,53 @@ class CityViewController: UIViewController {
     }
 }
 
-extension CityViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//extension CityViewController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if isFiltering() {
+//            return filteredPassedCafes.count
+//        } else {
+//            return passedlocation.cafes.count
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+//        cell.selectionStyle = .none
+//        if isFiltering() {
+//            cell.cafeImageView.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
+//            cell.cityCellLabel.text = filteredPassedCafes[indexPath.row].name
+//            return cell
+//        } else {
+//            cell.cafeImageView.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
+//            cell.cityCellLabel.text = passedlocation.cafes[indexPath.row].name
+//            return cell
+//    }
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 220
+//    }
+//
+//}
+//
+//extension CityViewController: UITableViewDelegate {
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        if let vc = storyboard?.instantiateViewController(withIdentifier: "CafeDetailViewController") as? CafeDetailViewController {
+//            if isFiltering() {
+//                vc.passedCafe = filteredPassedCafes[indexPath.row]
+//            } else {
+//                vc.passedCafe = passedCafes[indexPath.row]
+//            }
+//            navigationController?.pushViewController(vc, animated: true)
+//
+//        }
+//    }
+//}
+
+extension CityViewController:UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isFiltering() {
             return filteredPassedCafes.count
         } else {
@@ -233,38 +288,42 @@ extension CityViewController: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
-        cell.selectionStyle = .none
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cafeCell", for: indexPath) as! CafeCollectionViewCell
         if isFiltering() {
-            cell.cafeImageView.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
-            cell.cityCellLabel.text = filteredPassedCafes[indexPath.row].name
+            cell.cafeLabel.text = filteredPassedCafes[indexPath.row].name
             return cell
         } else {
-            cell.cafeImageView.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
-            cell.cityCellLabel.text = passedlocation.cafes[indexPath.row].name
+            cell.cafeLabel.text = passedlocation.cafes[indexPath.row].name
             return cell
+        }
     }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
-    }
-    
 }
 
-extension CityViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension CityViewController:UICollectionViewDelegateFlowLayout {
+    //1
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
         
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "CafeDetailViewController") as? CafeDetailViewController {
-            if isFiltering() {
-                vc.passedCafe = filteredPassedCafes[indexPath.row]
-            } else {
-                vc.passedCafe = passedCafes[indexPath.row]
-            }
-            navigationController?.pushViewController(vc, animated: true)
-
-        }
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 }
