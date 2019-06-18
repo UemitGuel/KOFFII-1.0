@@ -11,6 +11,7 @@
 		B305922E2296CBD00010B6FA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305922D2296CBD00010B6FA /* Cafe.swift */; };
 		B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */; };
 		B305C2EB222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */; };
+		B314E1B422B8F60400684116 /* LocationBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B314E1B322B8F60400684116 /* LocationBank.swift */; };
 		B318762222AFEAE000D0B920 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318762122AFEAE000D0B920 /* CafeCollectionViewCell.swift */; };
 		B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */; };
 		B33259172225803900BCF32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33259162225803900BCF32F /* AppDelegate.swift */; };
@@ -33,7 +34,6 @@
 		B38ABDDB22B7EC820016A82A /* BrewingBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ABDDA22B7EC820016A82A /* BrewingBank.swift */; };
 		B38ABDDF22B7F4C30016A82A /* ComplainBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ABDDE22B7F4C30016A82A /* ComplainBank.swift */; };
 		B38ABDE122B7F7360016A82A /* KnowledgeBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ABDE022B7F7360016A82A /* KnowledgeBank.swift */; };
-		B38ABDE322B7F8900016A82A /* LocationBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ABDE222B7F8900016A82A /* LocationBank.swift */; };
 		B393CAF7222AA47B004B028E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393CAF6222AA47B004B028E /* Utility.swift */; };
 		B3B868292265F1F9004D2365 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */; };
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
@@ -50,6 +50,7 @@
 		B305922D2296CBD00010B6FA /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungViewController.swift; sourceTree = "<group>"; };
 		B305C2EA222A9D4600EFF2B1 /* ZubereitungTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungTableViewCell.swift; sourceTree = "<group>"; };
+		B314E1B322B8F60400684116 /* LocationBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationBank.swift; sourceTree = "<group>"; };
 		B318762122AFEAE000D0B920 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B33259132225803900BCF32F /* a_simple_coffee_guide_endversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a_simple_coffee_guide_endversion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33259162225803900BCF32F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		B38ABDDA22B7EC820016A82A /* BrewingBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewingBank.swift; sourceTree = "<group>"; };
 		B38ABDDE22B7F4C30016A82A /* ComplainBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainBank.swift; sourceTree = "<group>"; };
 		B38ABDE022B7F7360016A82A /* KnowledgeBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeBank.swift; sourceTree = "<group>"; };
-		B38ABDE222B7F8900016A82A /* LocationBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationBank.swift; sourceTree = "<group>"; };
 		B393CAF6222AA47B004B028E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Staatliches-Regular.ttf"; sourceTree = "<group>"; };
 		B3B868282265F1F9004D2365 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
@@ -176,9 +176,9 @@
 				B3872369226A21AF00ED97DF /* KnowledgeModel.swift */,
 				B38ABDDE22B7F4C30016A82A /* ComplainBank.swift */,
 				B387236B226A221800ED97DF /* Complain.swift */,
-				B38ABDE222B7F8900016A82A /* LocationBank.swift */,
 				B3FCAF48229574470097749B /* Location.swift */,
 				B305922D2296CBD00010B6FA /* Cafe.swift */,
+				B314E1B322B8F60400684116 /* LocationBank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,11 +332,8 @@
 				B384BC2022A2BC73006F5566 /* CafeDetailViewController.swift in Sources */,
 				B387236C226A221800ED97DF /* Complain.swift in Sources */,
 				B33259192225803900BCF32F /* ViewController.swift in Sources */,
-<<<<<<< HEAD
-				B38ABDE322B7F8900016A82A /* LocationBank.swift in Sources */,
-=======
+				B314E1B422B8F60400684116 /* LocationBank.swift in Sources */,
 				B318762222AFEAE000D0B920 /* CafeCollectionViewCell.swift in Sources */,
->>>>>>> implementingCollectionView
 				B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */,
 				B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */,
 				B33259172225803900BCF32F /* AppDelegate.swift in Sources */,
