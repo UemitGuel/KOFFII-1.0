@@ -12,9 +12,9 @@ class PageViewController: UIPageViewController {
     
     fileprivate lazy var pages: [UIViewController] = {
         return [
+            self.getViewController(withIdentifier: "Map_Nav"),
             self.getViewController(withIdentifier: "Zubereitung_nav"),
-            self.getViewController(withIdentifier: "Kaffeewissen_Nav"),
-            self.getViewController(withIdentifier: "Map_Nav")
+            self.getViewController(withIdentifier: "Kaffeewissen_Nav")
         ]
     }()
     
@@ -33,7 +33,7 @@ class PageViewController: UIPageViewController {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
         
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        backButton.tintColor = UIColor.white
+        backButton.tintColor = UIColor.black
         navigationItem.backBarButtonItem = backButton
         
         //load others VCs and assigned it!
@@ -50,7 +50,7 @@ extension PageViewController: UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
-        if pages.firstIndex(of: viewController) == Optional(2) {
+        if pages.firstIndex(of: viewController) == Optional(0) {
             let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             backButton.tintColor = UIColor.black
             navigationItem.backBarButtonItem = backButton
@@ -71,7 +71,7 @@ extension PageViewController: UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
-        if pages.firstIndex(of: viewController) == Optional(2) {
+        if pages.firstIndex(of: viewController) == Optional(0) {
             let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             backButton.tintColor = UIColor.black
             navigationItem.backBarButtonItem = backButton

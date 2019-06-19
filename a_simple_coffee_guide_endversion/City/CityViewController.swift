@@ -34,6 +34,7 @@ class CityViewController: UIViewController {
     var passedCafes = [Cafe]()
     var filteredPassedCafes = [Cafe]()
     var requestedFeatures : [Features] = []
+
     
     private let reuseIdentifier = "cafeCell"
     private let sectionInsets = UIEdgeInsets(top: 50.0,
@@ -64,7 +65,7 @@ class CityViewController: UIViewController {
         
         title = passedlocation.city
         
-        let customFont = UIFont(name: "Staatliches-Regular", size: 23)
+        let customFont = UIFont(name: "Staatliches-Regular", size: 20)
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: customFont ?? UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.bold) ]
         }
@@ -234,50 +235,6 @@ class CityViewController: UIViewController {
     }
 }
 
-//extension CityViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if isFiltering() {
-//            return filteredPassedCafes.count
-//        } else {
-//            return passedlocation.cafes.count
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
-//        cell.selectionStyle = .none
-//        if isFiltering() {
-//            cell.cafeImageView.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
-//            cell.cityCellLabel.text = filteredPassedCafes[indexPath.row].name
-//            return cell
-//        } else {
-//            cell.cafeImageView.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
-//            cell.cityCellLabel.text = passedlocation.cafes[indexPath.row].name
-//            return cell
-//    }
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 220
-//    }
-//
-//}
-//
-//extension CityViewController: UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "CafeDetailViewController") as? CafeDetailViewController {
-//            if isFiltering() {
-//                vc.passedCafe = filteredPassedCafes[indexPath.row]
-//            } else {
-//                vc.passedCafe = passedCafes[indexPath.row]
-//            }
-//            navigationController?.pushViewController(vc, animated: true)
-//
-//        }
-//    }
-//}
 
 extension CityViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -292,11 +249,12 @@ extension CityViewController:UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cafeCell", for: indexPath) as! CafeCollectionViewCell
         if isFiltering() {
             cell.cafeLabel.text = filteredPassedCafes[indexPath.row].name
-            return cell
+            cell.coffeeImage.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
         } else {
             cell.cafeLabel.text = passedlocation.cafes[indexPath.row].name
-            return cell
+            cell.coffeeImage.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
         }
+        return cell
     }
 }
 

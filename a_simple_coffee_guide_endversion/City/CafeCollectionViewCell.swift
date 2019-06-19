@@ -10,10 +10,15 @@ import UIKit
 
 class CafeCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var cafeLabel: UILabel!
     
+    @IBOutlet weak var coffeeImage: UIImageView!
+    @IBOutlet weak var cafeLabel: UILabel!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 8
+        
+        
+        
     }
 }

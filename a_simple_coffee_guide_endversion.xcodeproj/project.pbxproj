@@ -176,9 +176,9 @@
 				B3872369226A21AF00ED97DF /* KnowledgeModel.swift */,
 				B38ABDDE22B7F4C30016A82A /* ComplainBank.swift */,
 				B387236B226A221800ED97DF /* Complain.swift */,
+				B314E1B322B8F60400684116 /* LocationBank.swift */,
 				B3FCAF48229574470097749B /* Location.swift */,
 				B305922D2296CBD00010B6FA /* Cafe.swift */,
-				B314E1B322B8F60400684116 /* LocationBank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -29,9 +29,10 @@ class LocationViewController: UIViewController {
         tableView.dataSource = self
         populateTableView()
         
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        backButton.tintColor = UIColor.black
+        navigationItem.backBarButtonItem = backButton
         
-        
-
     }
     
     func setupNavBar() {
