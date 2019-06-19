@@ -35,6 +35,7 @@ class CityViewController: UIViewController {
     var filteredPassedCafes = [Cafe]()
     var requestedFeatures : [Features] = []
 
+
     
     private let reuseIdentifier = "cafeCell"
     private let sectionInsets = UIEdgeInsets(top: 50.0,
@@ -54,7 +55,9 @@ class CityViewController: UIViewController {
         collectionView.dataSource = self
 
         passedCafes = passedlocation.cafes
+        
     }
+    
 
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = false
@@ -247,12 +250,33 @@ extension CityViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cafeCell", for: indexPath) as! CafeCollectionViewCell
+        
         if isFiltering() {
             cell.cafeLabel.text = filteredPassedCafes[indexPath.row].name
-            cell.coffeeImage.image = UIImage(named: filteredPassedCafes[indexPath.row].image)
+            let imageData = UIImage(named: filteredPassedCafes[indexPath.row].image)!.pngData()!
+            let options = [
+                kCGImageSourceCreateThumbnailWithTransform: true,
+                kCGImageSourceCreateThumbnailFromImageAlways: true,
+                kCGImageSourceThumbnailMaxPixelSize: 300] as CFDictionary
+            let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
+            let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
+            let thumbnail = UIImage(cgImage: imageReference)
+            
+            cell.coffeeImage.image = thumbnail
+
         } else {
             cell.cafeLabel.text = passedlocation.cafes[indexPath.row].name
-            cell.coffeeImage.image = UIImage(named: passedlocation.cafes[indexPath.row].image)
+            
+            let imageData = UIImage(named: passedlocation.cafes[indexPath.row].image)!.pngData()!
+            let options = [
+                kCGImageSourceCreateThumbnailWithTransform: true,
+                kCGImageSourceCreateThumbnailFromImageAlways: true,
+                kCGImageSourceThumbnailMaxPixelSize: 300] as CFDictionary
+            let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
+            let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
+            let thumbnail = UIImage(cgImage: imageReference)
+            
+            cell.coffeeImage.image = thumbnail
         }
         return cell
     }
