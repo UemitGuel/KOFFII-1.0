@@ -31,7 +31,6 @@ class OtherDetailViewController: UIViewController {
         
         // Setting Image and Name
         imageView.image = UIImage(named: passedKnowledge.imageName)
-        imageView.layer.cornerRadius = 8
         
         self.title = passedKnowledge.name
         

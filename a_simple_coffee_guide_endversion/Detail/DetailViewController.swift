@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var chosenPreparationLabel: UILabel!
     
     
-    @IBOutlet weak var firstSeparator: UIView!
     @IBOutlet weak var secondSeparator: UIView!
     @IBOutlet weak var thirdSeparator: UIView!
     
@@ -50,7 +49,6 @@ class DetailViewController: UIViewController {
         
         // Setting Image and Name
         detailImageView.image = UIImage(named: passedbrewing.imageName)
-        detailImageView.layer.cornerRadius = 8
         //chosenPreparationLabel.text = passedDict["Name"] as? String
         
         
@@ -72,7 +70,6 @@ class DetailViewController: UIViewController {
         infoTableView.dataSource = self
         infoTableView.delegate = self
         
-        firstSeparator.layer.cornerRadius = 1.5
         secondSeparator.layer.cornerRadius = 1.5
         thirdSeparator.layer.cornerRadius = 1.5
         
