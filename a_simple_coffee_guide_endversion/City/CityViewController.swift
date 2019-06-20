@@ -257,7 +257,7 @@ extension CityViewController:UICollectionViewDataSource {
             let options = [
                 kCGImageSourceCreateThumbnailWithTransform: true,
                 kCGImageSourceCreateThumbnailFromImageAlways: true,
-                kCGImageSourceThumbnailMaxPixelSize: 300] as CFDictionary
+                kCGImageSourceThumbnailMaxPixelSize: 100] as CFDictionary
             let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
             let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
             let thumbnail = UIImage(cgImage: imageReference)
@@ -271,7 +271,7 @@ extension CityViewController:UICollectionViewDataSource {
             let options = [
                 kCGImageSourceCreateThumbnailWithTransform: true,
                 kCGImageSourceCreateThumbnailFromImageAlways: true,
-                kCGImageSourceThumbnailMaxPixelSize: 300] as CFDictionary
+                kCGImageSourceThumbnailMaxPixelSize: 100] as CFDictionary
             let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
             let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
             let thumbnail = UIImage(cgImage: imageReference)
@@ -324,3 +324,4 @@ extension CityViewController:UICollectionViewDelegate {
     }
     
 }
+
