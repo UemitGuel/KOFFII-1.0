@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FAADA8760927476FEAD0C68 /* Pods_a_simple_coffee_guide_endversion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374FA84ED9F4285176B36C6C /* Pods_a_simple_coffee_guide_endversion.framework */; };
 		B305922B2296CA770010B6FA /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305922A2296CA770010B6FA /* CityTableViewCell.swift */; };
 		B305922E2296CBD00010B6FA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305922D2296CBD00010B6FA /* Cafe.swift */; };
 		B305C2E9222A99A000EFF2B1 /* ZubereitungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */; };
@@ -23,13 +24,14 @@
 		B336B6DA229584C000F6AD69 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336B6D9229584C000F6AD69 /* CityViewController.swift */; };
 		B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */; };
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
+		B362920222BBD29D00E11E72 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B362920122BBD29D00E11E72 /* Quicksand-Medium.ttf */; };
+		B362920422BBD2AB00E11E72 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B362920322BBD2AB00E11E72 /* Quicksand-Bold.ttf */; };
 		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
 		B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */; };
 		B384BC2022A2BC73006F5566 /* CafeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384BC1F22A2BC73006F5566 /* CafeDetailViewController.swift */; };
 		B3872368226A217000ED97DF /* BrewingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3872367226A217000ED97DF /* BrewingModel.swift */; };
 		B387236A226A21AF00ED97DF /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3872369226A21AF00ED97DF /* KnowledgeModel.swift */; };
 		B387236C226A221800ED97DF /* Complain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387236B226A221800ED97DF /* Complain.swift */; };
-		B38912172269D8EB001A92A9 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */; };
 		B38912192269D933001A92A9 /* OtherDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38912182269D933001A92A9 /* OtherDetailTableViewCell.swift */; };
 		B38ABDDB22B7EC820016A82A /* BrewingBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ABDDA22B7EC820016A82A /* BrewingBank.swift */; };
 		B38ABDDF22B7F4C30016A82A /* ComplainBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ABDDE22B7F4C30016A82A /* ComplainBank.swift */; };
@@ -39,13 +41,13 @@
 		B3C57277223A9D86003DA27D /* ComplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57276223A9D86003DA27D /* ComplainViewController.swift */; };
 		B3C57279223A9FFA003DA27D /* ComplainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */; };
 		B3CDEF8322A2B3C500674791 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDEF8222A2B3C500674791 /* RoundButton.swift */; };
-		B3FBE7F92285BDD700900812 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */; };
 		B3FCAF44229570880097749B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF43229570880097749B /* LocationViewController.swift */; };
 		B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF45229572880097749B /* LocationTableViewCell.swift */; };
 		B3FCAF49229574470097749B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF48229574470097749B /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374FA84ED9F4285176B36C6C /* Pods_a_simple_coffee_guide_endversion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_a_simple_coffee_guide_endversion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B305922A2296CA770010B6FA /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		B305922D2296CBD00010B6FA /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		B305C2E8222A99A000EFF2B1 /* ZubereitungViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZubereitungViewController.swift; sourceTree = "<group>"; };
@@ -63,13 +65,14 @@
 		B336B6D9229584C000F6AD69 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B362920122BBD29D00E11E72 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		B362920322BBD2AB00E11E72 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
 		B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		B384BC1F22A2BC73006F5566 /* CafeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailViewController.swift; sourceTree = "<group>"; };
 		B3872367226A217000ED97DF /* BrewingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewingModel.swift; sourceTree = "<group>"; };
 		B3872369226A21AF00ED97DF /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
 		B387236B226A221800ED97DF /* Complain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complain.swift; sourceTree = "<group>"; };
-		B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../Library/Fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		B38912182269D933001A92A9 /* OtherDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailTableViewCell.swift; sourceTree = "<group>"; };
 		B38ABDDA22B7EC820016A82A /* BrewingBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewingBank.swift; sourceTree = "<group>"; };
 		B38ABDDE22B7F4C30016A82A /* ComplainBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainBank.swift; sourceTree = "<group>"; };
@@ -80,10 +83,11 @@
 		B3C57276223A9D86003DA27D /* ComplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainViewController.swift; sourceTree = "<group>"; };
 		B3C57278223A9FFA003DA27D /* ComplainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainTableViewCell.swift; sourceTree = "<group>"; };
 		B3CDEF8222A2B3C500674791 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../Library/Fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		B3FCAF43229570880097749B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B3FCAF45229572880097749B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		B3FCAF48229574470097749B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B422A9772D26632B3852EE1A /* Pods-a_simple_coffee_guide_endversion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a_simple_coffee_guide_endversion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-a_simple_coffee_guide_endversion/Pods-a_simple_coffee_guide_endversion.debug.xcconfig"; sourceTree = "<group>"; };
+		E66B7FB7B36293C64D0F568F /* Pods-a_simple_coffee_guide_endversion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a_simple_coffee_guide_endversion.release.xcconfig"; path = "Pods/Target Support Files/Pods-a_simple_coffee_guide_endversion/Pods-a_simple_coffee_guide_endversion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +95,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FAADA8760927476FEAD0C68 /* Pods_a_simple_coffee_guide_endversion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0599F3905B407A6E83070AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B422A9772D26632B3852EE1A /* Pods-a_simple_coffee_guide_endversion.debug.xcconfig */,
+				E66B7FB7B36293C64D0F568F /* Pods-a_simple_coffee_guide_endversion.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B305922C2296CB5A0010B6FA /* City */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +126,8 @@
 			children = (
 				B33259152225803900BCF32F /* a_simple_coffee_guide_endversion */,
 				B33259142225803900BCF32F /* Products */,
+				A0599F3905B407A6E83070AD /* Pods */,
+				C0819C1D82442B31A612E06A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */,
-				B38912162269D8EB001A92A9 /* Quicksand-Medium.ttf */,
-				B3FBE7F82285BDD700900812 /* Quicksand-Bold.ttf */,
+				B362920122BBD29D00E11E72 /* Quicksand-Medium.ttf */,
+				B362920322BBD2AB00E11E72 /* Quicksand-Bold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -237,6 +253,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		C0819C1D82442B31A612E06A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				374FA84ED9F4285176B36C6C /* Pods_a_simple_coffee_guide_endversion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33259252225803B00BCF32F /* Build configuration list for PBXNativeTarget "a_simple_coffee_guide_endversion" */;
 			buildPhases = (
+				BE28E2CBA6D647A068F9021A /* [CP] Check Pods Manifest.lock */,
 				B332590F2225803900BCF32F /* Sources */,
 				B33259102225803900BCF32F /* Frameworks */,
 				B33259112225803900BCF32F /* Resources */,
+				FF4DDA24247B4FFEE950E232 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,15 +323,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */,
-				B3FBE7F92285BDD700900812 /* Quicksand-Bold.ttf in Resources */,
+				B362920422BBD2AB00E11E72 /* Quicksand-Bold.ttf in Resources */,
 				B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */,
 				B332591E2225803A00BCF32F /* Assets.xcassets in Resources */,
 				B332591C2225803900BCF32F /* Main.storyboard in Resources */,
-				B38912172269D8EB001A92A9 /* Quicksand-Medium.ttf in Resources */,
+				B362920222BBD29D00E11E72 /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE28E2CBA6D647A068F9021A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-a_simple_coffee_guide_endversion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4DDA24247B4FFEE950E232 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-a_simple_coffee_guide_endversion/Pods-a_simple_coffee_guide_endversion-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-a_simple_coffee_guide_endversion/Pods-a_simple_coffee_guide_endversion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B332590F2225803900BCF32F /* Sources */ = {
@@ -485,6 +558,7 @@
 		};
 		B33259262225803B00BCF32F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B422A9772D26632B3852EE1A /* Pods-a_simple_coffee_guide_endversion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +577,7 @@
 		};
 		B33259272225803B00BCF32F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66B7FB7B36293C64D0F568F /* Pods-a_simple_coffee_guide_endversion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

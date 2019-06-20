@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CityViewController: UIViewController {
     
@@ -253,33 +254,19 @@ extension CityViewController:UICollectionViewDataSource {
         
         if isFiltering() {
             cell.cafeLabel.text = filteredPassedCafes[indexPath.row].name
-            let imageData = UIImage(named: filteredPassedCafes[indexPath.row].image)!.pngData()!
-            let options = [
-                kCGImageSourceCreateThumbnailWithTransform: true,
-                kCGImageSourceCreateThumbnailFromImageAlways: true,
-                kCGImageSourceThumbnailMaxPixelSize: 100] as CFDictionary
-            let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
-            let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
-            let thumbnail = UIImage(cgImage: imageReference)
-            
-            cell.coffeeImage.image = thumbnail
+            let url = URL(string: filteredPassedCafes[indexPath.row].image)
+            cell.coffeeImage.sd_setImage(with: url) { (_, _, _, _) in
+            }
 
         } else {
             cell.cafeLabel.text = passedlocation.cafes[indexPath.row].name
-            
-            let imageData = UIImage(named: passedlocation.cafes[indexPath.row].image)!.pngData()!
-            let options = [
-                kCGImageSourceCreateThumbnailWithTransform: true,
-                kCGImageSourceCreateThumbnailFromImageAlways: true,
-                kCGImageSourceThumbnailMaxPixelSize: 100] as CFDictionary
-            let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
-            let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
-            let thumbnail = UIImage(cgImage: imageReference)
-            
-            cell.coffeeImage.image = thumbnail
+            let url = URL(string: passedlocation.cafes[indexPath.row].image)
+            cell.coffeeImage.sd_setImage(with: url) { (_, _, _, _) in
+            }
         }
         return cell
     }
+    
 }
 
 extension CityViewController:UICollectionViewDelegateFlowLayout {
