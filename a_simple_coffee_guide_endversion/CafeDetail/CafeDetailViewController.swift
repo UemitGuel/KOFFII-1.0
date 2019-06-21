@@ -126,8 +126,13 @@ class CafeDetailViewController: UIViewController {
         
         //Apple Maps
         let actionAppleMaps = UIAlertAction(title: "Apple Maps", style: .default) { UIAlertAction in
-            let url = URL(string: "http://maps.apple.com/?q=\(self.passedCafe.name)&sll=\(self.passedCafe.latitude),\(self.passedCafe.longitude)&t=s")
-            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            let longitude = String(format: "%.6f", self.passedCafe.longitude)
+            let latitude = String(format: "%.6f", self.passedCafe.latitude)
+            let splitetStringName = self.passedCafe.name.components(separatedBy: " ")
+            let cafeName = splitetStringName.joined(separator: "+")
+            print(cafeName)
+            guard let url = URL(string: "http://maps.apple.com/?q=\(cafeName)&sll=" + longitude + "," + latitude + "&t=s") else { return print("errror") }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
             }
         
