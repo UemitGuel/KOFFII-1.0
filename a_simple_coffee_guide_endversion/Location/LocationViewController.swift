@@ -7,23 +7,22 @@
 //
 
 import UIKit
+import MessageUI
 
 class LocationViewController: UIViewController {
 
+    
+    @IBOutlet weak var suggestionButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var DE_BarButtonItem: UIBarButtonItem!
-    
+
     // let/var
-    let searchController = UISearchController(searchResultsController: nil)
     var locations = [Location]()
-    var filteredLocations = [Location]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        setupSearchBar()
        
         tableView.delegate = self
         tableView.dataSource = self
@@ -33,6 +32,12 @@ class LocationViewController: UIViewController {
         backButton.tintColor = UIColor.black
         navigationItem.backBarButtonItem = backButton
         
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [
+                NSAttributedString.Key.font : UIFont(name: "Staatliches-Regular", size: 18)!,
+                NSAttributedString.Key.foregroundColor : UIColor.black,
+            ], for: .normal)
+        
     }
     
     func setupNavBar() {
@@ -40,38 +45,6 @@ class LocationViewController: UIViewController {
     self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     
-    // Search
-    
-    func setupSearchBar() {
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search.."
-        navigationItem.searchController = searchController
-        searchController.searchBar.searchBarStyle = .minimal
-        searchController.searchBar.backgroundColor = .white
-        searchController.searchBar.tintColor = .black
-        definesPresentationContext = true
-        
-        self.searchController.searchBar.setValue("X", forKey: "cancelButtonText")
-
-    }
-    
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredLocations = locations.filter({( location : Location) -> Bool in
-            return location.city.lowercased().contains(searchText.lowercased())
-        })
-    
-        tableView.reloadData()
-    }
-    
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
     
     // Filling the Data
     
@@ -79,11 +52,27 @@ class LocationViewController: UIViewController {
         locations = LocationBank().listCities
     }
     
-    
-    
-    @IBAction func DE_BarButtonItemTapped(_ sender: UIBarButtonItem) {
+    func showMailComposer() {
         
+        guard MFMailComposeViewController.canSendMail() else {
+            //Show alert informing the user
+            return
+        }
+        
+        let composer = MFMailComposeViewController()
+        composer.mailComposeDelegate = self
+        composer.setToRecipients(["uemitgul@gmail.com"])
+        composer.setSubject("You forgot this amazing coffee place!")
+        composer.setMessageBody("Hi Ümit,\nCool app, but you should add XY Cafe in YZ to the list. They have...(wifi, food, vegan options, cake, plug?)\n\nAnd for the app, I would recommend you to ...", isHTML: false)
+        
+        present(composer, animated: true)
     }
+    
+    @IBAction func SuggestionButtonTapped(_ sender: UIBarButtonItem) {
+        showMailComposer()
+    }
+    
+    
 }
 
 
@@ -98,12 +87,7 @@ extension LocationViewController: UITableViewDataSource {
         cell.selectionStyle = .none
 
         let location : Location
-        
-        if isFiltering() {
-            location = filteredLocations[indexPath.row]
-        } else {
-            location = locations[indexPath.row]
-        }
+        location = locations[indexPath.row]
         cell.cellLabel.text = location.city
         cell.locationImageView.image = UIImage(named: location.imageName)
         
@@ -121,24 +105,34 @@ extension LocationViewController: UITableViewDelegate {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CityViewController") as? CityViewController {
             let location : Location
-            if isFiltering() {
-                location = filteredLocations[indexPath.row]
-                vc.passedlocation = location
-            } else {
-                location = locations[indexPath.row]
-                vc.passedlocation = location
-            }
+            location = locations[indexPath.row]
+            vc.passedlocation = location
             parent?.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
 
-
-extension LocationViewController: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+extension LocationViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
+        if let _ = error {
+            //Show error alert
+            controller.dismiss(animated: true)
+            return
+        }
+        
+        switch result {
+        case .cancelled:
+            print("Cancelled")
+        case .failed:
+            print("Failed to send")
+        case .saved:
+            print("Saved")
+        case .sent:
+            print("Email Sent")
+        }
+        
+        controller.dismiss(animated: true)
     }
 }
-

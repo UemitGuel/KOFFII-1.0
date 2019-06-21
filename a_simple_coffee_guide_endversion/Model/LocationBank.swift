@@ -42,6 +42,10 @@ struct LocationBank {
                 Cafe(name: "Kaffeesaurus", image: "https://images.unsplash.com/photo-1486482044844-888b371f410c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80", features: [Features.Food, Features.Vegan, Features.Cake], latitude: 50.940394, longitude: 6.938585, url: "https://www.google.com/maps/place/Kaffeesaurus/@50.94036,6.93858,17z/data=!4m12!1m6!3m5!1s0x47bf2510697bb22f:0xeb89da280a86feef!2sKaffeesaurus!8m2!3d50.94036!4d6.93858!3m4!1s0x47bf2510697bb22f:0xeb89da280a86feef!8m2!3d50.94036!4d6.93858"),
                 Cafe(name: "hommage Cafe", image: "https://images.unsplash.com/photo-1458819714733-e5ab3d536722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80", features: [Features.Food, Features.Vegan, Features.Cake], latitude: 50.940610, longitude: 6.941803, url: "https://www.google.com/maps/place/hommage+Caf%C3%A9/@50.94061,6.939609,17z/data=!4m5!3m4!1s0x47bf2507b6360e5f:0x1b96804d5f2e135b!8m2!3d50.940595!4d6.941789"),
                 Cafe(name: "WNDRFUEL", image: "https://images.unsplash.com/photo-1501484311399-ed1e8632445d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80", features: [Features.Wifi, Features.Food, Features.Cake, Features.Vegan, Features.Plug], latitude: 50.929567, longitude: 6.937614, url: "https://www.google.com/maps/place/WNDRFUEL/@50.9295119,6.9365851,18.42z/data=!4m5!3m4!1s0x47bf24fe5a0b1bed:0xb46805e9930d5026!8m2!3d50.929547!4d6.937614")
-                ])])
+                ]),
+             Location(city: "Coming soon", imageName: "Coming_soon", cafes: [
+                Cafe(name: "", image: "", features: [], latitude: 0, longitude: 0, url: "")
+                ])
+            ])
     }
 }
