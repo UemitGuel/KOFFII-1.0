@@ -24,7 +24,6 @@
 		B336B6DA229584C000F6AD69 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336B6D9229584C000F6AD69 /* CityViewController.swift */; };
 		B355A5D1222EC057009A5BE7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */; };
 		B355A5D3222EC072009A5BE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A5D2222EC072009A5BE7 /* DetailViewController.swift */; };
-		B362920222BBD29D00E11E72 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B362920122BBD29D00E11E72 /* Quicksand-Medium.ttf */; };
 		B37F2F78223E5F810015BC15 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */; };
 		B37F2F7A223E600A0015BC15 /* KnowledgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */; };
 		B384BC2022A2BC73006F5566 /* CafeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384BC1F22A2BC73006F5566 /* CafeDetailViewController.swift */; };
@@ -43,11 +42,8 @@
 		B3FCAF44229570880097749B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF43229570880097749B /* LocationViewController.swift */; };
 		B3FCAF46229572880097749B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF45229572880097749B /* LocationTableViewCell.swift */; };
 		B3FCAF49229574470097749B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCAF48229574470097749B /* Location.swift */; };
-		E4CEE63C2626D3D90001074C /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CEE63B2626D3D90001074C /* Quicksand-Bold.ttf */; };
-		E4CEE63F2626D3EB0001074C /* Font in Resources */ = {isa = PBXBuildFile; fileRef = E4CEE63E2626D3EB0001074C /* Font */; };
-		E4CEE6422626D4270001074C /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CEE6412626D4270001074C /* Quicksand-Bold.ttf */; };
-		E4CEE6462626D4360001074C /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CEE6452626D4360001074C /* Quicksand-Bold.ttf */; };
-		E4CEE64D2626D4550001074C /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CEE64C2626D4550001074C /* Quicksand-Medium.ttf */; };
+		E409D8332626D542004549A7 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E409D8322626D542004549A7 /* Quicksand-Medium.ttf */; };
+		E4ABD1402626D6B300E43C34 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4ABD13F2626D6B300E43C34 /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +65,6 @@
 		B336B6D9229584C000F6AD69 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		B355A5D0222EC057009A5BE7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		B355A5D2222EC072009A5BE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		B362920122BBD29D00E11E72 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		B37F2F77223E5F810015BC15 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
 		B37F2F79223E600A0015BC15 /* KnowledgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeTableViewCell.swift; sourceTree = "<group>"; };
 		B384BC1F22A2BC73006F5566 /* CafeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailViewController.swift; sourceTree = "<group>"; };
@@ -90,11 +85,9 @@
 		B3FCAF45229572880097749B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		B3FCAF48229574470097749B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B422A9772D26632B3852EE1A /* Pods-a_simple_coffee_guide_endversion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a_simple_coffee_guide_endversion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-a_simple_coffee_guide_endversion/Pods-a_simple_coffee_guide_endversion.debug.xcconfig"; sourceTree = "<group>"; };
+		E409D8322626D542004549A7 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		E4ABD13F2626D6B300E43C34 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		E4CEE63B2626D3D90001074C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
-		E4CEE63E2626D3EB0001074C /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; sourceTree = "<group>"; };
-		E4CEE6412626D4270001074C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
-		E4CEE6452626D4360001074C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
-		E4CEE64C2626D4550001074C /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		E66B7FB7B36293C64D0F568F /* Pods-a_simple_coffee_guide_endversion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a_simple_coffee_guide_endversion.release.xcconfig"; path = "Pods/Target Support Files/Pods-a_simple_coffee_guide_endversion/Pods-a_simple_coffee_guide_endversion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,11 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				B393CAF9222AD1B6004B028E /* Staatliches-Regular.ttf */,
-				E4CEE64C2626D4550001074C /* Quicksand-Medium.ttf */,
-				E4CEE6452626D4360001074C /* Quicksand-Bold.ttf */,
-				B362920122BBD29D00E11E72 /* Quicksand-Medium.ttf */,
-				E4CEE6412626D4270001074C /* Quicksand-Bold.ttf */,
-				E4CEE63E2626D3EB0001074C /* Font */,
+				E4ABD13F2626D6B300E43C34 /* Quicksand-Bold.ttf */,
+				E409D8322626D542004549A7 /* Quicksand-Medium.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -334,16 +324,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CEE63C2626D3D90001074C /* Quicksand-Bold.ttf in Resources */,
+				E4ABD1402626D6B300E43C34 /* Quicksand-Bold.ttf in Resources */,
+				E409D8332626D542004549A7 /* Quicksand-Medium.ttf in Resources */,
 				B33259212225803A00BCF32F /* LaunchScreen.storyboard in Resources */,
-				E4CEE63F2626D3EB0001074C /* Font in Resources */,
-				E4CEE6422626D4270001074C /* Quicksand-Bold.ttf in Resources */,
-				E4CEE6462626D4360001074C /* Quicksand-Bold.ttf in Resources */,
 				B33067432264E53900B23FD4 /* Staatliches-Regular.ttf in Resources */,
 				B332591E2225803A00BCF32F /* Assets.xcassets in Resources */,
 				B332591C2225803900BCF32F /* Main.storyboard in Resources */,
-				B362920222BBD29D00E11E72 /* Quicksand-Medium.ttf in Resources */,
-				E4CEE64D2626D4550001074C /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
