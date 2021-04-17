@@ -16,3 +16,9 @@ This project was in the App Store, but is now replaces with the 2.0 Version
 
 
 ## Preview
+
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-04-17 at 11 59 24](https://user-images.githubusercontent.com/47325422/115109465-26bfe680-9f76-11eb-83ff-6e741a65be15.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-04-17 at 11 59 35](https://user-images.githubusercontent.com/47325422/115109469-2889aa00-9f76-11eb-8c70-d1f4b8c76c96.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-04-17 at 11 59 49](https://user-images.githubusercontent.com/47325422/115109470-2a536d80-9f76-11eb-8a98-a8b79b43f715.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-04-17 at 12 00 21](https://user-images.githubusercontent.com/47325422/115109474-2b849a80-9f76-11eb-84cb-bb3702b741a5.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-04-17 at 11 59 59](https://user-images.githubusercontent.com/47325422/115109476-2cb5c780-9f76-11eb-96cf-251aea800d48.png)
