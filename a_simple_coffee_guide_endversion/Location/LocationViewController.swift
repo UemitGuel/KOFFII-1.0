@@ -131,6 +131,9 @@ extension LocationViewController: MFMailComposeViewControllerDelegate {
             print("Saved")
         case .sent:
             print("Email Sent")
+        @unknown default:
+            controller.dismiss(animated: true)
+            return
         }
         
         controller.dismiss(animated: true)
