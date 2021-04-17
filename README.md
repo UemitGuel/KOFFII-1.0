@@ -1,4 +1,4 @@
-# a_simple_coffee_guide_endversion
+# KOFFII 1.0
 
 :warning: **This Project was developed in 2019 and is now deprecated**
 
