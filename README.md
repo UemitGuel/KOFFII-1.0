@@ -10,7 +10,13 @@ so I always looked for chill cafes with wifi and plugins. So after I while, I th
 
 So I learned Swift in Cafes in Barcelona, while writing this App for people like me who wanna do that.
 
-This project was in the App Store, but is now replaces with the [I'm an inline-style link](https://www.google.com)
+This project was in the App Store, but was later replaced by the next Version of the App
+
+[KOFFII Cologne](https://apps.apple.com/de/app/koffii-cologne/id1462659665)
+
+with the Github Repo: 
+
+[KOFFII-CGN-2.0](https://github.com/UemitGuel/KOFFII-CGN-2.0)
 
 
 
