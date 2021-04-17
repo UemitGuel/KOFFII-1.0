@@ -10,7 +10,7 @@ so I always looked for chill cafes with wifi and plugins. So after I while, I th
 
 So I learned Swift in Cafes in Barcelona, while writing this App for people like me who wanna do that.
 
-This project was in the App Store, but is now replaces with the 2.0 Version 
+This project was in the App Store, but is now replaces with the [I'm an inline-style link](https://www.google.com)
 
 
 
